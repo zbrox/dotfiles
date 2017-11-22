@@ -1,0 +1,24 @@
+# Header: wrap up to -------------------------->|
+# Keep it to only 1 line, imperative mood only, brief
+# Don’t finish with a period
+# E.g. feat: Add new event option
+<type>: <subject>
+
+# Body: wrap up to -------------------------------------------------->|
+# It can be multiple lines. Longer description of what
+# exactly is done and why it is done - not how
+
+
+# Footer: wrap up to ------------------------------------------------>|
+# Multiline as well. Use for references like issue number
+# it fixes or a discussion that it was referenced in.
+
+
+# type can be:
+#	feat (new feature, changing a feature)
+#	fix (bug fix)
+#	docs (changes to documentation)
+#	style (formatting, missing semi colons, etc; no code change)
+#	refactor (refactoring production code)
+#	test (adding missing tests, refactoring tests; no production code change)
+#	chore (updating grunt tasks etc; no production code change)
