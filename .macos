@@ -284,6 +284,17 @@ defaults write com.apple.menuextra.clock DateFormat "EEE dd.MM H:mm"
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 
 ###############################################################################
+# Other
+###############################################################################
+
+# Turn off sudden motion sensor [no HDD only]
+sudo pmset -a sms 0
+
+# Delay (180 minutes) hard drive sleep [no HDD only]
+sudo pmset -b disksleep 180  # Battery
+sudo pmset -c disksleep 180  # Power adapter
+
+###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
 
