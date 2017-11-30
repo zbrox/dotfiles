@@ -1,6 +1,9 @@
 # Path to your dotfiles installation.
 export DOTFILES=$HOME/.dotfiles
 
+# Load aliases
+source $DOTFILES/aliases.zsh
+
 # Preferred editor
 export EDITOR='vim'
 
