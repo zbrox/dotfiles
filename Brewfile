@@ -29,7 +29,6 @@ brew 'cocoapods'
 brew 'fasd'
 brew 'git', args: ['without-completions']
 brew 'git-flow'
-brew 'keybase'
 brew 'mackup'
 brew 'mas'
 brew 'mcrypt'
