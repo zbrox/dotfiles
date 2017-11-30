@@ -20,7 +20,7 @@ brew 'coreutils'
 brew 'findutils'
 
 # Install more recent versions of some macOS tools
-brew 'homebrew/dupes/grep'
+brew 'grep'
 
 # Install cli apps
 brew 'awscli'
