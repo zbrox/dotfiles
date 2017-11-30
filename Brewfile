@@ -39,7 +39,6 @@ brew "nvm"
 brew "pyenv-virtualenv"
 brew "pyenv-virtualenvwrapper"
 brew 'qt5'
-brew 'subosito/packages/snowboard'
 brew "tmux"
 brew 'trash'
 brew 'wget'
