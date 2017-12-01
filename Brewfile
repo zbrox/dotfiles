@@ -65,6 +65,7 @@ cask 'handbrake'
 cask 'iterm2'
 cask "keybase"
 cask "kitematic"
+cask "ksdiff"
 cask 'lastfm'
 cask 'mounty'
 cask 'musixmatch'
