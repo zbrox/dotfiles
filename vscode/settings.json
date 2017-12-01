@@ -1,0 +1,7 @@
+{
+    "window.restoreWindows": "all",
+    "editor.rulers": [
+        80
+    ],
+    "editor.minimap.enabled": false
+}
