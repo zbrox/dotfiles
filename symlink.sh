@@ -1,4 +1,4 @@
-DOTFILES=$DOTFILES
+DOTFILES=~/.dotfiles
 
 # ZSH
 if [ -e ~/.zshrc ]; then
