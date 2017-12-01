@@ -24,7 +24,7 @@ else
 		echo "VSCode settings.json exists. Remove it and rerun."
 	fi
 	if [ ! -d ~/Library/Application\ Support/Code/User/snippets ]; then
-		ln -s $DOTFILES/vscode/snippets/ ~/Library/Application\ Support/Code/User/snippets
+		ln -s $DOTFILES/vscode/snippets ~/Library/Application\ Support/Code/User/snippets
 	else
 		echo "VSCode snippets folder exists. Remove it and rerun."
 	fi
