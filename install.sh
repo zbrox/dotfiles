@@ -10,6 +10,11 @@ fi
 # Update Homebrew recipes
 brew update
 
+# install Xcode separately
+brew install mas
+mas install 497799835
+sudo xcodebuild -license accept
+
 # Install all our dependencies with bundle (See Brewfile)
 brew tap homebrew/bundle
 brew bundle
