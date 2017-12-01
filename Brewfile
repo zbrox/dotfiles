@@ -30,7 +30,6 @@ brew 'fasd'
 brew 'git', args: ['without-completions']
 brew 'git-flow'
 brew 'mackup'
-brew 'mas'
 brew 'mcrypt'
 brew 'mongodb'
 brew 'mosquitto'
@@ -66,6 +65,7 @@ cask 'handbrake'
 cask 'iterm2'
 cask "keybase"
 cask "kitematic"
+cask "ksdiff"
 cask 'lastfm'
 cask 'mounty'
 cask 'musixmatch'
@@ -128,4 +128,3 @@ mas "Things3", id: 904280696
 mas 'The Unarchiver', id: 425424353
 mas "Trello", id: 1278508951
 mas "WeChat", id: 836500024
-mas "Xcode", id: 497799835
