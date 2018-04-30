@@ -24,6 +24,12 @@ export PATH="$(yarn global bin | grep -o '/.*'):$PATH"
 export NVM_DIR="$HOME/.nvm"
 source "/usr/local/opt/nvm/nvm.sh"
 
+# homebrew
+export HOMEBREW_AUTO_UPDATE_SECS=3600
+
+# cargo/rust
+export PATH="$HOME/.cargo/bin:$PATH"
+
 # zplug
 export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
@@ -41,7 +47,8 @@ zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-autosuggestions", defer:2
 
 # Load theme file
-zplug 'themes/ys', from:oh-my-zsh, as:theme
+# zplug 'themes/ys', from:oh-my-zsh, as:theme
+zplug denysdovhan/spaceship-prompt, use:spaceship.zsh, from:github, as:theme
 
 # check if all plugins are installed
 if ! zplug check --verbose; then
