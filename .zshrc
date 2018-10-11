@@ -50,3 +50,5 @@ fi
 
 # Then, source plugins and add commands to $PATH
 zplug load
+fpath=(~/.zsh $fpath)
+
