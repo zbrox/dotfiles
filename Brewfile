@@ -51,6 +51,7 @@ brew "zsh"
 cask 'aerial'
 cask 'alfred'
 cask 'anybar'
+cask 'bartender'
 cask "battle-net"
 cask "calibre"
 cask "caprine"
@@ -71,6 +72,7 @@ cask 'mounty'
 cask 'musixmatch'
 cask 'paw'
 cask 'postico'
+cask 'rocket'
 cask 'sequel-pro'
 cask 'slack'
 cask 'sourcetree'
