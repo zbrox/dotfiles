@@ -55,6 +55,7 @@ cask 'bartender'
 cask "battle-net"
 cask "calibre"
 cask "caprine"
+cask 'cheatsheet'
 cask 'cleanmymac'
 cask 'cryptomator'
 cask 'dash'
