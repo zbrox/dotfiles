@@ -4,5 +4,11 @@
         80
     ],
     "editor.minimap.enabled": false,
-    "eslint.packageManager": "yarn"
+    "eslint.packageManager": "yarn",
+    "window.zoomLevel": 0,
+    "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
+    "terminal.integrated.fontFamily": "Source Code Pro",
+    "extensions.ignoreRecommendations": false,
+    "workbench.statusBar.feedback.visible": false,
+    "editor.detectIndentation": false
 }
