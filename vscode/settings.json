@@ -3,5 +3,6 @@
     "editor.rulers": [
         80
     ],
-    "editor.minimap.enabled": false
+    "editor.minimap.enabled": false,
+    "eslint.packageManager": "yarn"
 }
