@@ -7,7 +7,28 @@
     "window.zoomLevel": 0,
     "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
     "terminal.integrated.fontFamily": "Source Code Pro",
+    "todo-tree.ripgrep": "/Applications/Visual Studio Code.app/Contents/Resources/app/node_modules.asar.unpacked/vscode-ripgrep/bin/rg",
     "extensions.ignoreRecommendations": false,
     "workbench.statusBar.feedback.visible": false,
-    "editor.detectIndentation": false
+    "editor.detectIndentation": false,
+    "files.associations": {
+        "**/*.css": "postcss"
+    },
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "breadcrumbs.enabled": true,
+    "window.openFoldersInNewWindow": "on",
+    "window.nativeTabs": true,
+    "todo-tree.defaultHighlight": {
+        "foreground": "green",
+        "type": "none"
+    },
+    "todo-tree.customHighlight": {
+        "TODO": {},
+        "FIXME": {}
+    },
+    "editor.matchBrackets": false,
+    "workbench.colorTheme": "Night Blue",
+    "editor.renderWhitespace": "all",
+    "terminal.integrated.rendererType": "dom",
+    "editor.renderControlCharacters": true
 }
