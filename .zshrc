@@ -26,6 +26,7 @@ source "/usr/local/opt/nvm/nvm.sh"
 
 # homebrew
 export HOMEBREW_AUTO_UPDATE_SECS=3600
+export PATH="/usr/local/sbin:$PATH"
 
 # cargo/rust
 export PATH="$HOME/.cargo/bin:$PATH"
@@ -45,6 +46,9 @@ zplug "plugins/colorize", from:oh-my-zsh
 zplug "zsh-users/zsh-history-substring-search", defer:2
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-autosuggestions", defer:2
+zplug "tysonwolker/iterm-tab-colors", defer:2
+zplug "jimeh/zsh-peco-history", defer:2
+zplug "paulmelnikow/zsh-startup-timer", defer:2
 
 # Load theme file
 # zplug 'themes/ys', from:oh-my-zsh, as:theme
@@ -60,3 +64,5 @@ fi
 
 # Then, source plugins and add commands to $PATH
 zplug load
+export PATH="/usr/local/opt/icu4c/bin:$PATH"
+export PATH="/usr/local/opt/icu4c/sbin:$PATH"
