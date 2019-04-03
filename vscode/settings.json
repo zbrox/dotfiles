@@ -4,7 +4,6 @@
         80
     ],
     "editor.minimap.enabled": false,
-    "eslint.packageManager": "yarn",
     "window.zoomLevel": 0,
     "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
     "terminal.integrated.fontFamily": "Source Code Pro",
@@ -31,5 +30,9 @@
     "workbench.colorTheme": "Night Blue",
     "editor.renderWhitespace": "all",
     "terminal.integrated.rendererType": "dom",
-    "editor.renderControlCharacters": true
+    "editor.renderControlCharacters": true,
+    "[markdown]": {
+        "editor.wordWrap": "wordWrapColumn",
+        "editor.quickSuggestions": false,
+    }
 }
