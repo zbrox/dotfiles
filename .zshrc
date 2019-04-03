@@ -17,9 +17,6 @@ export PKG_CONFIG_PATH=PKG_CONFIG_PATH:/opt/X11/lib/pkgconfig
 # fix the python path warning
 unset PYTHONPATH
 
-# yarn global path
-export PATH="$(yarn global bin | grep -o '/.*'):$PATH"
-
 # nvm
 export NVM_DIR="$HOME/.nvm"
 source "/usr/local/opt/nvm/nvm.sh"
