@@ -24,8 +24,10 @@ brew 'grep'
 
 # Install cli apps
 brew 'awscli'
+brew 'bat'
 brew 'certbot'
 brew 'cocoapods'
+brew 'exa'
 brew 'fasd'
 brew 'git', args: ['without-completions']
 brew 'git-flow'

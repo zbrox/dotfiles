@@ -13,3 +13,9 @@ alias dockexec="docker exec -i -t"
 
 # Xcode
 alias xcodeclean="rm -frd ~/Library/Developer/Xcode/DerivedData/* && rm -frd ~/Library/Caches/com.apple.dt.Xcode/*"
+
+# cat replacement
+alias ls="exa"
+
+# ls replacement
+alias cat="bat"
