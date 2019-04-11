@@ -18,3 +18,6 @@ alias ls="exa"
 
 # ls replacement
 alias cat="bat"
+
+# The most often used git command
+alias commit="git commit -m"
