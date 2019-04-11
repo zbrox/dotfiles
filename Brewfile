@@ -5,7 +5,6 @@ tap 'caskroom/versions'
 tap 'homebrew/core'
 tap 'homebrew/bundle'
 tap 'homebrew/dupes'
-tap 'homebrew/php'
 tap 'homebrew/versions'
 tap 'subosito/packages'
 
