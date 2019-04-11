@@ -40,6 +40,8 @@
     st = status -sb
     # Stash all files including untracked
     stash-all = stash save --include-untracked
+    # List all branches
+    branches = branch -a
 [commit]
     template = ~/.dotfiles/.gitcommitmsg
     cleanup = strip
