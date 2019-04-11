@@ -28,10 +28,17 @@
     default = simple
     followTags = true
 [alias]
+    # View abbreviated SHA, description, and history graph of the latest 20 commits
+    l = log --pretty=oneline -n 20 --graph --abbrev-commit
+    # List the remote refs in order of last commit to them
     la = for-each-ref --sort=-committerdate --format='%(committerdate:short) %(refname)' refs/heads refs/remotes
+    # Show a list of contributors and their commit count
     contributors = shortlog --summary --numbered
+    # Undo last commit and put changes in staging area
     undo = reset HEAD~1 --mixed
+    # Show status of branches and if they're in ahead of remotes
     st = status -sb
+    # Stash all files including untracked
     stash-all = stash save --include-untracked
 [commit]
     template = ~/.dotfiles/.gitcommitmsg
