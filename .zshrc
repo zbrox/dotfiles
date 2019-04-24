@@ -27,6 +27,7 @@ source "/usr/local/opt/nvm/nvm.sh"
 # homebrew
 export HOMEBREW_AUTO_UPDATE_SECS=3600
 export PATH="/usr/local/sbin:$PATH"
+export HOMEBREW_GITHUB_API_TOKEN=$HOMEBREW_GITHUB_API_TOKEN
 
 # cargo/rust
 export PATH="$HOME/.cargo/bin:$PATH"
