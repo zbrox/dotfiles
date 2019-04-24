@@ -1,6 +1,9 @@
 # Path to your dotfiles installation.
 export DOTFILES=$HOME/.dotfiles
 
+# Read private env variables files (not in repo)
+[ -r $DOTFILES/.env_private ] && source $DOTFILES/.env_private
+
 # Load aliases
 source $DOTFILES/aliases.zsh
 
