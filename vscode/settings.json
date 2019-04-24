@@ -34,5 +34,6 @@
     "[markdown]": {
         "editor.wordWrap": "wordWrapColumn",
         "editor.quickSuggestions": false,
-    }
+    },
+    "workbench.startupEditor": "newUntitledFile"
 }
