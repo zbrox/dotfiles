@@ -42,6 +42,7 @@ zplug "plugins/git-flow", from:oh-my-zsh
 zplug "plugins/docker", from:oh-my-zsh
 zplug "plugins/osx", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
 zplug "plugins/colorize", from:oh-my-zsh
+zplug "lukechilds/zsh-better-npm-completion", defer:2
 
 # zsh plugins
 zplug "zsh-users/zsh-history-substring-search", defer:2
