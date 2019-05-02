@@ -21,3 +21,22 @@ alias cat="bat"
 
 # The most often used git command
 alias commit="git commit -m"
+
+# Git flow related (not strictly an alias but hey)
+# This requires the git flow git plugin
+function dorelease {
+    BRANCH=$(git symbolic-ref HEAD | cut -d'/' -f3)
+    if [[ $BRANCH == release* ]]
+    then
+        VERSION=$(git symbolic-ref HEAD | cut -d'/' -f4)
+        git flow release finish $VERSION
+    else
+        VERSION=$1
+        if [ -z "$VERSION" ]
+        then
+            echo "No version specified"
+        else
+            git flow release start $VERSION
+        fi
+    fi
+}
