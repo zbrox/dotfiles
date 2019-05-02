@@ -43,5 +43,5 @@ function dorelease {
 
 function versionbump {
     VERSION=$(git symbolic-ref HEAD | cut -d'/' -f4)
-    git commit -m \"chore: Bump up version number to $VERSION\"
+    git commit -m "chore: Bump up version number to $VERSION"
 }
