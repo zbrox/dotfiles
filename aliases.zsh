@@ -22,7 +22,7 @@ alias cat="bat"
 # The most often used git command
 alias commit="git commit -m"
 
-# Git flow related (not strictly an alias but hey)
+# Git flow related (some not strictly an alias but hey)
 # This requires the git flow git plugin
 function dorelease {
     BRANCH=$(git symbolic-ref HEAD | cut -d'/' -f3)
@@ -40,3 +40,5 @@ function dorelease {
         fi
     fi
 }
+
+alias versionbump="git commit -m \"chore: Bump up version number to $(git symbolic-ref HEAD | cut -d'/' -f4)\""
