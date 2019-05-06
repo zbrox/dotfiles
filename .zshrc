@@ -52,6 +52,7 @@ zplug "tysonwolker/iterm-tab-colors", defer:2
 zplug "jimeh/zsh-peco-history", defer:2
 zplug "paulmelnikow/zsh-startup-timer", defer:2
 
+
 # Load theme file
 # zplug 'themes/ys', from:oh-my-zsh, as:theme
 zplug denysdovhan/spaceship-prompt, use:spaceship.zsh, from:github, as:theme
@@ -66,6 +67,9 @@ fi
 
 # Then, source plugins and add commands to $PATH
 zplug load
+
+# Set the autocd option of zsh
+setopt AUTOCD
 
 export PATH="/usr/local/opt/icu4c/bin:$PATH"
 export PATH="/usr/local/opt/icu4c/sbin:$PATH"
