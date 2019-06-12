@@ -35,5 +35,8 @@
         "editor.wordWrap": "wordWrapColumn",
         "editor.quickSuggestions": false,
     },
-    "workbench.startupEditor": "newUntitledFile"
+    "workbench.startupEditor": "newUntitledFile",
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }
