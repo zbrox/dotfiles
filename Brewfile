@@ -1,134 +1,168 @@
 # Taps
-tap 'caskroom/cask'
-tap 'caskroom/fonts'
-tap 'caskroom/versions'
-tap 'homebrew/core'
-tap 'homebrew/bundle'
-tap 'homebrew/dupes'
-tap 'homebrew/versions'
-tap 'subosito/packages'
+tap "filosottile/musl-cross"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
+tap "homebrew/core"
+tap "homebrew/services"
 
-# Install ZSH
-brew 'zsh'
-brew 'zsh-completions'
+brew "openssl"
+brew "python"
+brew "ansible"
+brew "asciidoc"
+brew "asciidoctor"
+brew "automake"
+brew "awscli"
+brew "bat"
+brew "glib"
+brew "certbot"
+brew "cmake"
+brew "cocoapods"
+brew "coreutils"
+brew "exa"
+brew "exercism"
+brew "fd"
+brew "findutils"
+brew "git"
+brew "git-flow"
+brew "gnupg"
+brew "grep"
+brew "htop"
+brew "hyperfine"
+brew "imagemagick"
+brew "kbdgen"
+brew "libssh2"
+brew "libwebsockets"
+brew "libxml2"
+brew "mackup"
+brew "magic-wormhole"
+brew "mas"
+brew "mcrypt"
+brew "mkcert"
+brew "protobuf"
+brew "mosh"
+brew "nmap"
+brew "node"
+brew "nss"
+brew "nvm"
+brew "pdfgrep"
+brew "protoc-gen-go"
+brew "pugixml"
+brew "pyenv"
+brew "pyenv-virtualenv"
+brew "pyenv-virtualenvwrapper"
+brew "s3cmd"
+brew "screen"
+brew "swagger-codegen"
+brew "telnet"
+brew "tmux"
+brew "trash"
+brew "vim"
+brew "wget"
+brew "wrk"
+brew "xcproj"
+brew "xctool"
+brew "zola"
+brew "zplug"
+brew "zsh"
+brew "zsh-completions"
+brew "filosottile/musl-cross/musl-cross"
 
-# Install GNU core utilities (those that come with macOS are outdated)
-brew 'coreutils'
+cask "aerial"
+cask "alfred"
+cask "calibre"
+cask "cleanmymac"
+cask "cryptomator"
+cask "dash"
+cask "discord"
+cask "docker"
+cask "etcher"
+cask "font-anonymice-powerline"
+cask "font-dejavu-sans-mono-for-powerline"
+cask "font-droid-sans-mono-for-powerline"
+cask "font-fira-mono-for-powerline"
+cask "font-inconsolata-dz-for-powerline"
+cask "font-inconsolata-for-powerline"
+cask "font-inconsolata-g-for-powerline"
+cask "font-liberation-mono-for-powerline"
+cask "font-menlo-for-powerline"
+cask "font-meslo-for-powerline"
+cask "font-monofur-for-powerline"
+cask "font-noto-mono-for-powerline"
+cask "font-roboto-mono-for-powerline"
+cask "font-source-code-pro"
+cask "font-source-code-pro-for-powerline"
+cask "font-source-sans-pro"
+cask "font-source-serif-pro"
+cask "font-ubuntu-mono-derivative-powerline"
+cask "gitup"
+cask "google-chrome"
+cask "handbrake"
+cask "iterm2"
+cask "keybase"
+cask "kitematic"
+cask "ksdiff"
+cask "lastfm"
+cask "macdown"
+cask "mounty"
+cask "musixmatch"
+cask "openttd"
+cask "paw"
+cask "postico"
+cask "qlcolorcode"
+cask "qlmarkdown"
+cask "qlstephen"
+cask "qt-creator"
+cask "quicklook-csv"
+cask "quicklook-json"
+cask "rocket"
+cask "sequel-pro"
+cask "slack"
+cask "sourcetree"
+cask "spectacle"
+cask "spotify"
+cask "steam"
+cask "sublime-text"
+cask "teamviewer"
+cask "transmission"
+cask "transmit"
+cask "virtualbox"
+cask "virtualbox-extension-pack"
+cask "viscosity"
+cask "visual-studio-code"
+cask "vlc"
+cask "whatsapp"
+cask "wireshark"
+cask "wwdc"
+cask "zeplin"
+cask "zulip"
 
-# Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
-brew 'findutils'
-
-# Install more recent versions of some macOS tools
-brew 'grep'
-
-# Install cli apps
-brew 'awscli'
-brew 'bat'
-brew 'certbot'
-brew 'cocoapods'
-brew 'exa'
-brew 'fasd'
-brew 'git', args: ['without-completions']
-brew 'git-flow'
-brew 'mackup'
-brew 'mcrypt'
-brew 'mongodb'
-brew 'mosquitto'
-brew 'node'
-brew 'nvm'
-brew 'pyenv-virtualenv'
-brew 'pyenv-virtualenvwrapper'
-brew 'qt5'
-brew 'tmux'
-brew 'trash'
-brew 'wget'
-brew 'xcproj'
-brew 'xctool'
-brew 'yarn'
-brew 'zplug'
-brew 'zsh'
-
-# Apps
-cask 'aerial'
-cask 'alfred'
-cask 'anybar'
-cask 'bartender'
-cask 'battle-net'
-cask 'calibre'
-cask 'caprine'
-cask 'cheatsheet'
-cask 'cleanmymac'
-cask 'cryptomator'
-cask 'dash'
-cask 'docker'
-cask 'dropbox'
-cask 'etcher'
-cask 'google-chrome'
-cask 'handbrake'
-cask 'iterm2'
-cask 'keybase'
-cask 'kitematic'
-cask 'ksdiff'
-cask 'lastfm'
-cask 'mounty'
-cask 'musixmatch'
-cask 'paw'
-cask 'postico'
-cask 'rocket'
-cask 'sequel-pro'
-cask 'slack'
-cask 'sourcetree'
-cask 'spectacle'
-cask 'spotify'
-cask 'steam'
-cask 'sublime-text'
-cask 'teamviewer'
-cask 'transmission'
-cask 'transmit'
-cask 'vagrant'
-cask 'virtualbox'
-cask 'virtualbox-extension-pack'
-cask 'viscosity'
-cask 'visual-studio-code'
-cask 'vlc'
-cask 'whatsapp'
-cask 'wireshark'
-
-# Quicklook
-cask 'qlcolorcode'
-cask 'qlmarkdown'
-cask 'quicklook-json'
-cask 'quicklook-csv'
-cask 'qlstephen'
-
-# Fonts
-cask 'font-source-code-pro'
-cask 'font-source-sans-pro'
-cask 'font-source-serif-pro'
-
-# Install Mac App Store apps
-mas '1Password', id: 443987910
-mas 'Apple Configurator 2', id: 1037126344
-mas 'Cardhop', id: 1290358394
-mas 'DaisyDisk', id: 411643860
-mas 'Deliveries', id: 924726344
-mas 'Drop', id: 1173932628
-mas 'Finances', id: 1218241304
-mas 'Gemini 2', id: 1090488118
-mas 'IconFly', id: 556381974
-mas 'iTranslate', id: 884952790
-mas 'Kaleidoscope', id: 587512244
-mas 'Keynote', id: 409183694
-mas 'Kindle', id: 405399194
-mas 'Lingo', id: 624884154
-mas 'Numbers', id: 409203825
-mas 'Pages', id: 409201541
-mas 'Photo Privacy', id: 428752671
-mas 'Pixelmator', id: 407963104
-mas 'SnippetsLab', id: 1006087419
-mas 'Soulver', id: 413965349
-mas 'Telegram', id: 747648890
-mas 'Things3', id: 904280696
-mas 'The Unarchiver', id: 425424353
-mas 'Trello', id: 1278508951
-mas 'WeChat', id: 836500024
+mas "1Password 7", id: 1333542190
+mas "Cardhop", id: 1290358394
+mas "DaisyDisk", id: 411643860
+mas "Deliveries", id: 924726344
+mas "Drop", id: 1173932628
+mas "Finances", id: 1218241304
+mas "Gemini 2", id: 1090488118
+mas "IconFly", id: 556381974
+mas "iTranslate", id: 884952790
+mas "Kaleidoscope", id: 587512244
+mas "Keynote", id: 409183694
+mas "Keypad", id: 928906884
+mas "Lightweight PDF", id: 1450640351
+mas "Lingo", id: 624884154
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "PDFOptim", id: 621276561
+mas "Photo Privacy", id: 428752671
+mas "Pixelmator", id: 407963104
+mas "Shazam", id: 897118787
+mas "SnippetsLab", id: 1006087419
+mas "Soulver", id: 413965349
+mas "Telegram", id: 747648890
+mas "The Unarchiver", id: 425424353
+mas "Things", id: 904280696
+mas "Trello", id: 1278508951
+mas "WireGuard", id: 1451685025
+mas "Xcode", id: 497799835
