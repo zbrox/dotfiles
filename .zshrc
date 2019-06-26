@@ -37,26 +37,28 @@ export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
 # zsh completions
-zplug "plugins/git", from:oh-my-zsh
-zplug "plugins/git-flow", from:oh-my-zsh
+zplug "plugins/git", from:oh-my-zsh, if:"(( $+commands[git] ))"
+zplug "plugins/git-flow", from:oh-my-zsh, if:"(( $+commands[git] ))"
+
 zplug "plugins/docker", from:oh-my-zsh
 zplug "plugins/osx", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
 zplug "plugins/colorize", from:oh-my-zsh
-zplug "lukechilds/zsh-better-npm-completion", defer:2
-zplug "plugins/cargo", from:oh-my-zsh, defer:2
+zplug "lukechilds/zsh-better-npm-completion"
+zplug "plugins/cargo", from:oh-my-zsh
+zplug "zsh-users/zsh-completions"
 
 # zsh plugins
-zplug "zsh-users/zsh-history-substring-search", defer:2
+zplug "zsh-users/zsh-history-substring-search", defer:3
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-autosuggestions", defer:2
 zplug "tysonwolker/iterm-tab-colors", defer:2
-zplug "jimeh/zsh-peco-history", defer:2
+zplug "jimeh/zsh-peco-history", defer:3
 zplug "paulmelnikow/zsh-startup-timer", defer:2
 
 
 # Load theme file
 # zplug 'themes/ys', from:oh-my-zsh, as:theme
-zplug denysdovhan/spaceship-prompt, use:spaceship.zsh, from:github, as:theme
+zplug "denysdovhan/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
 
 # check if all plugins are installed
 if ! zplug check --verbose; then
