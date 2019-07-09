@@ -75,6 +75,8 @@ brew "zsh"
 brew "zsh-completions"
 brew "filosottile/musl-cross/musl-cross"
 
+cask "1password"
+cask "1password-cli"
 cask "aerial"
 cask "alfred"
 cask "calibre"
@@ -141,7 +143,6 @@ cask "wwdc"
 cask "zeplin"
 cask "zulip"
 
-mas "1Password 7", id: 1333542190
 mas "Cardhop", id: 1290358394
 mas "DaisyDisk", id: 411643860
 mas "Deliveries", id: 924726344
