@@ -7,6 +7,12 @@ export DOTFILES=$HOME/.dotfiles
 # Load aliases
 source $DOTFILES/aliases.zsh
 
+# zsh history
+export HISTSIZE=5000
+export HISTFILE="$HOME/.zsh-history"
+export SAVEHIST=$HISTSIZE
+setopt SHARE_HISTORY
+
 # Preferred editor
 export EDITOR='vim'
 
