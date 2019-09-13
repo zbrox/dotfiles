@@ -55,5 +55,7 @@
         "foreground": "green",
         "type": "none"
     },
-    "todo-tree.ripgrep.ripgrep": "/Applications/Visual Studio Code.app/Contents/Resources/app/node_modules.asar.unpacked/vscode-ripgrep/bin/rg"
+    "todo-tree.ripgrep.ripgrep": "/Applications/Visual Studio Code.app/Contents/Resources/app/node_modules.asar.unpacked/vscode-ripgrep/bin/rg",
+    "editor.fontLigatures": true,
+    "editor.fontFamily": "'Fira Code'"
 }
