@@ -16,6 +16,9 @@ setopt SHARE_HISTORY
 # Preferred editor
 export EDITOR='vim'
 
+# Set vim keybindings
+bindkey -v
+
 # You may need to manually set your language environment
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
