@@ -22,10 +22,6 @@
         "foreground": "green",
         "type": "none"
     },
-    "todo-tree.customHighlight": {
-        "TODO": {},
-        "FIXME": {}
-    },
     "editor.matchBrackets": false,
     "workbench.colorTheme": "Night Blue",
     "editor.renderWhitespace": "all",
@@ -33,7 +29,7 @@
     "editor.renderControlCharacters": true,
     "[markdown]": {
         "editor.wordWrap": "wordWrapColumn",
-        "editor.quickSuggestions": false,
+        "editor.quickSuggestions": false
     },
     "workbench.startupEditor": "newUntitledFile",
     "[json]": {
@@ -44,5 +40,20 @@
     },
     "[jsonc]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "todo-tree.highlights.customHighlight": {
+        "TODO": {},
+        "FIXME": {}
+    },
+    "todo-tree.highlights.defaultHighlight": {
+        "foreground": "green",
+        "type": "none"
+    },
+    "todo-tree.ripgrep.ripgrep": "/Applications/Visual Studio Code.app/Contents/Resources/app/node_modules.asar.unpacked/vscode-ripgrep/bin/rg"
 }
