@@ -90,3 +90,6 @@ fpath=(~/.zsh $fpath)
 
 # direnv
 eval "$(direnv hook zsh)"
+
+# qt
+export PATH="/usr/local/opt/qt/bin:$PATH"
