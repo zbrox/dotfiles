@@ -50,3 +50,5 @@
     ui = auto
 [status]
     showUntrackedFiles = all
+[credential "https://github.com"]
+    username = "zbrox"
