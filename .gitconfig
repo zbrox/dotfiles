@@ -16,7 +16,7 @@
     name = Rostislav Raykov
     email = z@zbrox.org
 [core]
-    editor = subl -n -w
+    editor = code --wait
     excludesfile = ~/.dotfiles/.gitignore_global
     pager = delta --dark
 [difftool "sourcetree"]
