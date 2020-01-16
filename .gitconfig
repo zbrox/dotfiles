@@ -52,3 +52,7 @@
     showUntrackedFiles = all
 [credential "https://github.com"]
     username = "zbrox"
+[pull]
+	rebase = true
+[rebase]
+	autostash = true
