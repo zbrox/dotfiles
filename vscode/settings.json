@@ -12,7 +12,8 @@
     "workbench.statusBar.feedback.visible": false,
     "editor.detectIndentation": false,
     "files.associations": {
-        "**/*.css": "postcss"
+        "**/*.css": "postcss",
+        "*.css": "css"
     },
     "typescript.updateImportsOnFileMove.enabled": "always",
     "breadcrumbs.enabled": true,
