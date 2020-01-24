@@ -6,7 +6,7 @@
     "editor.minimap.enabled": false,
     "window.zoomLevel": 0,
     "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
-    "terminal.integrated.fontFamily": "JetBrains Mono",
+    "terminal.integrated.fontFamily": "Source Code Pro",
     "todo-tree.ripgrep": "/Applications/Visual Studio Code.app/Contents/Resources/app/node_modules.asar.unpacked/vscode-ripgrep/bin/rg",
     "extensions.ignoreRecommendations": false,
     "workbench.statusBar.feedback.visible": false,
