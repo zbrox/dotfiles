@@ -55,6 +55,7 @@ zplug "plugins/colorize", from:oh-my-zsh
 zplug "lukechilds/zsh-better-npm-completion"
 zplug "plugins/cargo", from:oh-my-zsh
 zplug "zsh-users/zsh-completions"
+zplug "nnao45/zsh-kubectl-completion"
 
 # zsh plugins
 zplug "zsh-users/zsh-history-substring-search", defer:3
