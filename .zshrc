@@ -65,11 +65,6 @@ zplug "tysonwolker/iterm-tab-colors", defer:2
 zplug "jimeh/zsh-peco-history", defer:3
 zplug "paulmelnikow/zsh-startup-timer", defer:2
 
-
-# Load theme file
-# zplug 'themes/ys', from:oh-my-zsh, as:theme
-zplug "denysdovhan/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
-
 # check if all plugins are installed
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "
@@ -99,3 +94,6 @@ export PATH="/usr/local/opt/qt/bin:$PATH"
 export OPENSSL_INCLUDE_DIR=`brew --prefix openssl`/include
 export OPENSSL_LIB_DIR=`brew --prefix openssl`/lib
 export DEP_OPENSSL_INCLUDE=`brew --prefix openssl`/include
+
+# init starship prompt
+eval "$(starship init zsh)"
