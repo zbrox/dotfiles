@@ -73,5 +73,9 @@
     "javascript.updateImportsOnFileMove.enabled": "always",
     "git.confirmSync": false,
     "git.autofetch": true,
-    "python.pythonPath": "/usr/local/bin/python3"
+    "python.pythonPath": "/usr/local/bin/python3",
+    "yaml.schemas": {
+        "file:///Users/zbrox/.vscode/extensions/me-dutour-mathieu.vscode-github-actions-2.2.7/schemas/workflow.schema.json": "/.github/workflows/*.yml",
+        "file:///Users/zbrox/.vscode/extensions/me-dutour-mathieu.vscode-github-actions-2.2.7/schemas/action.schema.json": "/action.yml"
+    }
 }
