@@ -68,5 +68,10 @@
     "[rust]": {
         "editor.defaultFormatter": "matklad.ra-lsp"
     },
-    "prettier.arrowParens": "always"
+    "prettier.arrowParens": "always",
+    "debug.allowBreakpointsEverywhere": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "git.confirmSync": false,
+    "git.autofetch": true,
+    "python.pythonPath": "/usr/local/bin/python3"
 }
