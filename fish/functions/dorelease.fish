@@ -15,14 +15,3 @@ function dorelease
         end
     end
 end
-
-function versionbump
-    set -l VERSION (git symbolic-ref HEAD | cut -d'/' -f4)
-
-    if test -Z $VERSION
-        echo "You're not on a version branch"
-        return 1
-    end
-
-    git commit -m "chore: Bump up version number to $VERSION"
-end
