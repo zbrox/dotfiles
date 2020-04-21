@@ -20,7 +20,8 @@ brew tap homebrew/bundle
 brew bundle
 
 # Make ZSH the default shell environment
-chsh -s $(which zsh)
+# don't forget to add $(which fish) to /etc/shells
+chsh -s $(which fish)
 
 # Set macOS preferences
 # We will run this last because this will reload the shell

@@ -1,3 +1,5 @@
+#! /bin/bash
+
 DOTFILES=~/.dotfiles
 
 # ZSH
@@ -28,4 +30,12 @@ else
 	else
 		echo "VSCode snippets folder exists. Remove it and rerun."
 	fi
+fi
+
+# Fish
+if [ -e ~/.config/fish ]; then
+	echo "~/.config/fish already exists"
+else
+    mkdir -p ~/.config
+	ln -s $DOTFILES/fish ~/.config/fish
 fi
