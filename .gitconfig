@@ -14,8 +14,8 @@
 [diff]
     tool = Kaleidoscope
 [user]
-    name = Rostislav Raykov
-    email = z@zbrox.org
+	name = Rostislav Raykov
+	email = z@zbrox.org
 [core]
     editor = code --wait
     excludesfile = ~/.dotfiles/.gitignore_global
