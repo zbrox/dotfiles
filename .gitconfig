@@ -31,7 +31,7 @@
     followTags = true
 [alias]
     # View abbreviated SHA, description, and history graph of the latest 20 commits
-    l = log --pretty=format:\"%C(Red)%h  %C(reset)%ad (%C(Green)%cr%C(reset))%x09 %C(Cyan)%an: %C(reset)%s\" -n 20 --graph --abbrev-commit --date=short
+    l = log --pretty=format:\"%C(Red)%h %C(reset)%ad (%C(Green)%cr%C(reset))%x09 %C(Cyan)%an: %C(reset)%s%C(auto)%d\" -n 20 --graph --abbrev-commit --date=short
     # List the remote refs in order of last commit to them
     la = for-each-ref --sort=-committerdate --format='%(committerdate:short) %(refname)' refs/heads refs/remotes
     # Show a list of contributors and their commit count
