@@ -10,7 +10,7 @@ alias l 'exa --all --long --modified --group --header --color-scale'
 # navigating & such
 abbr -a o 'open'
 abbr -a mkdir 'mkdir -pv' # create folders along the path always
-alias search rg -i
+alias search 'rg -i'
 
 # git
 alias c 'git commit -m'
