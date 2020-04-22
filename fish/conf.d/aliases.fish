@@ -13,6 +13,7 @@ abbr -a mkdir 'mkdir -pv' # create folders along the path always
 
 # git
 alias c 'git commit -m'
+alias commit 'git commit -m'
 alias master 'git checkout master'
 alias g 'gitup'
 
