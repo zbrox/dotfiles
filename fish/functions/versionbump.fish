@@ -4,7 +4,7 @@
 function versionbump
     set -l VERSION (git symbolic-ref HEAD | cut -d'/' -f4)
 
-    if test -Z $VERSION
+    if test -z $VERSION
         echo "You're not on a version branch"
         return 1
     end
