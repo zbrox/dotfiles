@@ -24,7 +24,7 @@ alias msgamend 'git commit --amend -m'
 alias copyssh 'pbcopy < $HOME/.ssh/id_rsa.pub'
 
 # fish reload
-alias reloadcli 'source $HOME/.config/fish/config.fish'
+alias reloadcli 'source $HOME/.config/fish/config.fish; and for i in $HOME/.config/fish/conf.d/*.fish; source $i; end;'
 
 # dns
 alias reloaddns 'dscacheutil -flushcache; and sudo killall -HUP mDNSResponder'
