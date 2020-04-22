@@ -17,6 +17,8 @@ alias c 'git commit -m'
 alias commit 'git commit -m'
 alias master 'git checkout master'
 alias g 'gitup'
+alias amend 'git commit --amend --no-edit'
+alias msgamend 'git commit --amend -m'
 
 # ssh
 alias copyssh 'pbcopy < $HOME/.ssh/id_rsa.pub'
