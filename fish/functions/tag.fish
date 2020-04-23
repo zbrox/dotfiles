@@ -1,4 +1,4 @@
-function tag
+function tag --description "A shorter way to tag a commit with the same message as the version"
     set -l VERSION $argv[1]
     
     if not is_version $VERSION
