@@ -26,3 +26,5 @@ alias copyssh 'pbcopy < $HOME/.ssh/id_rsa.pub'
 # dns
 alias reloaddns 'dscacheutil -flushcache; and sudo killall -HUP mDNSResponder'
 
+# Python
+alias pyactivate 'source bin/activate.fish'
