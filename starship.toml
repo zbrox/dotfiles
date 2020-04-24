@@ -1,0 +1,5 @@
+# documentation at https://starship.rs/config
+
+[character]
+symbol = "➜"
+error_symbol = "✗"

@@ -39,3 +39,11 @@ else
     mkdir -p ~/.config
 	ln -s $DOTFILES/fish ~/.config/fish
 fi
+
+# Starship
+if [ -e ~/.config/starship.toml ]; then
+	echo "~/.config/starship.toml already exists"
+else
+    mkdir -p ~/.config
+	ln -s $DOTFILES/starship.toml ~/.config/starship.toml
+fi
