@@ -47,3 +47,10 @@ else
     mkdir -p ~/.config
 	ln -s $DOTFILES/starship.toml ~/.config/starship.toml
 fi
+
+# Tmux
+if [ -e ~/.tmux.conf ]; then
+	echo "~/.tmux.conf already exists"
+else
+    source $DOTFILES/tmux/install.sh
+fi
