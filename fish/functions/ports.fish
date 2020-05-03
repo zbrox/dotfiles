@@ -6,6 +6,8 @@ function ports --argument name --description "Fetch commonly used ports by servi
             echo 9042
         case redis
             echo 6379
+        case elastic
+            echo 9200 9300
         case '*'
             echo ''
     end
