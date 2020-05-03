@@ -8,5 +8,5 @@ function fish_greeting
     set -a GREETINGS "Knock knock"
     set -a GREETINGS "Look at how fast this was!"
 
-    printf (set_color red)"%s\n" (random choice $GREETINGS)
+    printf (set_color red)"%s\n" (random choice $GREETINGS) (set_color normal)
 end
