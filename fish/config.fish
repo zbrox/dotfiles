@@ -10,3 +10,6 @@ end
 
 # Starship prompt
 starship init fish | source
+
+# initialize nix
+fenv source "$HOME/.nix-profile/etc/profile.d/nix.sh"
