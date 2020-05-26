@@ -20,6 +20,7 @@ abbr -a g 'gitup'
 abbr -a amend 'git commit --amend --no-edit'
 abbr -a msgamend 'git commit --amend -m'
 abbr -a гит 'git' # keep forgetting to change keyboard layouts
+abbr -a rmtag 'git tag --delete'
 
 # ssh
 alias copyssh 'pbcopy < $HOME/.ssh/id_rsa.pub'
