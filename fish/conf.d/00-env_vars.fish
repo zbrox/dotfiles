@@ -25,6 +25,9 @@ set -x PATH $PATH /usr/local/opt/qt/bin
 # Homebrew
 set -x HOMEBREW_AUTO_UPDATE_SECS 3600
 
+# Fix some issues with openssl and homebrew
+set -x DYLD_FALLBACK_LIBRARY_PATH /usr/local/opt/openssl/lib
+
 # load private env file
 posix-source $DOTFILES/.env_private
 
