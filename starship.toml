@@ -3,3 +3,8 @@
 [character]
 symbol = "➜"
 error_symbol = "✗"
+
+[cmd_duration]
+min_time = 500
+show_milliseconds = true
+prefix = "отне "
