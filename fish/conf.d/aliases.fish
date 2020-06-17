@@ -1,11 +1,11 @@
 # Thanks again, Pascal https://github.com/killercup/pascastle/blob/master/home/.config/fish/conf.d/shortcuts.fish
 
 # replacement of common tools
-alias ls 'exa'
-alias cat 'bat'
+abbr -a ls 'exa'
+abbr -a cat 'bat'
 
 # pretty list
-alias l 'exa --all --long --modified --group --header --color-scale'
+abbr -a l 'exa --all --long --modified --group --header --color-scale'
 
 # navigating & such
 abbr -a o 'open'
