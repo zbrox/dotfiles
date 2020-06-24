@@ -1,5 +1,5 @@
 function new_post
-    set -l CONTENT_DIR "content/"
+    set -l CONTENT_DIR "content/posts/"
     set -l SLUG $argv[1]
 
     if test -z "$SLUG"
