@@ -10,7 +10,6 @@
     "todo-tree.ripgrep": "/Applications/Visual Studio Code.app/Contents/Resources/app/node_modules.asar.unpacked/vscode-ripgrep/bin/rg",
     "extensions.ignoreRecommendations": false,
     "workbench.statusBar.feedback.visible": false,
-    "editor.detectIndentation": false,
     "files.associations": {
         "**/*.css": "postcss",
         "*.css": "css"
