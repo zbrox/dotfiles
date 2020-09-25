@@ -2,5 +2,5 @@ function sync-fork --argument branch --description "Sync a branch (default is ma
     set -q branch or set branch "master"
     git fetch upstream
     git checkout $branch
-    git merge upstream/$branch
+    git rebase upstream/$branch
 end
