@@ -54,3 +54,11 @@ if [ -e ~/.tmux.conf ]; then
 else
     source $DOTFILES/tmux/install.sh
 fi
+
+# Alacritty
+if [ -e ~/.alacritty.yml ]; then
+	echo "~/.alacritty.yml already exists"
+else
+	mkdir -p ~/.config
+	ln -s $DOTFILES/alacritty ~/.config/alacritty
+fi
