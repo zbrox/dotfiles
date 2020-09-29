@@ -8,3 +8,6 @@ error_symbol = "✗"
 min_time = 500
 show_milliseconds = true
 prefix = "отне "
+
+[python]
+pyenv_version_name = true
