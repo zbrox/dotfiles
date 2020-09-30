@@ -2,18 +2,11 @@
 
 DOTFILES=~/.dotfiles
 
-# ZSH
-if [ -e ~/.zshrc ]; then
-	echo ".zshrc already exists"
-else
-	ln -s $DOTFILES/.zshrc ~/.zshrc
-fi
-
 # GIT
 if [ -e ~/.gitconfig ]; then
         echo ".gitconfig already exists"
 else
-        ln -s $DOTFILES/.gitconfig ~/.gitconfig
+        ln -s $DOTFILES/git/.gitconfig ~/.gitconfig
 fi
 
 # VSCode
@@ -45,7 +38,7 @@ if [ -e ~/.config/starship.toml ]; then
 	echo "~/.config/starship.toml already exists"
 else
     mkdir -p ~/.config
-	ln -s $DOTFILES/starship.toml ~/.config/starship.toml
+	ln -s $DOTFILES/starship/starship.toml ~/.config/starship.toml
 fi
 
 # Tmux

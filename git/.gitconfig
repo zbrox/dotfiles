@@ -18,7 +18,7 @@
 	email = z@zbrox.org
 [core]
     editor = code --wait
-    excludesfile = ~/.dotfiles/.gitignore_global
+    excludesfile = ~/.dotfiles/git/.gitignore_global
     pager = delta --dark
 [difftool "sourcetree"]
 	cmd = /usr/local/bin/ksdiff -w \"$LOCAL\" \"$REMOTE\"
@@ -45,7 +45,7 @@
     # List all branches
     branches = branch -a
 [commit]
-    template = ~/.dotfiles/.gitcommitmsg
+    template = ~/.dotfiles/git/.gitcommitmsg
     cleanup = strip
 [color]
     ui = auto
