@@ -1,6 +1,6 @@
 # My dotfiles
 
-Initially based on https://github.com/driesvints/dotfiles
+Initially based on [https://github.com/driesvints/dotfiles](https://github.com/driesvints/dotfiles)
 
 ## Setup
 
