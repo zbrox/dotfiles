@@ -44,7 +44,7 @@ sudo xcodebuild -license accept
 # Install all our dependencies with bundle (See Brewfile)
 echo "Installing programs listed in Brewfile..."
 brew tap homebrew/bundle
-brew bundle macos/Brewfile
+brew bundle install --file macos/Brewfile
 
 # Set macOS preferences
 # We will run this last because this will reload the shell
