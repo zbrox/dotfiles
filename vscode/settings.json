@@ -77,5 +77,6 @@
     "rust-analyzer.cargoFeatures.loadOutDirsFromCheck": true,
     "liveshare.presence": false,
     "editor.formatOnSaveMode": "modifications",
-    "tabnine.experimentalAutoImports": true
+    "tabnine.experimentalAutoImports": true,
+    "python.languageServer": "Pylance"
 }
