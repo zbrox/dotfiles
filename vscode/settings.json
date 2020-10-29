@@ -78,5 +78,8 @@
     "liveshare.presence": false,
     "editor.formatOnSaveMode": "modifications",
     "tabnine.experimentalAutoImports": true,
-    "python.languageServer": "Pylance"
+    "python.languageServer": "Pylance",
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python"
+    }
 }
