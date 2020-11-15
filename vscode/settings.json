@@ -12,7 +12,8 @@
     "workbench.statusBar.feedback.visible": false,
     "files.associations": {
         "**/*.css": "postcss",
-        "*.css": "css"
+        "*.css": "css",
+        "*.journal": "ledger"
     },
     "typescript.updateImportsOnFileMove.enabled": "always",
     "breadcrumbs.enabled": true,
