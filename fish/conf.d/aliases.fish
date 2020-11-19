@@ -32,3 +32,7 @@ alias reloaddns 'dscacheutil -flushcache; and sudo killall -HUP mDNSResponder'
 
 # Python
 alias pyactivate 'source bin/activate.fish'
+
+# nix
+alias nixos-switch 'sudo nixos-rebuild switch'
+alias nixos-update 'sudo nix-channel --update'
