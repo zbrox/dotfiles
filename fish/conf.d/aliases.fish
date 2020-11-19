@@ -36,3 +36,4 @@ alias pyactivate 'source bin/activate.fish'
 # nix
 alias nixos-switch 'sudo nixos-rebuild switch'
 alias nixos-update 'sudo nix-channel --update'
+alias nixos-clean-all 'sudo nix-collect-garbage -d'
