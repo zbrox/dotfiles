@@ -82,5 +82,6 @@
     "python.languageServer": "Pylance",
     "[python]": {
         "editor.defaultFormatter": "ms-python.python"
-    }
+    },
+    "rust-analyzer.cargo.loadOutDirsFromCheck": true
 }
