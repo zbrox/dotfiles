@@ -21,8 +21,8 @@ abbr -a amend 'git commit --amend --no-edit'
 abbr -a msgamend 'git commit --amend -m'
 abbr -a гит 'git' # keep forgetting to change keyboard layouts
 abbr -a rmtag 'git tag --delete'
-abbr -a push 'git push'
-abbr -a pull 'git pull'
+alias push 'git push'
+alias pull 'git pull'
 
 # ssh
 alias copyssh 'pbcopy < $HOME/.ssh/id_rsa.pub'
