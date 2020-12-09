@@ -83,5 +83,8 @@
     "[python]": {
         "editor.defaultFormatter": "ms-python.python"
     },
-    "rust-analyzer.cargo.loadOutDirsFromCheck": true
+    "rust-analyzer.cargo.loadOutDirsFromCheck": true,
+    "terminal.integrated.shell.linux": "/run/current-system/sw/bin/fish",
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false
 }
