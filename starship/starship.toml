@@ -8,3 +8,4 @@ error_symbol = "✗"
 min_time = 500
 show_milliseconds = true
 format = "отне [$duration]($style) "
+show_notifications = true
