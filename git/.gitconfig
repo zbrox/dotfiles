@@ -44,6 +44,8 @@
     stash-all = stash save --include-untracked
     # List all branches
     branches = branch -a
+    # List latest 5 tags
+    lt = log --pretty=format:\"%C(Red)%h %C(reset)%ad (%C(Green)%cr%C(reset))%x09 %C(Cyan)%an: %C(reset)%s%C(auto)%d\" -n 5 --abbrev-commit --date=short --tags --no-walk
 [commit]
     template = ~/.dotfiles/git/.gitcommitmsg
     cleanup = strip
