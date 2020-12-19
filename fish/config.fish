@@ -12,6 +12,6 @@ end
 starship init fish | source
 
 # initialize nix
-if test -e "$HOME/.nix-profile/etc/profile.d/nix.shd"
+if test -e "$HOME/.nix-profile/etc/profile.d/nix.sh"
     fenv source "$HOME/.nix-profile/etc/profile.d/nix.sh"
 end
