@@ -28,6 +28,7 @@ symlink_file git/.gitconfig ~/.gitconfig
 
 # VSCode
 symlink_file vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
+symlink_file vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
 symlink_dir vscode/snippets ~/Library/Application\ Support/Code/User/snippets
 
 # Fish
