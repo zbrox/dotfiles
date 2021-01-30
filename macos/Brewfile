@@ -1,9 +1,9 @@
 tap "akeru-inc/tap"
 tap "cjbassi/ytop"
 tap "clementtsang/bottom"
-tap "dandavison/delta", "https://github.com/dandavison/delta"
 tap "dtan4/dtan4"
 tap "filosottile/musl-cross"
+tap "hashicorp/tap"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
@@ -16,8 +16,8 @@ tap "nektos/tap"
 tap "zbrox/repo"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@1.1"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.8"
+# Tool Command Language
+brew "tcl-tk"
 # Automate deployment, configuration, and upgrading
 brew "ansible"
 # Collection of portable C++ source libraries
@@ -34,8 +34,12 @@ brew "asciidoctor"
 brew "atool"
 # Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
+# Terminal bandwidth utilization tool
+brew "bandwhich"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Garbage collector for C and C++
+brew "bdw-gc"
 # Compiler infrastructure and toolchain library for WebAssembly
 brew "binaryen"
 # Parser generator
@@ -50,26 +54,24 @@ brew "cairo"
 brew "cargo-instruments"
 # Decentralized dependency manager for Cocoa
 brew "carthage"
-# Display user-friendly message boxes from shell scripts
-brew "dialog"
 # Cross-platform make
 brew "cmake"
 # Dependency manager for Cocoa projects
 brew "cocoapods"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
+# Display user-friendly message boxes from shell scripts
+brew "dialog"
 # Load/unload environment variables based on $PWD
 brew "direnv"
 # Minimal, fast alternative to 'du -sh'
 brew "diskus"
 # Command-line tool for DigitalOcean
 brew "doctl"
+# Command-line DNS client
+brew "dog"
 # More intuitive version of du in rust
 brew "dust"
-# Cross-platform C++ GUI toolkit (wxWidgets for macOS)
-brew "wxmac"
-# Programming language for highly scalable real-time systems
-brew "erlang"
 # Modern replacement for 'ls'
 brew "exa"
 # Command-line tool to interact with exercism.io
@@ -88,34 +90,62 @@ brew "webp"
 brew "ghostscript"
 # Distributed revision control system
 brew "git"
+# Syntax-highlighting pager for git and diff output
+brew "git-delta"
 # Extensions to follow Vincent Driessen's branching model
 brew "git-flow"
 # Git extension for versioning large files
 brew "git-lfs"
 # Official GitLab CI runner
 brew "gitlab-runner"
+# Callback framework for C++
+brew "libsigc++"
 # C++ interface to glib
 brew "glibmm"
 # Command-line option parsing utility
 brew "gnu-getopt"
 # GNU implementation of the famous stream editor
 brew "gnu-sed"
+# GNU Ubiquitous Intelligent Language for Extensions
+brew "guile"
+# Asynchronous event library
+brew "libev"
 # Validating, recursive, caching DNS resolver
 brew "unbound"
 # GNU Transport Layer Security (TLS) Library
 brew "gnutls"
 # GNU Pretty Good Privacy (PGP) package
 brew "gnupg"
+# Generate introspection data for GObject libraries
+brew "gobject-introspection"
+# Library for manipulating JPEG-2000 images
+brew "jasper"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.8"
+# OpenType text shaping engine
+brew "harfbuzz"
+# Graph visualization software from AT&T and Bell Labs
+brew "graphviz"
 # Colorize logfiles and command output
 brew "grc"
 # GNU grep, egrep and fgrep
 brew "grep"
+# Command-line tool for generating regular expressions
+brew "grex"
 # Kubernetes package manager
 brew "helm"
+# Powerful, lightweight programming language
+brew "lua"
 # Convert source code to formatted text with syntax highlighting
 brew "highlight"
+# Easy plain text accounting with command-line, terminal and web UIs
+brew "hledger"
 # Improved top (interactive process viewer)
 brew "htop"
+# Platform built on V8 to build network applications
+brew "node"
+# Simple zero-configuration command-line HTTP server
+brew "http-server"
 # Command-line benchmarking tool
 brew "hyperfine"
 # Database of common MIME types
@@ -136,10 +166,12 @@ brew "jq"
 brew "kind"
 # Tool to move from `docker-compose` to Kubernetes
 brew "kompose"
-# Asynchronous event library
-brew "libev"
-# Callback framework for C++
-brew "libsigc++"
+# Kubernetes command-line interface
+brew "kubernetes-cli", link: false
+# Command-line, double-entry accounting tool
+brew "ledger"
+# Postgres C API library
+brew "libpq"
 # C library implementing the SSH2 protocol
 brew "libssh2"
 # C websockets server library
@@ -164,12 +196,12 @@ brew "minikube"
 brew "miniserve"
 # Simple tool to make locally trusted development certificates
 brew "mkcert"
+# Protocol buffers (Google's data interchange format)
+brew "protobuf"
 # Remote terminal application
 brew "mosh"
 # Port scanning utility for large networks
 brew "nmap"
-# Platform built on V8 to build network applications
-brew "node"
 # Libraries for security-enabled client and server applications
 brew "nss"
 # Manage multiple Node.js versions
@@ -184,28 +216,32 @@ brew "qt"
 brew "poppler"
 # Search PDFs for strings matching a regular expression
 brew "pdfgrep"
+# Object-relational database system
+brew "postgresql"
 # Convert bitmaps to vector graphics
 brew "potrace"
 # Modern replacement for ps written by Rust
 brew "procs"
 # Go support for Google's protocol buffers
 brew "protoc-gen-go"
+# Python version management
+brew "pyenv"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Intuitive find & replace CLI
 brew "sd"
 # Cross-shell prompt for astronauts
 brew "starship"
-# Tool Command Language
-brew "tcl-tk"
 # User interface to the TELNET protocol
 brew "telnet"
 # Tool to build, change, and version infrastructure
 brew "terraform"
+# Tool to build, change, and version infrastructure
+brew "terraform@0.12"
+# Clean C library for processing UTF-8 Unicode data
+brew "utf8proc"
 # Terminal multiplexer
 brew "tmux"
-# Manage complex tmux sessions easily
-brew "tmuxinator"
 # Program that allows you to count code, quickly
 brew "tokei"
 # CLI tool that moves files or folder to the trash
@@ -234,29 +270,46 @@ brew "akeru-inc/tap/xcnotary"
 brew "cjbassi/ytop/ytop"
 # A cross-platform graphical process/system monitor with a customizable interface and a multitude of features.
 brew "clementtsang/bottom/bottom"
-# A viewer for git and diff output
-brew "dandavison/delta/git-delta"
 # `tail -f` experience for Kubernetes Pods
 brew "dtan4/dtan4/k8stail"
 # Linux cross compilers based on musl libc
 brew "filosottile/musl-cross/musl-cross"
+# Vault
+brew "hashicorp/tap/vault"
 # A simple terminal UI for docker, written in Go
 brew "jesseduffield/lazydocker/lazydocker"
 # Run GitHub Actions locally
 brew "nektos/tap/act"
+# Password manager that keeps all passwords secure behind one password
+cask "1password"
+# View, print, and comment on PDF documents
+cask "adobe-acrobat-reader"
 cask "aerial"
+# GPU-accelerated terminal emulator
 cask "alacritty"
+# Application launcher and productivity software
 cask "alfred"
+# Menu bar icon organizer
 cask "bartender"
+# Utility to display the output from any script or program in the menu bar
 cask "bitbar"
+# E-books management software
 cask "calibre"
-cask "cheatsheet"
+# Automated testing of webapps for Google Chrome
 cask "chromedriver"
+# Clipboard extension app
+cask "clipy"
+# Multi-platform client-side cloud file encryption tool
 cask "cryptomator"
+# API documentation browser and code snippet manager
 cask "dash"
+# Voice and text chat software
 cask "discord"
+# App to build and share containerized applications and microservices
 cask "docker"
 cask "etcher"
+# Official CLI tool for Concourse CI
+cask "fly"
 cask "font-anonymice-powerline"
 cask "font-dejavu-sans-mono-for-powerline"
 cask "font-droid-sans-mono-for-powerline"
@@ -265,6 +318,7 @@ cask "font-fira-mono-for-powerline"
 cask "font-inconsolata-dz-for-powerline"
 cask "font-inconsolata-for-powerline"
 cask "font-inconsolata-g-for-powerline"
+# Typeface made for developers
 cask "font-jetbrains-mono"
 cask "font-liberation-mono-for-powerline"
 cask "font-menlo-for-powerline"
@@ -274,63 +328,86 @@ cask "font-noto-mono-for-powerline"
 cask "font-roboto-mono-for-powerline"
 cask "font-source-code-pro"
 cask "font-source-code-pro-for-powerline"
+# Fonts designed for user interfaces
 cask "font-source-sans-pro"
 cask "font-source-serif-pro"
 cask "font-ubuntu-mono-derivative-powerline"
-cask "gitter"
+# Git interface focused on visual interaction
 cask "gitup"
+# Web browser
 cask "google-chrome"
+# Open-source video transcoder
 cask "handbrake"
-cask "iterm2"
-cask "keepingyouawake"
-cask "kitematic"
 cask "ksdiff"
+# Music services manager
 cask "lastfm"
+# Open-source Markdown editor
 cask "macdown"
+# Re-mounts write-protected NTFS volumes
 cask "mounty"
 cask "openttd"
+# File system integration
 cask "osxfuse"
+# HTTP client that helps testing and describing APIs
 cask "paw"
+# Home media server
 cask "plex"
+# GUI client for PostgreSQL databases
 cask "postico"
 cask "quicklook-csv"
 cask "quicklook-json"
+# Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
+# Emoji picker optimized for blind people
 cask "rocket"
-cask "screens"
+# MySQL/MariaDB database management platform
 cask "sequel-pro"
+# Instant messaging application focusing on security
+cask "signal"
+# Team communication and collaboration software
 cask "slack"
+# Video game digital distribution service
 cask "steam"
-cask "sublime-text"
+# Remote access and connectivity software focused on security
 cask "teamviewer"
+# Messaging app with a focus on speed and security
+cask "telegram"
+# File transfer application
 cask "transmit"
+# Development environment
 cask "vagrant"
+# Free and open-source hosted hypervisor for x86 virtualization
 cask "virtualbox"
+# AMD64/Intel64 and x86 virtualization
 cask "virtualbox-extension-pack"
+# VPN client for secure internet access and private browsing
 cask "viscosity"
+# Open-source code editor
 cask "visual-studio-code"
+# Multimedia player
 cask "vlc"
+# Desktop client for WhatsApp
 cask "whatsapp"
+# Network protocol analyzer
 cask "wireshark"
+# Allows access to WWDC livestreams, videos and sessions
 cask "wwdc"
-mas "1Password 7", id: 1333542190
 mas "Abyss", id: 1507396839
-mas "Cardhop", id: 1290358394
-mas "CleanMyMac X", id: 1339170533
+mas "Amphetamine", id: 937984704
 mas "DaisyDisk", id: 411643860
 mas "Day One", id: 1055511498
 mas "Developer", id: 640199958
 mas "Diagrams", id: 1276248849
-mas "Downlink", id: 1454269192
 mas "Drop", id: 1173932628
-mas "Finances", id: 1218241304
 mas "Gemini 2", id: 1090488118
 mas "Ghostery Lite", id: 1436953057
 mas "Grammarly for Safari", id: 1462114288
+mas "Hush", id: 1544743900
 mas "IconFly", id: 556381974
 mas "Jira", id: 1475897096
 mas "Kaleidoscope", id: 587512244
 mas "Keynote", id: 409183694
+mas "Klib", id: 1196268448
 mas "Lingo", id: 624884154
 mas "Medis", id: 1063631769
 mas "Messenger", id: 1480068668
@@ -341,13 +418,13 @@ mas "Paprika Recipe Manager 3", id: 1303222628
 mas "PDFOptim", id: 621276561
 mas "Photo Privacy", id: 428752671
 mas "Pixelmator", id: 407963104
+mas "Scrobbles for Last.fm", id: 1344679160
 mas "Shazam", id: 897118787
 mas "SnippetsLab", id: 1006087419
 mas "Soulver", id: 413965349
-mas "Telegram", id: 747648890
 mas "The Unarchiver", id: 425424353
+mas "Theu2007Survivalists", id: 1515959873
 mas "Things", id: 904280696
-mas "ToothFairy", id: 1191449274
-mas "WhatsApp", id: 1147396723
 mas "WireGuard", id: 1451685025
 mas "Xcode", id: 497799835
+mas "Yomu", id: 562211012
