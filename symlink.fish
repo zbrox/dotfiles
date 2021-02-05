@@ -40,6 +40,9 @@ symlink_file starship/starship.toml ~/.config/starship.toml
 # Alacritty
 symlink_dir alacritty ~/.config/alacritty
 
+# Mac
+symlink_file macos/Brewfile ~/.Brewfile
+
 # Tmux
 if test -e ~/.tmux.conf
     echo "Skipping tmux configuration install since ~/.tmux.conf already exists."
