@@ -16,7 +16,7 @@ function symlink_dir --argument dotdir --argument destination
         echo "The destination folder $destination already exists"
     else
         echo "Linking folder $DOTFILES/$dotdir to $destination"
-        ln -s $DOTFILES/$dotfile $destination
+        ln -s $DOTFILES/$dotdir $destination
     end
 end
 
