@@ -1,6 +1,7 @@
 # A lot of this shamelessly copied from Pascal 
 # https://github.com/killercup/pascastle/blob/master/home/.config/fish/conf.d/env_vars.fish
 
+set -x PATH /opt/homebrew/bin $PATH # prefer arm64 brews
 set -x PATH /usr/local/bin $PATH # prefer brews
 set -x PATH $HOME/.bin $PATH # prefer user binaries even more
 set -x PATH $HOME/.local/bin $PATH # prefer user binaries even more
