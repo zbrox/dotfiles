@@ -46,3 +46,8 @@ if type -q brew
 	set -x OPENSSL_INCLUDE_DIR $__brew_prefix_openssl/include
 	set -x OPENSSL_LIB_DIR $__brew_prefix_openssl/lib
 end
+
+if test (uname -p) = "arm"
+	set -x LDFLAGS -L(brew --prefix openssl)/lib
+	set -x CPPFLAGS -I(brew --prefix openssl)/include
+end
