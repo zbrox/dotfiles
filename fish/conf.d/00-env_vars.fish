@@ -42,9 +42,8 @@ set -x EDITOR 'vim'
 
 # Homebrew OpenSSL headers fixes
 if type -q brew
-	set -l __brew_prefix_openssl /usr/local/opt/openssl # (brew --prefix openssl)
-	set -x OPENSSL_INCLUDE_DIR $__brew_prefix_openssl/include
-	set -x OPENSSL_LIB_DIR $__brew_prefix_openssl/lib
+	set -x OPENSSL_INCLUDE_DIR (brew --prefix openssl)/include
+	set -x OPENSSL_LIB_DIR (brew --prefix openssl)/lib
 end
 
 if test (uname -p) = "arm"
