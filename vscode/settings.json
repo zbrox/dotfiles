@@ -86,5 +86,8 @@
     "rust-analyzer.cargo.loadOutDirsFromCheck": true,
     "terminal.integrated.shell.linux": "/run/current-system/sw/bin/fish",
     "telemetry.enableTelemetry": false,
-    "telemetry.enableCrashReporter": false
+    "telemetry.enableCrashReporter": false,
+    "markdownlint.config": {
+        "MD024": { "siblings_only": true }
+    }
 }
