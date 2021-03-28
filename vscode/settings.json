@@ -7,9 +7,7 @@
     "window.zoomLevel": 0,
     "terminal.integrated.shell.osx": "fish",
     "terminal.integrated.fontFamily": "Source Code Pro",
-    "todo-tree.ripgrep": "/Applications/Visual Studio Code.app/Contents/Resources/app/node_modules.asar.unpacked/vscode-ripgrep/bin/rg",
     "extensions.ignoreRecommendations": false,
-    "workbench.statusBar.feedback.visible": false,
     "files.associations": {
         "**/*.css": "postcss",
         "*.css": "css",
@@ -19,12 +17,7 @@
     "breadcrumbs.enabled": true,
     "window.openFoldersInNewWindow": "on",
     "window.nativeTabs": true,
-    "todo-tree.defaultHighlight": {
-        "foreground": "green",
-        "type": "none"
-    },
-    "editor.matchBrackets": false,
-    "workbench.colorTheme": "SynthWave '84",
+    "editor.matchBrackets": "never",
     "editor.renderWhitespace": "all",
     "terminal.integrated.rendererType": "dom",
     "editor.renderControlCharacters": true,
@@ -75,19 +68,27 @@
     "git.autofetch": true,
     "python.pythonPath": "/usr/local/bin/python3",
     "rust-analyzer.checkOnSave.command": "clippy",
-    "rust-analyzer.cargoFeatures.loadOutDirsFromCheck": true,
-    "liveshare.presence": false,
     "editor.formatOnSaveMode": "modifications",
-    "tabnine.experimentalAutoImports": true,
     "python.languageServer": "Pylance",
     "[python]": {
         "editor.defaultFormatter": "ms-python.python"
     },
-    "rust-analyzer.cargo.loadOutDirsFromCheck": true,
     "terminal.integrated.shell.linux": "/run/current-system/sw/bin/fish",
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
     "markdownlint.config": {
         "MD024": { "siblings_only": true }
-    }
+    },
+    "gitlens.defaultTimeFormat": "hh:mm",
+    "gitlens.defaultDateFormat": "YY-MM-DD hh:mm",
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+    "[xml]": {
+        "editor.defaultFormatter": "redhat.vscode-xml"
+    },
+    "todo-tree.tree.showScanModeButton": false
 }
