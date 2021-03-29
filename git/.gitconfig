@@ -61,3 +61,5 @@
 	autostash = true
 [rerere]
 	enabled = 1
+[fetch]
+	pruneTags = true
