@@ -80,12 +80,9 @@
     },
     "gitlens.defaultTimeFormat": "hh:mm",
     "gitlens.defaultDateFormat": "YY-MM-DD hh:mm",
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
     "[xml]": {
         "editor.defaultFormatter": "redhat.vscode-xml"
     },
