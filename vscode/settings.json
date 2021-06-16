@@ -6,7 +6,7 @@
     "editor.minimap.enabled": false,
     "window.zoomLevel": 0,
     "terminal.integrated.shell.osx": "fish",
-    "terminal.integrated.fontFamily": "Source Code Pro",
+    "terminal.integrated.fontFamily": "Source Code Pro for Powerline",
     "extensions.ignoreRecommendations": false,
     "files.associations": {
         "**/*.css": "postcss",
