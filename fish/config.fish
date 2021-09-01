@@ -11,6 +11,9 @@ end
 # Starship prompt
 starship init fish | source
 
+# McFly
+mcfly init fish | source
+
 # initialize nix
 if test -e "$HOME/.nix-profile/etc/profile.d/nix.sh"
     fenv source "$HOME/.nix-profile/etc/profile.d/nix.sh"
