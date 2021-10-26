@@ -18,3 +18,8 @@ mcfly init fish | source
 if test -e "$HOME/.nix-profile/etc/profile.d/nix.sh"
     fenv source "$HOME/.nix-profile/etc/profile.d/nix.sh"
 end
+
+# # setup nix-darwin
+# if test -e /etc/static/fish/config.fish
+#     source /etc/static/fish/config.fish
+# end
