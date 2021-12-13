@@ -115,4 +115,7 @@
         "**/zshenv": true,
         "**/*.zsh-theme": true
     }
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "editor.guides.bracketPairs": "active"
 }
