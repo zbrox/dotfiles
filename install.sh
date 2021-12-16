@@ -2,6 +2,10 @@
 
 echo "Setting up your Mac..."
 
+# Ask for the administrator password upfront
+echo "Admin password:"
+sudo -v
+
 # Check for Homebrew and install if we don't have it
 if test ! "$(which brew)"; then
   echo "Installing Homebrew..."
