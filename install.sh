@@ -31,6 +31,9 @@ if ! grep -Fxq "$(which fish)" /etc/shells; then
   exit 1
 fi
 
+echo "Symlink stuff..."
+fish symlink.fish
+
 echo "Setting Fish as the default shell for the user..."
 chsh -s "$(which fish)"
 
