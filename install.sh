@@ -3,7 +3,7 @@
 echo "Setting up your Mac..."
 
 # Check for Homebrew and install if we don't have it
-if test ! $(which brew); then
+if test ! "$(which brew)"; then
   echo "Installing Homebrew..."
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 else
@@ -18,17 +18,17 @@ brew update
 echo "Installing Fish shell..."
 brew install fish
 # Make Fish the default shell
-if ! grep -Fxq $(which fish) /etc/shells; then
+if ! grep -Fxq "$(which fish)" /etc/shells; then
   echo "Adding $(which fish) to list of shells..."
   echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
 fi
-if ! grep -Fxq $(which fish) /etc/shells; then
+if ! grep -Fxq "$(which fish)" /etc/shells; then
   echo "There was no error but still $(which fish) is not in /etc/shells. Add manually and rerun install script."
   exit 1
 fi
 
 echo "Setting Fish as the default shell for the user..."
-chsh -s $(which fish)
+chsh -s "$(which fish)"
 
 # Install mas for installing from the Mac App Store
 echo "Installing Mac App Store install utility..."
