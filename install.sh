@@ -42,8 +42,8 @@ echo "Installing Mac App Store install utility..."
 brew install mas
 
 # install Xcode separately
-echo "Installing Xcode..."
-mas install 497799835
+echo "Installing Xcode developer tools..."
+xcode-select --install
 
 echo "Confirm the accepting of the Xcode license"
 sudo xcodebuild -license accept
