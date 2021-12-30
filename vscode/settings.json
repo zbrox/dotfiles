@@ -5,7 +5,6 @@
     ],
     "editor.minimap.enabled": false,
     "window.zoomLevel": 0,
-    "terminal.integrated.shell.osx": "fish",
     "terminal.integrated.fontFamily": "Source Code Pro for Powerline",
     "extensions.ignoreRecommendations": false,
     "files.associations": {
@@ -65,7 +64,7 @@
     "javascript.updateImportsOnFileMove.enabled": "always",
     "git.confirmSync": false,
     "git.autofetch": true,
-    "python.pythonPath": "/usr/local/bin/python3",
+    "python.pythonPath": "/opt/homebrew/bin/python3",
     "rust-analyzer.checkOnSave.command": "clippy",
     "editor.formatOnSaveMode": "modifications",
     "python.languageServer": "Pylance",
@@ -73,6 +72,7 @@
         "editor.defaultFormatter": "ms-python.python"
     },
     "terminal.integrated.shell.linux": "/run/current-system/sw/bin/fish",
+    "terminal.integrated.shell.osx": "${env:HOME}/.nix-profile/bin/fish",
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
     "markdownlint.config": {
@@ -99,7 +99,6 @@
     "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
     "redhat.telemetry.enabled": false,
     "terminal.integrated.tabs.enabled": true,
-    "shellcheck.executablePath": "shellcheck",
     "shellcheck.ignorePatterns": {
         "**/.envrc": true,
         "**/*.zsh": true,
@@ -114,7 +113,8 @@
         "**/*.zshenv": true,
         "**/zshenv": true,
         "**/*.zsh-theme": true
-    }
+    },
+    "shellcheck.executablePath": "/opt/homebrew/bin/shellcheck",
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "editor.guides.bracketPairs": "active"
