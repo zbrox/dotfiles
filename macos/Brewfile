@@ -214,7 +214,7 @@ brew "lapack"
 # Asynchronous event library
 brew "libev"
 # Postgres C API library
-brew "libpq"
+brew "libpq", link: true
 # Library that provides automatic proxy configuration management
 brew "libproxy"
 # Protocol buffers (Google's data interchange format)
@@ -253,6 +253,8 @@ brew "nmap"
 brew "nss"
 # Optimized BLAS library
 brew "openblas"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@3"
 # 7-Zip (high compression file archiver) implementation
 brew "p7zip"
 # Cross-platform application and UI framework
@@ -275,6 +277,8 @@ brew "pyenv"
 brew "python@3.8"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Rust toolchain installer
+brew "rustup-init"
 # Intuitive find & replace CLI
 brew "sd"
 # Static analysis and lint tool, for (ba)sh scripts
@@ -452,9 +456,11 @@ mas "DaisyDisk", id: 411643860
 mas "Data Jar", id: 1453273600
 mas "Day One", id: 1055511498
 mas "Developer", id: 640199958
+mas "Grammarly for Safari", id: 1462114288
 mas "Hush", id: 1544743900
 mas "Iconic", id: 1582751983
 mas "Jayson", id: 1468691718
+mas "Kaleidoscope", id: 587512244
 mas "Keynote", id: 409183694
 mas "Keys", id: 1494642810
 mas "MakePass", id: 1450989464
@@ -466,6 +472,7 @@ mas "Pages", id: 409201541
 mas "Paprika Recipe Manager 3", id: 1303222628
 mas "Pi-hole Remote", id: 1515445551
 mas "Pixelmator Pro", id: 1289583905
+mas "Scrobbles for Last.fm", id: 1344679160
 mas "Shazam", id: 897118787
 mas "Tailscale", id: 1475387142
 mas "TestFlight", id: 899247664
