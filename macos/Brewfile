@@ -109,6 +109,8 @@ brew "fd"
 brew "findutils"
 # User-friendly command-line shell for UNIX-like operating systems
 brew "fish"
+# Fast and simple Node.js version manager
+brew "fnm"
 # GNU compiler collection
 brew "gcc"
 # GitHub command-line tool
