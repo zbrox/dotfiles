@@ -394,6 +394,8 @@ cask "lastfm"
 cask "lens"
 # Open-source Markdown editor
 cask "macdown"
+# File system integration
+cask "macfuse"
 # Meet, chat, call, and collaborate in just one place
 cask "microsoft-teams"
 # Re-mounts write-protected NTFS volumes
