@@ -1,10 +1,9 @@
-jethrokuan/z
 lilyball/nix-env.fish
 laughedelic/brew-completions
-evanlucas/fish-kubectl-completions
 halostatue/fish-docker
 oh-my-fish/plugin-foreign-env
 oh-my-fish/plugin-bang-bang
-jorgebucaran/fisher
 sijad/gitignore
 oh-my-fish/plugin-grc
+jethrokuan/z
+evanlucas/fish-kubectl-completions
