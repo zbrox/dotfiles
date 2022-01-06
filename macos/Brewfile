@@ -393,8 +393,6 @@ cask "lens"
 cask "macdown"
 # File system integration
 cask "macfuse"
-# Meet, chat, call, and collaborate in just one place
-cask "microsoft-teams"
 # Re-mounts write-protected NTFS volumes
 cask "mounty"
 # Free and open-source RSS reader
