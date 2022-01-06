@@ -24,7 +24,7 @@ brew install fish
 # Make Fish the default shell
 if ! grep -Fxq "$(which fish)" /etc/shells; then
   echo "Adding $(which fish) to list of shells..."
-  echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
+  echo $(which fish) | sudo tee -a /etc/shells
 fi
 if ! grep -Fxq "$(which fish)" /etc/shells; then
   echo "There was no error but still $(which fish) is not in /etc/shells. Add manually and rerun install script."
