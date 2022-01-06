@@ -71,8 +71,6 @@
     "[python]": {
         "editor.defaultFormatter": "ms-python.python"
     },
-    "terminal.integrated.shell.linux": "/run/current-system/sw/bin/fish",
-    "terminal.integrated.shell.osx": "${env:HOME}/.nix-profile/bin/fish",
     "telemetry.telemetryLevel": "off",
     "markdownlint.config": {
         "MD024": { "siblings_only": true }
