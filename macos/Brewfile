@@ -310,8 +310,6 @@ brew "vim"
 brew "watch"
 # Internet file retriever
 brew "wget"
-# Manipulate Xcode project files
-brew "xcproj"
 # Fast CSV toolkit written in Rust
 brew "xsv"
 # JavaScript package manager
