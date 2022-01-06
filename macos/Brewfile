@@ -2,7 +2,6 @@ tap "akeru-inc/tap"
 tap "apparition47/tap"
 tap "cantino/mcfly"
 tap "cjbassi/ytop"
-tap "clementtsang/bottom"
 tap "dtan4/dtan4"
 tap "filosottile/musl-cross"
 tap "hashicorp/tap"
@@ -326,7 +325,7 @@ brew "cantino/mcfly/mcfly"
 # A TUI system monitor written in Rust
 brew "cjbassi/ytop/ytop"
 # A cross-platform graphical process/system monitor with a customizable interface and a multitude of features.
-brew "clementtsang/bottom/bottom"
+brew "bottom"
 # `tail -f` experience for Kubernetes Pods
 brew "dtan4/dtan4/k8stail"
 # Vault
