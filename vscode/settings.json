@@ -73,8 +73,7 @@
     },
     "terminal.integrated.shell.linux": "/run/current-system/sw/bin/fish",
     "terminal.integrated.shell.osx": "${env:HOME}/.nix-profile/bin/fish",
-    "telemetry.enableTelemetry": false,
-    "telemetry.enableCrashReporter": false,
+    "telemetry.telemetryLevel": "off",
     "markdownlint.config": {
         "MD024": { "siblings_only": true }
     },
