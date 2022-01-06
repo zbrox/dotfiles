@@ -1,6 +1,5 @@
 tap "akeru-inc/tap"
 tap "apparition47/tap"
-tap "cantino/mcfly"
 tap "cjbassi/ytop"
 tap "dtan4/dtan4"
 tap "filosottile/musl-cross"
@@ -240,6 +239,8 @@ brew "magic-wormhole"
 brew "make"
 # Mac App Store command-line interface
 brew "mas"
+# Fly through your shell history
+brew "mcfly"
 # Replacement for the old crypt package and crypt(1) command
 brew "mcrypt"
 # High performance static file server
@@ -320,8 +321,6 @@ brew "yarn"
 brew "zola"
 # macOS app notarization helper
 brew "akeru-inc/tap/xcnotary"
-# McFly
-brew "cantino/mcfly/mcfly"
 # A TUI system monitor written in Rust
 brew "cjbassi/ytop/ytop"
 # `tail -f` experience for Kubernetes Pods
