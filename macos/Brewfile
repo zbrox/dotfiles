@@ -56,6 +56,8 @@ brew "bison"
 brew "borgbackup"
 # Simple wrapper script for the Borg backup software
 brew "borgmatic"
+# Yet another cross-platform graphical process/system monitor
+brew "bottom"
 # Glorious Glasgow Haskell Compilation System
 brew "ghc"
 # Command-line interface for Cabal and Hackage
@@ -64,8 +66,6 @@ brew "cabal-install"
 brew "glib"
 # Low-level library for pixel manipulation
 brew "pixman"
-# Tool Command Language
-brew "tcl-tk"
 # Vector graphics library with cross-device output support
 brew "cairo"
 # Easily generate Instruments traces for your rust crate
@@ -274,6 +274,8 @@ brew "procs"
 brew "protoc-gen-go"
 # Python version management
 brew "pyenv"
+# Tool Command Language
+brew "tcl-tk"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.8"
 # Search tool like grep and The Silver Searcher
@@ -322,8 +324,6 @@ brew "akeru-inc/tap/xcnotary"
 brew "cantino/mcfly/mcfly"
 # A TUI system monitor written in Rust
 brew "cjbassi/ytop/ytop"
-# A cross-platform graphical process/system monitor with a customizable interface and a multitude of features.
-brew "bottom"
 # `tail -f` experience for Kubernetes Pods
 brew "dtan4/dtan4/k8stail"
 # Vault
