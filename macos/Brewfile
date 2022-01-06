@@ -457,9 +457,11 @@ mas "DaisyDisk", id: 411643860
 mas "Data Jar", id: 1453273600
 mas "Day One", id: 1055511498
 mas "Developer", id: 640199958
+mas "GarageBand", id: 682658836
 mas "Grammarly for Safari", id: 1462114288
 mas "Hush", id: 1544743900
 mas "Iconic", id: 1582751983
+mas "iMovie", id: 408981434
 mas "Jayson", id: 1468691718
 mas "Kaleidoscope", id: 587512244
 mas "Keynote", id: 409183694
@@ -483,4 +485,3 @@ mas "Things", id: 904280696
 mas "Twitter", id: 1482454543
 mas "Vinegar", id: 1591303229
 mas "Wayback Machine", id: 1472432422
-mas "Xcode", id: 497799835
