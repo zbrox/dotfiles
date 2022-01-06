@@ -334,6 +334,8 @@ brew "hashicorp/tap/vault"
 cask "1password-beta"
 # Apple TV Aerial screensaver
 cask "aerial"
+# AirPods companion app
+cask "airbuddy"
 # Inspect application bundles
 cask "apparency"
 # Tool to flash OS images to SD cards & USB drives
