@@ -46,6 +46,8 @@
     branches = branch -a
     # List latest 5 tags
     lt = log --pretty=format:\"%C(Red)%h %C(reset)%ad (%C(Green)%cr%C(reset))%x09 %C(Cyan)%an: %C(reset)%s%C(auto)%d\" -n 5 --abbrev-commit --date=short --tags --no-walk
+    # Clean merged branches
+    clean-branches = "!git branch --merged | grep  -v '\\*\\|master\\|main|develop' | xargs -n 1 -r git branch -d"
 [commit]
     template = ~/.dotfiles/git/.gitcommitmsg
     cleanup = strip
