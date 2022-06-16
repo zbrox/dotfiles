@@ -4,7 +4,6 @@
         80
     ],
     "editor.minimap.enabled": false,
-    "window.zoomLevel": 0,
     "terminal.integrated.fontFamily": "Source Code Pro for Powerline",
     "extensions.ignoreRecommendations": false,
     "files.associations": {
@@ -21,7 +20,11 @@
     "editor.renderControlCharacters": true,
     "[markdown]": {
         "editor.wordWrap": "wordWrapColumn",
-        "editor.quickSuggestions": false
+        "editor.quickSuggestions": {
+            "comments": "off",
+            "strings": "off",
+            "other": "off"
+        }
     },
     "workbench.startupEditor": "newUntitledFile",
     "[json]": {
@@ -114,5 +117,6 @@
     "shellcheck.executablePath": "/opt/homebrew/bin/shellcheck",
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "editor.guides.bracketPairs": "active"
+    "editor.guides.bracketPairs": "active",
+    "editor.bracketPairColorization.enabled": true
 }
