@@ -40,3 +40,10 @@ alias nixos-clean-all 'sudo nix-collect-garbage -d'
 
 # brew
 alias brew-update-bundle 'brew bundle dump --force --describe --global'
+
+# kubectl
+abbr -a k 'kubectl'
+abbr -a kroll 'kubectl rollout restast'
+abbr -a kcon 'kubectl config current-context'
+abbr -a ksetcon 'kubectl config set-context'
+abbr -a klistcon 'kubectl config get-contexts'
