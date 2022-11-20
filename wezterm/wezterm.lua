@@ -1,4 +1,5 @@
 local wezterm = require "wezterm"
+local keybindings = require "keybindings"
 
 return {
     font = wezterm.font "Source Code Pro for Powerline",
@@ -11,31 +12,5 @@ return {
     
     -- Key bindings
     leader = { key = 'b', mods = 'CTRL' },
-    keys = {
-        {
-            key = 'r',
-            mods = 'CMD',
-            action = wezterm.action.ReloadConfiguration,
-        },
-        {
-            key = '|',
-            mods = 'LEADER',
-            action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' },
-        },
-        {
-            key = '-',
-            mods = 'LEADER',
-            action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' },
-        },
-        {
-            key = 'x',
-            mods = 'LEADER',
-            action = wezterm.action.CloseCurrentPane { confirm = true },
-        },
-        {
-            key = 'X',
-            mods = 'LEADER',
-            action = wezterm.action.CloseCurrentTab { confirm = true },
-        },
-    }
+    keys = keybindings
 }
