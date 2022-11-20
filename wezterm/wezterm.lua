@@ -1,5 +1,8 @@
 local wezterm = require "wezterm"
 local keybindings = require "keybindings"
+local utils = require "utils"
+
+utils.notify_reload()
 
 return {
     font = wezterm.font "Source Code Pro for Powerline",
