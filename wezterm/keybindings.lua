@@ -28,4 +28,8 @@ return {{
     action = wezterm.action.CloseCurrentTab {
         confirm = true
     }
+}, {
+    key = 'p',
+    mods = 'CMD',
+    action = wezterm.action.QuickSelect
 }}
