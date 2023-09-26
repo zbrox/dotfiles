@@ -28,3 +28,5 @@ end
 if test -e "$HOME/.rye/env"
     fenv source "$HOME/.rye/env"
 end
+
+source ~/.config/op/plugins.sh
