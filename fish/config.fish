@@ -23,3 +23,8 @@ end
 # if test -e /etc/static/fish/config.fish
 #     source /etc/static/fish/config.fish
 # end
+
+# rye
+if test -e "$HOME/.rye/env"
+    fenv source "$HOME/.rye/env"
+end
