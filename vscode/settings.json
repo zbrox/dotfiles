@@ -52,7 +52,7 @@
     },
     "todo-tree.ripgrep.ripgrep": "/Applications/Visual Studio Code.app/Contents/Resources/app/node_modules.asar.unpacked/vscode-ripgrep/bin/rg",
     "editor.fontLigatures": true,
-    "editor.fontFamily": "JetBrains Mono",
+    "editor.fontFamily": "Source Code Pro for Powerline",
     "[typescriptreact]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
