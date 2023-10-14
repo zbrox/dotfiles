@@ -40,6 +40,9 @@ symlink_file starship/starship.toml ~/.config/starship.toml
 # Alacritty
 symlink_dir alacritty ~/.config/alacritty
 
+# Neovim
+symlink_dir nvim ~/.config/nvim
+
 # Mac
 symlink_file macos/Brewfile ~/.Brewfile
 

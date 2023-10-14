@@ -49,3 +49,6 @@ abbr -a ksetcon 'kubectl config set-context'
 abbr -a kusecon 'kubectl config use-context'
 abbr -a klistcon 'kubectl config get-contexts'
 abbr -a dok8save 'doctl kubernetes cluster kubeconfig save'
+
+# nvim
+abbr -a vim 'nvim'
