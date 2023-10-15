@@ -65,4 +65,7 @@ return require('packer').startup(function(use)
           { "nvim-lua/plenary.nvim" }
       }
   }
+  
+  -- nicer buffer line
+  use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
 end)

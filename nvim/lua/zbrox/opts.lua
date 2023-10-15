@@ -14,3 +14,7 @@ vim.opt.colorcolumn = "80"
 
 -- shorter timeout
 vim.opt.timeoutlen = 300
+
+-- colouuuurs
+vim.opt.termguicolors = true
+
