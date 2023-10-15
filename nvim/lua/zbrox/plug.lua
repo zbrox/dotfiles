@@ -53,5 +53,7 @@ return require('packer').startup(function(use)
 
   use("github/copilot.vim")
 
-  use ("folke/which-key.nvim")
+  use("folke/which-key.nvim")
+
+  use("tpope/vim-vinegar")
 end)
