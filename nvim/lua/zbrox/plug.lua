@@ -56,4 +56,13 @@ return require('packer').startup(function(use)
   use("folke/which-key.nvim")
 
   use("tpope/vim-vinegar")
+
+  -- gives hints to improve workflows
+  use {
+      "m4xshen/hardtime.nvim",
+      requires = {
+          { "MunifTanjim/nui.nvim" },
+          { "nvim-lua/plenary.nvim" }
+      }
+  }
 end)
