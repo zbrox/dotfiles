@@ -6,3 +6,7 @@ vim.keymap.set("i", "jk", "<ESC>", { noremap = true, silent = true })
 vim.keymap.set("i", "jj", "<ESC>", { noremap = true, silent = true })
 vim.keymap.set("t", "jk", "<C-\\><C-n>", { noremap = true, silent = true })
 vim.keymap.set("t", "jj", "<C-\\><C-n>", { noremap = true, silent = true })
+
+-- Switch buffer
+vim.keymap.set("n", "<S-h>", ":bprevious<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<S-l>", ":bnext<CR>", { noremap = true, silent = true })
