@@ -11,3 +11,6 @@ vim.opt.smartindent = true
 
 -- visual aid for column 80
 vim.opt.colorcolumn = "80"
+
+-- shorter timeout
+vim.opt.timeoutlen = 300
