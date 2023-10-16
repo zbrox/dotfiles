@@ -68,4 +68,12 @@ return require('packer').startup(function(use)
   
   -- nicer buffer line
   use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
+
+  -- command palette
+  use {
+      "mrjones2014/legendary.nvim",
+      requires = "kkharji/sqlite.lua"
+  }
+
+  use("stevearc/dressing.nvim")
 end)
