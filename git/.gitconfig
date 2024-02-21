@@ -22,7 +22,7 @@
     pager = delta --dark
 [difftool "sourcetree"]
 	cmd = /usr/local/bin/ksdiff -w \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /usr/local/bin/ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
 	trustExitCode = true
@@ -48,6 +48,8 @@
     lt = log --pretty=format:\"%C(Red)%h %C(reset)%ad (%C(Green)%cr%C(reset))%x09 %C(Cyan)%an: %C(reset)%s%C(auto)%d\" -n 5 --abbrev-commit --date=short --tags --no-walk
     # Clean merged branches
     clean-branches = "!git branch --merged | grep  -v '\\*\\|master\\|main|develop' | xargs -n 1 -r git branch -d"
+    # shorter checkout
+    co = checkout
 [commit]
     template = ~/.dotfiles/git/.gitcommitmsg
     cleanup = strip
