@@ -3,6 +3,7 @@
 # replacement of common tools
 abbr -a ls 'exa'
 abbr -a cat 'bat'
+abbr -a cd 'z'
 
 # pretty list
 abbr -a l 'exa --all --long --modified --group --header --color-scale'
