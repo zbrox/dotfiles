@@ -29,4 +29,8 @@ if test -e "$HOME/.rye/env"
     fenv source "$HOME/.rye/env"
 end
 
+# 1password integration
 source ~/.config/op/plugins.sh
+
+# setup zoxide
+zoxide init fish | source
