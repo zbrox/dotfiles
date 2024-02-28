@@ -216,7 +216,7 @@ return require('lazy').setup({
     -- Nicer buffer line
     {
         'akinsho/bufferline.nvim',
-        tag = "*",
+        version = "*",
         dependencies = 'nvim-tree/nvim-web-devicons',
         config = function()
             local bufferline = require("bufferline")
