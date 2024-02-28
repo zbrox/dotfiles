@@ -34,7 +34,7 @@ return require('lazy').setup({
 
             configs.setup({
                 -- A list of parser names, or "all" (the five listed parsers should always be installed)
-                ensure_installed = { "javascript", "typescript", "rust", "lua", "vim", "vimdoc", "query", "toml" },
+                ensure_installed = { "javascript", "typescript", "rust", "lua", "vim", "vimdoc", "query", "toml", "python" },
 
                 -- Install parsers synchronously (only applied to `ensure_installed`)
                 sync_install = false,
