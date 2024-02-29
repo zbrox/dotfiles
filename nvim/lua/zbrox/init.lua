@@ -1,5 +1,5 @@
-vim.g.mapleader = " "
-vim.g.localmapleader = "\\"
+require("zbrox.opts")
+require("zbrox.keys")
 
 -- lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -14,8 +14,5 @@ if not vim.loop.fs_stat(lazypath) then
     })
 end
 vim.opt.rtp:prepend(lazypath)
---
-require("zbrox.plug")
-require("zbrox.vars")
-require("zbrox.opts")
-require("zbrox.keys")
+
+require("lazy").setup("zbrox.plugins")

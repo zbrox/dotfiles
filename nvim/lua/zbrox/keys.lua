@@ -1,3 +1,7 @@
+-- Leader
+vim.g.mapleader = " "
+vim.g.localmapleader = "\\"
+
 -- Project View
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = "Show project view"})
 
