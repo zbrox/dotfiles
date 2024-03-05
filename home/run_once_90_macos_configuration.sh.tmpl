@@ -1,3 +1,4 @@
+{{ if (eq .chezmoi.os "darwin") -}}
 #!/usr/bin/env bash
 
 # Thanks to Mathias Bynens! https://mths.be/macos
@@ -42,15 +43,15 @@ defaults write com.apple.CrashReporter UseUNC 1
 ###############################################################################
 
 # Increase sound quality for Bluetooth headphones/headsets
-defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
+# defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
 
 # Set language and text formats
 # Note: if you’re in the US, replace `EUR` with `USD`, `Centimeters` with
 # `Inches`, `en_GB` with `en_US`, and `true` with `false`.
-defaults write NSGlobalDomain AppleLanguages -array "en" "bg" "se"
-defaults write NSGlobalDomain AppleLocale -string "bg_SE"
-defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
-defaults write NSGlobalDomain AppleMetricUnits -bool true
+# defaults write NSGlobalDomain AppleLanguages -array "en" "bg" "se"
+# defaults write NSGlobalDomain AppleLocale -string "bg_SE"
+# defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
+# defaults write NSGlobalDomain AppleMetricUnits -bool true
 
 # Set the timezone; see `sudo systemsetup -listtimezones` for other values
 sudo systemsetup -settimezone "Europe/Stockholm" > /dev/null
@@ -147,12 +148,6 @@ defaults write com.apple.dock static-only -bool true
 # Group windows by application in Mission Control
 defaults write com.apple.dock expose-group-by-app -bool true
 
-# Disable Dashboard
-defaults write com.apple.dashboard mcx-disabled -bool true
-
-# Don’t show Dashboard as a Space
-defaults write com.apple.dock dashboard-in-overlay -bool true
-
 # Remove the auto-hiding Dock delay
 defaults write com.apple.dock autohide-delay -float 0
 
@@ -161,10 +156,6 @@ defaults write com.apple.dock autohide-time-modifier -float 0
 
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
-
-# Add iOS & Watch Simulator to Launchpad
-sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app" "/Applications/Simulator.app"
-sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/Simulator (Watch).app" "/Applications/Simulator (Watch).app"
 
 # Hot corners
 # Possible values:
@@ -217,16 +208,6 @@ defaults write com.apple.mail DisableInlineAttachmentViewing -bool true
 defaults write com.apple.mail SpellCheckingBehavior -string "NoSpellCheckingEnabled"
 
 ###############################################################################
-# Terminal & iTerm 2                                                          #
-###############################################################################
-
-# Only use UTF-8 in Terminal.app
-defaults write com.apple.terminal StringEncodings -array 4
-
-# Don’t display the annoying prompt when quitting iTerm
-defaults write com.googlecode.iterm2 PromptOnQuit -bool false
-
-###############################################################################
 # Time Machine                                                                #
 ###############################################################################
 
@@ -273,13 +254,6 @@ defaults write com.apple.ical "first day of the week" 1
 defaults write com.apple.ical "first minute of work hours" 540
 
 ###############################################################################
-# Date & Time                                                                 #
-###############################################################################
-
-# Custom DateFormat
-defaults write com.apple.menuextra.clock DateFormat "EEE dd.MM H:mm"
-
-###############################################################################
 # Photos                                                                      #
 ###############################################################################
 
@@ -308,3 +282,4 @@ for app in "Activity Monitor" "Address Book" "Calendar" "Contacts" "cfprefsd" \
 done
 
 echo "Done. Note that some of these changes require a logout/restart to take effect."
+{{ end -}}
