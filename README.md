@@ -7,6 +7,8 @@ Current iteration uses [chezmoi](https://www.chezmoi.io/) to manage everything.
 ## What's in the box
 
 * Setting up some macOS specific stuff
+* Installing a bunch of software using Homebrew bundle or if needed through the Mac App Store
+* Install rustup
 * Configurations
   * [Fish](http://fishshell.com) as the default shell, with some handy functions, autocompletions, plugins, and [Fisher](https://github.com/jorgebucaran/fisher) for a plugin manager
   * [Starship](https://starship.rs) for a prompt
@@ -15,7 +17,7 @@ Current iteration uses [chezmoi](https://www.chezmoi.io/) to manage everything.
   * [Git](https://git-scm.com) Duh! Setting up a global gitignore, commit message template, some aliases, and some configurations options I'm used to
   * [VSCode](https://code.visualstudio.com) settings and extensions
   * [tmux](https://github.com/tmux/tmux) config, which has its own [readme](https://github.com/zbrox/dotfiles/blob/master/tmux/README.md)
-* Installing a bunch of software through the Homebrew bundle or if needed through the Mac App Store
+  * [zed](https://zed.dev) settings only
 
 ## Setup
 
