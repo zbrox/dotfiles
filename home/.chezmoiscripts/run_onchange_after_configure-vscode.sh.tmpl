@@ -1,0 +1,10 @@
+{{ if and (eq .chezmoi.os "darwin" "linux") (not .headless) -}}
+#!/bin/bash
+
+{{ range .vscode.extensions -}}
+code --force --install-extension {{ . | quote }}
+{{ end -}}
+
+echo "Done install VSCode extensions"
+
+{{ end -}}

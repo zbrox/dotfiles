@@ -1,0 +1,12 @@
+{{- $headless := promptBoolOnce . "headless" "Does this computer have a screen and a graphical env?" -}}
+
+[diff]
+    command = "delta"
+    args = ["--side-by-side"]
+    pager = "delta"
+
+[data]
+    headless = {{ $headless }}
+
+[github]
+    refreshPeriod = "24h"
