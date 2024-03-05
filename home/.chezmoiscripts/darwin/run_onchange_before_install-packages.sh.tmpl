@@ -1,4 +1,3 @@
-{{ if eq .chezmoi.os "darwin" -}}
 #!/bin/bash
 
 echo "Installing Xcode developer tools..."
@@ -21,4 +20,3 @@ cask {{ . | quote }}
 mas {{ .name | quote }}, id:{{ .id }}
 {{ end -}}
 EOF
-{{ end -}}
