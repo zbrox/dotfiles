@@ -1,0 +1,7 @@
+#!/bin/bash
+
+{{ range .vscode.extensions -}}
+code --install-extension {{ . | quote }}
+{{ end -}}
+
+echo "Done install VSCode extensions"
