@@ -8,7 +8,7 @@ set -x PATH $HOME/.local/bin $PATH # prefer user binaries even more
 set -x PATH $PATH /usr/local/sbin
 
 # Dotfiles
-set -x DOTFILES $HOME/.dotfiles
+set -x DOTFILES $HOME/.local/share/chezmoi
 
 # Cargo
 set -x PATH $PATH $HOME/.cargo/bin
