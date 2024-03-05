@@ -3,7 +3,7 @@ vim.g.mapleader = " "
 vim.g.localmapleader = "\\"
 
 -- Project View
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = "Show project view"})
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = "Show project view" })
 
 -- Better escape using jk in insert and terminal mode
 vim.keymap.set("i", "jk", "<ESC>", { noremap = true, silent = true })

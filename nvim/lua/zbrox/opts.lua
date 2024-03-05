@@ -17,4 +17,3 @@ vim.opt.timeoutlen = 300
 
 -- colouuuurs
 vim.opt.termguicolors = true
-
