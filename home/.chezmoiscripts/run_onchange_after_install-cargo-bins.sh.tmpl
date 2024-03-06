@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Source cargo env
+source $HOME/.cargo/env
+
+# Install cargo binstall
+cargo install cargo-binstall
+
+# Install cargo crates globally
+cargo binstall {{ range .cargo.bins -}}{{ . | quote }} {{ end -}}

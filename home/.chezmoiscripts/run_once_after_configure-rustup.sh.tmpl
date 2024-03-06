@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Install rust if not installed
+if ! command -v rustup &> /dev/null;
+then
+    echo "rustup not found, installing..."
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+    exit 0
+else
+    echo "rustup found, skipping installation"
+fi

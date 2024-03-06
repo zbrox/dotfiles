@@ -584,3 +584,27 @@ extensions = [
     "vadimcn.vscode-lldb",
     "Wokwi.wokwi-vscode",
 ]
+
+[cargo]
+bins = [
+    "cargo-about",
+    "cargo-audit",
+    "cargo-dist",
+    "cargo-edit",
+    "cargo-espflash",
+    "cargo-generate",
+    "cargo-get",
+    "cargo-leptos",
+    "cargo-nextest",
+    "cargo-run-bin",
+    "cargo-semver-checks",
+    "cargo-shuttle",
+    "cargo-udeps",
+    "cargo-watch",
+    "create-tauri-app",
+    "espup",
+    "flamegraph",
+    "lemmeknow",
+    "rewrk",
+    "tealdeer",
+]
