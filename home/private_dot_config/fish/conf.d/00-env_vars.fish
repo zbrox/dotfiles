@@ -14,6 +14,10 @@ set -x DOTFILES $HOME/.dotfiles
 set -x PATH $PATH $HOME/.cargo/bin
 set -x CARGO_TARGET_DIR $HOME/.cargo/global-target
 
+# Go
+set -x GOPATH $HOME/.go
+set -x PATH $PATH $GOPATH/bin
+
 # Add _current_ folder's node modules
 set -x PATH $PATH ./node_modules/.bin
 
