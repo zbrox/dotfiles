@@ -16,7 +16,6 @@
     "window.openFoldersInNewWindow": "on",
     "window.nativeTabs": true,
     "editor.renderWhitespace": "all",
-    "terminal.integrated.rendererType": "dom",
     "editor.renderControlCharacters": true,
     "[markdown]": {
         "editor.wordWrap": "wordWrapColumn",
@@ -47,7 +46,7 @@
         "FIXME": {}
     },
     "todo-tree.highlights.defaultHighlight": {
-        "foreground": "green",
+        "foreground": "#AFE1AF",
         "type": "none"
     },
     "todo-tree.ripgrep.ripgrep": "/Applications/Visual Studio Code.app/Contents/Resources/app/node_modules.asar.unpacked/vscode-ripgrep/bin/rg",
@@ -60,15 +59,14 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[rust]": {
-        "editor.defaultFormatter": "rust-lang.rust-analyzer"
+        "editor.defaultFormatter": "rust-lang.rust-analyzer",
+        "editor.formatOnSave": true,
     },
     "prettier.arrowParens": "always",
     "debug.allowBreakpointsEverywhere": true,
     "javascript.updateImportsOnFileMove.enabled": "always",
     "git.confirmSync": false,
     "git.autofetch": true,
-    "python.pythonPath": "/opt/homebrew/bin/python3",
-    "rust-analyzer.checkOnSave.command": "clippy",
     "editor.formatOnSaveMode": "modifications",
     "python.languageServer": "Pylance",
     "[python]": {
@@ -78,15 +76,9 @@
     "markdownlint.config": {
         "MD024": { "siblings_only": true }
     },
-    "gitlens.defaultTimeFormat": "hh:mm",
-    "gitlens.defaultDateFormat": "YY-MM-DD hh:mm",
-    "workbench.editorAssociations": {
-        "*.ipynb": "jupyter.notebook.ipynb"
-    },
     "[xml]": {
         "editor.defaultFormatter": "redhat.vscode-xml"
     },
-    "todo-tree.tree.showScanModeButton": false,
     "todo-tree.general.tags": [
         "BUG",
         "HACK",
@@ -116,11 +108,8 @@
     },
     "shellcheck.executablePath": "/opt/homebrew/bin/shellcheck",
     "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "editor.guides.bracketPairs": "active",
     "editor.bracketPairColorization.enabled": true,
-    "kotlin.languageServer.enabled": false,
-    "kotlin.debugAdapter.enabled": false,
     "[svelte]": {
         "editor.defaultFormatter": "svelte.svelte-vscode"
     },
