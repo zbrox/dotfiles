@@ -119,10 +119,11 @@
     "editor.inlineSuggest.enabled": true,
     "github.copilot.enable": {
         "*": true,
-        "yaml": true,
         "plaintext": true,
         "markdown": false,
-        "scminput": false
+        "scminput": false,
+        "yaml": true,
+        "gleam": false
     },
     "git.openRepositoryInParentFolders": "never",
     "editor.codeLensFontFamily": "Iosevka",
