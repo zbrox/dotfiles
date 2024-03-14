@@ -51,7 +51,7 @@
     },
     "todo-tree.ripgrep.ripgrep": "/Applications/Visual Studio Code.app/Contents/Resources/app/node_modules.asar.unpacked/vscode-ripgrep/bin/rg",
     "editor.fontLigatures": true,
-    "editor.fontFamily": "Source Code Pro for Powerline",
+    "editor.fontFamily": "Iosevka",
     "[typescriptreact]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
@@ -124,5 +124,7 @@
         "markdown": false,
         "scminput": false
     },
-    "git.openRepositoryInParentFolders": "never"
+    "git.openRepositoryInParentFolders": "never",
+    "editor.codeLensFontFamily": "Iosevka",
+    "editor.fontSize": 13
 }

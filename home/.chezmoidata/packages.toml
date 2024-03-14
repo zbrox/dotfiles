@@ -298,6 +298,7 @@ casks = [
     "font-source-sans-pro",
     "font-source-serif-pro",
     "font-ubuntu-mono-derivative-powerline",
+    "font-iosevka",
     # Git interface focused on visual interaction
     "gitup",
     # Open-source video transcoder
