@@ -45,7 +45,6 @@
     # shorter checkout
     co = checkout
 [commit]
-    template = ~/.dotfiles/git/.gitcommitmsg
     cleanup = strip
 [color]
     ui = auto
