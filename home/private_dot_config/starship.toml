@@ -15,3 +15,7 @@ home_symbol = "🏠"
 
 [battery]
 disabled = true
+
+[direnv]
+disabled = false
+style = "#CE9178"
