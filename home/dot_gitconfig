@@ -18,7 +18,6 @@
 	email = me@zbrox.com
 [core]
     editor = code --wait
-    excludesfile = ~/.dotfiles/git/.gitignore_global
     pager = delta --dark
 [push]
     default = simple
