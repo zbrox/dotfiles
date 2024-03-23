@@ -45,6 +45,8 @@
     clean-branches = "!git branch --merged | grep  -v '\\*\\|master\\|main|develop' | xargs -n 1 -r git branch -d"
     # shorter checkout
     co = checkout
+    # force push
+    fpush = push --force-with-lease
 [commit]
     cleanup = strip
 [color]
