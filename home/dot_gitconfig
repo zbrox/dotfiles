@@ -16,6 +16,8 @@
 [user]
 	name = Rostislav Raykov
 	email = me@zbrox.com
+[includeIf "gitdir:~/Projects/"]
+    path = .gitconfig-work
 [core]
     editor = code --wait
     pager = delta --dark
