@@ -521,6 +521,7 @@ extensions = [
     "bram209.leptos-language-server",
     "brettm12345.nixfmt-vscode",
     "casbin.vscode-casbin",
+    "charliermarsh.ruff",
     "codezombiech.gitignore",
     "dakara.transformer",
     "davidanson.vscode-markdownlint",
