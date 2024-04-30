@@ -127,5 +127,6 @@
     },
     "git.openRepositoryInParentFolders": "never",
     "editor.codeLensFontFamily": "Iosevka",
-    "editor.fontSize": 13
+    "editor.fontSize": 13,
+    "svelte.enable-ts-plugin": true,
 }
