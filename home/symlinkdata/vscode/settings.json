@@ -129,4 +129,5 @@
     "editor.codeLensFontFamily": "Iosevka",
     "editor.fontSize": 13,
     "svelte.enable-ts-plugin": true,
+    "typst-lsp.experimentalFormatterMode": "on"
 }
