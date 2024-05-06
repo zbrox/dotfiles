@@ -65,7 +65,7 @@ brews = [
     # Serial flasher utility for Espressif SoCs and modules based on esptool.py
     "espflash",
     # Modern replacement for 'ls'
-    "exa",
+    "eza",
     # Command-line tool to interact with exercism.io
     "exercism",
     # Perl lib for reading and writing EXIF metadata
