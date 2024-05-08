@@ -30,7 +30,9 @@ if test -e "$HOME/.rye/env"
 end
 
 # 1password integration
-source ~/.config/op/plugins.sh
+if test -e "$HOME/.config/op/plugins.sh"
+    source ~/.config/op/plugins.sh
+end
 
 # setup zoxide
 zoxide init fish | source
