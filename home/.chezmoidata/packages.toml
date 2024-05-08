@@ -12,6 +12,8 @@ taps = [
 brews = [ 
     # Run your GitHub Actions locally
     "act",
+    # A simple, modern and secure encryption tool
+    "age",
     # Automate deployment, configuration, and upgrading
     "ansible",
     # Checks ansible playbooks for practices and behaviour
@@ -200,6 +202,8 @@ brews = [
     "sd",
     # Static analysis and lint tool, for (ba)sh scripts
     "shellcheck",
+    # Simple and flexible tool for managing secrets
+    "sops",
     # SMART hard drive monitoring
     "smartmontools",
     # Command-line interface for https://speedtest.net bandwidth tests
