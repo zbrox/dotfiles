@@ -70,7 +70,7 @@
     "editor.formatOnSaveMode": "modifications",
     "python.languageServer": "Pylance",
     "[python]": {
-        "editor.defaultFormatter": "charliermarsh.ruff"
+        "editor.defaultFormatter": "charliermarsh.ruff",
     },
     "telemetry.telemetryLevel": "off",
     "markdownlint.config": {
@@ -129,5 +129,9 @@
     "editor.codeLensFontFamily": "Iosevka",
     "editor.fontSize": 13,
     "svelte.enable-ts-plugin": true,
-    "typst-lsp.experimentalFormatterMode": "on"
+    "typst-lsp.experimentalFormatterMode": "on",
+    "go.toolsManagement.autoUpdate": true,
+    "editor.accessibilitySupport": "off",
+    "github.copilot.editor.enableAutoCompletions": true,
+    "prisma.showPrismaDataPlatformNotification": false
 }
