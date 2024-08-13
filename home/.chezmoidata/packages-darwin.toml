@@ -252,9 +252,9 @@ brews = [
 ]
 casks = [
     # Password manager
-    "1password-beta",
+    "1password@beta",
     # Command-line interface for 1Password
-    "1password-cli",
+    "1password-cli@beta",
     # AirPods companion app
     "airbuddy",
     # GraphQL client
