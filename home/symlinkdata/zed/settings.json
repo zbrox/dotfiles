@@ -13,5 +13,13 @@
     "metrics": false
   },
   "ui_font_size": 16,
-  "buffer_font_size": 16
+  "buffer_font_size": 16,
+  "double_click_in_multibuffer": "open",
+  "terminal": {
+    "detect_venv": {
+      "on": {
+        "activate_script": "fish"
+      }
+    }
+  }
 }
