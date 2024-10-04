@@ -394,6 +394,10 @@ name = "1Password for Safari"
 id = 1569813296
 
 [[packages.darwin.mas]]
+name = "Bakery"
+id = 1575220747
+
+[[packages.darwin.mas]]
 name = "CiderTV"
 id = 1065907486
 
@@ -406,20 +410,36 @@ name = "DaisyDisk"
 id = 411643860
 
 [[packages.darwin.mas]]
-name = "Data Jar"
-id = 1453273600
+name = "Day One"
+id = 1055511498
 
 [[packages.darwin.mas]]
 name = "Developer"
 id = 640199958
 
 [[packages.darwin.mas]]
+name = "Dropover"
+id = 1355679052
+
+[[packages.darwin.mas]]
 name = "Exporter"
 id = 1099120373
 
 [[packages.darwin.mas]]
+name = "Fresh Cards"
+id = 1523398835
+
+[[packages.darwin.mas]]
+name = "Go Map!!"
+id = 592990211
+
+[[packages.darwin.mas]]
 name = "Hush"
 id = 1544743900
+
+[[packages.darwin.mas]]
+name = "Ice Cubes"
+id = 6444915884
 
 [[packages.darwin.mas]]
 name = "Iconic"
@@ -430,8 +450,20 @@ name = "Jayson"
 id = 1468691718
 
 [[packages.darwin.mas]]
+name = "Kaleidoscope"
+id = 587512244
+
+[[packages.darwin.mas]]
+name = "Keynote"
+id = 409183694
+
+[[packages.darwin.mas]]
 name = "Keys Multiplatform"
 id = 1494642810
+
+[[packages.darwin.mas]]
+name = "Kindle"
+id = 302584613
 
 [[packages.darwin.mas]]
 name = "Landmarks"
@@ -442,8 +474,12 @@ name = "MakePass"
 id = 1450989464
 
 [[packages.darwin.mas]]
-name = "Medis"
-id = 1579200037
+name = "Messenger"
+id = 1480068668
+
+[[packages.darwin.mas]]
+name = "miele-lxiv"
+id = 988332475
 
 [[packages.darwin.mas]]
 name = "MusicHarbor"
@@ -462,6 +498,14 @@ name = "Notchmeister"
 id = 1599169747
 
 [[packages.darwin.mas]]
+name = "Numbers"
+id = 409203825
+
+[[packages.darwin.mas]]
+name = "Pages"
+id = 409201541
+
+[[packages.darwin.mas]]
 name = "Paprika Recipe Manager 3"
 id = 1303222628
 
@@ -474,16 +518,16 @@ name = "Pixelmator Pro"
 id = 1289583905
 
 [[packages.darwin.mas]]
-name = "rcmd"
-id = 1596283165
-
-[[packages.darwin.mas]]
-name = "Save to Raindrop.io"
-id = 1549370672
+name = "Playgrounds"
+id = 1496833156
 
 [[packages.darwin.mas]]
 name = "Shazam"
 id = 897118787
+
+[[packages.darwin.mas]]
+name = "Soor"
+id = 1439731526
 
 [[packages.darwin.mas]]
 name = "StopTheMadness"
@@ -508,6 +552,10 @@ id = 1591303229
 [[packages.darwin.mas]]
 name = "Wayback Machine"
 id = 1472432422
+
+[[packages.darwin.mas]]
+name = "WireGuard"
+id = 1451685025
 
 [[packages.darwin.mas]]
 name = "WorldWideWeb"
