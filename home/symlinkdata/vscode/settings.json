@@ -133,5 +133,6 @@
     "go.toolsManagement.autoUpdate": true,
     "editor.accessibilitySupport": "off",
     "github.copilot.editor.enableAutoCompletions": true,
-    "prisma.showPrismaDataPlatformNotification": false
+    "prisma.showPrismaDataPlatformNotification": false,
+    "prettier.requireConfig": true
 }
