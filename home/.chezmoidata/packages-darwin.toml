@@ -1,27 +1,48 @@
 [packages.darwin]
 taps = [
-    "homebrew/bundle",
     "1password/tap",
     "borgbackup/tap",
     "chiselstrike/tap",
+    "codecrafters-io/tap",
     "hashicorp/tap",
+    "hcavarsan/kftray",
+    "homebrew/bundle",
     "homebrew/cask-fonts",
     "homebrew/cask-versions",
     "homebrew/services",
+    "libsql/sqld",
 ]
 brews = [
     # Run your GitHub Actions locally
     "act",
-    # A simple, modern and secure encryption tool
+    # Simple, modern, secure file encryption
     "age",
+    # General-purpose data compression with high compression ratio
+    "xz",
     # Automate deployment, configuration, and upgrading
     "ansible",
     # Checks ansible playbooks for practices and behaviour
     "ansible-lint",
+    # Library for manipulating PNG images
+    "libpng",
+    # Image format providing lossless and lossy compression for web images
+    "webp",
+    # New file format for still image compression
+    "jpeg-xl",
     # Protocol buffers (Google's data interchange format)
     "protobuf",
-    # Interpreted, interactive, object-oriented programming language
-    "python@3.10",
+    # Next generation open source RPC library and framework
+    "grpc",
+    # Clean C library for processing UTF-8 Unicode data
+    "utf8proc",
+    # Columnar in-memory analytics layer designed to accelerate big data
+    "apache-arrow",
+    # Collection of portable C++ source libraries
+    "boost",
+    # Standard XML representation system for technical documents
+    "docbook",
+    # Source-code syntax highlighter
+    "source-highlight",
     # Formatter/translator for text files to numerous formats
     "asciidoc",
     # Text processor and publishing toolchain for AsciiDoc
@@ -30,20 +51,58 @@ brews = [
     "atool",
     # Tool for generating GNU Standards-compliant Makefiles
     "automake",
+    # Official Amazon AWS command-line interface
+    "awscli",
+    # C library implementing the SSH2 protocol
+    "libssh2",
+    # Regular expressions library
+    "oniguruma",
     # Clone of cat(1) with syntax highlighting and Git integration
     "bat",
+    # Garbage collector for C and C++
+    "bdw-gc",
     # Compiler infrastructure and toolchain library for WebAssembly
     "binaryen",
+    # Parser generator
+    "bison",
     # Simple wrapper script for the Borg backup software
     "borgmatic",
+    # Yet another cross-platform graphical process/system monitor
+    "bottom",
+    # Glorious Glasgow Haskell Compilation System
+    "ghc",
+    # Command-line interface for Cabal and Hackage
+    "cabal-install",
+    # Software library to render fonts
+    "freetype",
+    # XML-based font configuration API for X Windows
+    "fontconfig",
+    # GNU internationalization (i18n) and localization (l10n) library
+    "gettext",
+    # Core application library for C
+    "glib",
+    # Low-level library for pixel manipulation
+    "pixman",
+    # Vector graphics library with cross-device output support
+    "cairo",
     # Easily generate Instruments traces for your rust crate
     "cargo-instruments",
+    # Decentralized dependency manager for Cocoa
+    "carthage",
+    # Object-file caching compiler wrapper
+    "ccache",
+    # Manage your dotfiles across multiple diverse machines, securely
+    "chezmoi",
+    # Open source monitoring and visualization UI for the TICK stack
+    "chronograf",
     # Cross-platform make
     "cmake",
     # GNU File, Shell, and Text utilities
     "coreutils",
     # Compiler for writing C extensions for the Python language
     "cython",
+    # Lightweight, framework-agnostic database migration tool
+    "dbmate",
     # Secure runtime for JavaScript and TypeScript
     "deno",
     # USB programmer
@@ -62,20 +121,40 @@ brews = [
     "dog",
     # More intuitive version of du in rust
     "dust",
+    # Build automation tool for the container era
+    "earthly",
+    # Simple command-line tool for creating clusters on Amazon EKS
+    "eksctl",
+    # Generic library support script
+    "libtool",
+    # Programming language for highly scalable real-time systems
+    "erlang",
     # Functional metaprogramming aware language built on Erlang VM
     "elixir",
     # Serial flasher utility for Espressif SoCs and modules based on esptool.py
     "espflash",
-    # Modern replacement for 'ls'
-    "eza",
     # Command-line tool to interact with exercism.io
     "exercism",
     # Perl lib for reading and writing EXIF metadata
     "exiftool",
+    # Modern, maintained replacement for ls
+    "eza",
     # Simple, fast and user-friendly alternative to find
     "fd",
-    # GNU compiler collection
-    "gcc",
+    # Validating, recursive, caching DNS resolver
+    "unbound",
+    # GNU Transport Layer Security (TLS) Library
+    "gnutls",
+    # OpenType text shaping engine
+    "harfbuzz",
+    # Framework for layout and rendering of i18n text
+    "pango",
+    # OCR (Optical Character Recognition) engine
+    "tesseract",
+    # H.265/HEVC encoder
+    "x265",
+    # Scaling, colorspace conversion, and dithering library
+    "zimg",
     # Play, record, convert, and stream audio and video
     "ffmpeg",
     # Collection of GNU find, xargs, and locate
@@ -88,32 +167,86 @@ brews = [
     "fnm",
     # Command-line fuzzy finder written in Go
     "fzf",
+    # GNU compiler collection
+    "gcc",
     # GNU Pretty Good Privacy (PGP) package
     "gnupg",
+    # Library access to GnuPG
+    "gpgme",
+    # Database of common MIME types
+    "shared-mime-info",
+    # ISO/IEC 23008-12:2017 HEIF file format decoder and encoder
+    "libheif",
+    # Postgres C API library
+    "libpq",
+    # Adds spatial SQL capabilities to SQLite
+    "libspatialite",
+    # Libraries for security-enabled client and server applications
+    "nss",
+    # Optimized BLAS library
+    "openblas",
+    # Package for scientific computing with Python
+    "numpy",
+    # PDF rendering library (based on the xpdf-3.0 code base)
+    "poppler",
+    # Geospatial Data Abstraction Library
+    "gdal",
     # GitHub command-line tool
     "gh",
+    # Interpreter for PostScript and PDF
+    "ghostscript",
     # Distributed revision control system
     "git",
     # Syntax-highlighting pager for git and diff output
     "git-delta",
+    # Extensions to follow Vincent Driessen's branching model
+    "git-flow",
     # Git extension for versioning large files
     "git-lfs",
     # Platform built on V8 to build network applications
     "node",
+    # Run gitlab pipelines locally as shell executor or docker executor
+    "gitlab-ci-local",
+    # Statically typed language for the Erlang VM
+    "gleam",
+    # Callback framework for C++
+    "libsigc++",
+    # C++ interface to glib
+    "glibmm",
+    # C++ interface to glib
+    "glibmm@2.66",
     # Command-line option parsing utility
     "gnu-getopt",
     # GNU implementation of the famous stream editor
     "gnu-sed",
     # Open source programming language to build simple/reliable/efficient software
     "go",
+    # Generate introspection data for GObject libraries
+    "gobject-introspection",
     # Pure Go implementation of jq
     "gojq",
+    # Library for manipulating JPEG-2000 images
+    "jasper",
+    # Library to render SVG files using Cairo
+    "librsvg",
+    # Graph visualization software from AT&T and Bell Labs
+    "graphviz",
     # Colorize logfiles and command output
     "grc",
     # GNU grep, egrep and fgrep
     "grep",
     # Command-line tool for generating regular expressions
     "grex",
+    # Utilities for manipulating PostScript documents
+    "psutils",
+    # GNU troff text-formatting system
+    "groff",
+    # GNU Ubiquitous Intelligent Language for Extensions
+    "guile",
+    # Tool for glamorous shell scripts
+    "gum",
+    # Cross-platform program for developing Haskell projects
+    "haskell-stack",
     # Kubernetes package manager
     "helm",
     # Powerful, lightweight programming language
@@ -124,26 +257,38 @@ brews = [
     "hledger",
     # Improved top (interactive process viewer)
     "htop",
+    # Cryptography and SSL/TLS Toolkit
+    "openssl@1.1",
     # Simple zero-configuration command-line HTTP server
     "http-server",
     # Command-line benchmarking tool
     "hyperfine",
-    # Interpreted, interactive, object-oriented programming language
-    "python@3.9",
+    # LLVM's OpenMP runtime library
+    "libomp",
+    # Library for reading RAW files from digital photo cameras
+    "libraw",
     # Tools and libraries to manipulate images in many formats
     "imagemagick",
     # GNU utilities for networking
     "inetutils",
+    # CLI for managing resources in InfluxDB v2
+    "influxdb-cli",
     # Update of iperf: measures TCP, UDP, and SCTP bandwidth
     "iperf3",
+    # Manage your Java environment
+    "jenv",
     # JSON output from a shell
     "jo",
+    # Image manipulation library
+    "jpeg",
     # Lightweight and flexible command-line JSON processor
     "jq",
     # Handy way to save and run project-specific commands
     "just",
     # Kubernetes CLI To Manage Your Clusters In Style!
     "k9s",
+    # Easy way to access the system keyring service from python
+    "keyring",
     # Run local Kubernetes cluster in Docker
     "kind",
     # Tool to move from `docker-compose` to Kubernetes
@@ -154,6 +299,22 @@ brews = [
     "kubeseal",
     # Template-free customization of Kubernetes YAML manifests
     "kustomize",
+    # Linear Algebra PACKage
+    "lapack",
+    # Command-line, double-entry accounting tool
+    "ledger",
+    # Asynchronous event library
+    "libev",
+    # Library that provides automatic proxy configuration management
+    "libproxy",
+    # Apache Pulsar C++ library
+    "libpulsar",
+    # C websockets server library
+    "libwebsockets",
+    # C++ wrapper for libxml
+    "libxml++",
+    # Next-gen compiler infrastructure
+    "llvm@17",
     # Keep your Mac's application settings in sync
     "mackup",
     # Securely transfers data between computers
@@ -176,10 +337,14 @@ brews = [
     "neonctl",
     # Ambitious Vim-fork focused on extensibility and agility
     "neovim",
+    # Small build system for use with gyp or CMake
+    "ninja",
     # Port scanning utility for large networks
     "nmap",
     # Batch rename utility
     "nomino",
+    # Development kit for the Java programming language
+    "openjdk@11",
     # 7-Zip (high compression file archiver) implementation
     "p7zip",
     # Search PDFs for strings matching a regular expression
@@ -188,28 +353,46 @@ brews = [
     "pnpm",
     # Python package management tool
     "poetry",
+    # Convert bitmaps to vector graphics
+    "potrace",
+    # Modern replacement for ps written in Rust
+    "procs",
     # Go support for Google's protocol buffers
     "protoc-gen-go",
     # Python version management
     "pyenv",
+    # Interpreted, interactive, object-oriented programming language
+    "python@3.10",
+    # Interpreted, interactive, object-oriented programming language
+    "python@3.9",
+    # Cross-platform application and UI framework
+    "qt",
+    # Fast, efficient and secure backup program
+    "restic",
     # Search tool like grep and The Silver Searcher
     "ripgrep",
     # Utility that provides fast incremental file transfer
     "rsync",
     # Rust toolchain installer
     "rustup",
+    # Command-line tool for the Amazon S3 service
+    "s3cmd",
     # Intuitive find & replace CLI
     "sd",
     # Static analysis and lint tool, for (ba)sh scripts
     "shellcheck",
-    # Simple and flexible tool for managing secrets
-    "sops",
     # SMART hard drive monitoring
     "smartmontools",
+    # Editor of encrypted files
+    "sops",
     # Command-line interface for https://speedtest.net bandwidth tests
     "speedtest-cli",
     # Cross-shell prompt for astronauts
     "starship",
+    # Version control system designed to be a better CVS
+    "subversion",
+    # Tool Command Language
+    "tcl-tk",
     # User interface to the TELNET protocol
     "telnet",
     # Tool to build, change, and version infrastructure
@@ -222,6 +405,14 @@ brews = [
     "trash",
     # Build, bundle & ship your Rust WASM application to the web
     "trunk",
+    # Markup-based typesetting system
+    "typst",
+    # Formatter for typst
+    "typstfmt",
+    # Extremely fast Python package installer and resolver, written in Rust
+    "uv",
+    # Vi 'workalike' with many additional features
+    "vim",
     # Tool for creating isolated virtual python environments
     "virtualenv",
     # Your favorite rust -> wasm workflow tool!
@@ -230,15 +421,19 @@ brews = [
     "watch",
     # Internet file retriever
     "wget",
+    # Tools for the WireGuard secure network tunnel
+    "wireguard-tools",
     # HTTP benchmarking tool
     "wrk",
     # Friendly and fast tool for sending HTTP requests
     "xh",
     # Fast CSV toolkit written in Rust
     "xsv",
+    # JavaScript package manager
+    "yarn",
     # Process YAML, JSON, XML, CSV and properties documents from the CLI
     "yq",
-    # Fork of youtube-dl with additional features and fixes
+    # Feature-rich command-line audio/video downloader
     "yt-dlp",
     # Fast static site generator in a single binary with everything built-in
     "zola",
@@ -247,6 +442,8 @@ brews = [
     # Deduplicating archiver with compression and authenticated encryption
     "borgbackup/tap/borgbackup-fuse",
     "chiselstrike/tap/turso",
+    # CodeCrafters CLI
+    "codecrafters-io/tap/codecrafters",
     # Vault
     "hashicorp/tap/vault",
 ]
