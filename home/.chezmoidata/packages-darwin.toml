@@ -29,14 +29,6 @@ brews = [
     "webp",
     # New file format for still image compression
     "jpeg-xl",
-    # Protocol buffers (Google's data interchange format)
-    "protobuf",
-    # Next generation open source RPC library and framework
-    "grpc",
-    # Clean C library for processing UTF-8 Unicode data
-    "utf8proc",
-    # Columnar in-memory analytics layer designed to accelerate big data
-    "apache-arrow",
     # Collection of portable C++ source libraries
     "boost",
     # Standard XML representation system for technical documents
@@ -87,24 +79,16 @@ brews = [
     "cairo",
     # Easily generate Instruments traces for your rust crate
     "cargo-instruments",
-    # Decentralized dependency manager for Cocoa
-    "carthage",
     # Object-file caching compiler wrapper
     "ccache",
     # Manage your dotfiles across multiple diverse machines, securely
     "chezmoi",
-    # Open source monitoring and visualization UI for the TICK stack
-    "chronograf",
     # Cross-platform make
     "cmake",
     # GNU File, Shell, and Text utilities
     "coreutils",
-    # Compiler for writing C extensions for the Python language
-    "cython",
     # Lightweight, framework-agnostic database migration tool
     "dbmate",
-    # Secure runtime for JavaScript and TypeScript
-    "deno",
     # USB programmer
     "dfu-util",
     # Display user-friendly message boxes from shell scripts
@@ -123,8 +107,6 @@ brews = [
     "dust",
     # Build automation tool for the container era
     "earthly",
-    # Simple command-line tool for creating clusters on Amazon EKS
-    "eksctl",
     # Generic library support script
     "libtool",
     # Programming language for highly scalable real-time systems
@@ -161,52 +143,20 @@ brews = [
     "findutils",
     # User-friendly command-line shell for UNIX-like operating systems
     "fish",
-    # Command-line tools for fly.io services
-    "flyctl",
     # Fast and simple Node.js version manager
     "fnm",
     # Command-line fuzzy finder written in Go
     "fzf",
     # GNU compiler collection
     "gcc",
-    # GNU Pretty Good Privacy (PGP) package
-    "gnupg",
-    # Library access to GnuPG
-    "gpgme",
-    # Database of common MIME types
-    "shared-mime-info",
-    # ISO/IEC 23008-12:2017 HEIF file format decoder and encoder
-    "libheif",
-    # Postgres C API library
-    "libpq",
-    # Adds spatial SQL capabilities to SQLite
-    "libspatialite",
-    # Libraries for security-enabled client and server applications
-    "nss",
-    # Optimized BLAS library
-    "openblas",
-    # Package for scientific computing with Python
-    "numpy",
-    # PDF rendering library (based on the xpdf-3.0 code base)
-    "poppler",
-    # Geospatial Data Abstraction Library
-    "gdal",
-    # GitHub command-line tool
-    "gh",
     # Interpreter for PostScript and PDF
     "ghostscript",
     # Distributed revision control system
     "git",
     # Syntax-highlighting pager for git and diff output
     "git-delta",
-    # Extensions to follow Vincent Driessen's branching model
-    "git-flow",
     # Git extension for versioning large files
     "git-lfs",
-    # Platform built on V8 to build network applications
-    "node",
-    # Run gitlab pipelines locally as shell executor or docker executor
-    "gitlab-ci-local",
     # Statically typed language for the Erlang VM
     "gleam",
     # Callback framework for C++
@@ -219,12 +169,14 @@ brews = [
     "gnu-getopt",
     # GNU implementation of the famous stream editor
     "gnu-sed",
+    # GNU Pretty Good Privacy (PGP) package
+    "gnupg",
     # Open source programming language to build simple/reliable/efficient software
     "go",
     # Generate introspection data for GObject libraries
     "gobject-introspection",
-    # Pure Go implementation of jq
-    "gojq",
+    # Library access to GnuPG
+    "gpgme",
     # Library for manipulating JPEG-2000 images
     "jasper",
     # Library to render SVG files using Cairo
@@ -237,10 +189,10 @@ brews = [
     "grep",
     # Command-line tool for generating regular expressions
     "grex",
-    # Utilities for manipulating PostScript documents
-    "psutils",
-    # GNU troff text-formatting system
-    "groff",
+    # Protocol buffers (Google's data interchange format)
+    "protobuf",
+    # Next generation open source RPC library and framework
+    "grpc",
     # GNU Ubiquitous Intelligent Language for Extensions
     "guile",
     # Tool for glamorous shell scripts
@@ -249,20 +201,16 @@ brews = [
     "haskell-stack",
     # Kubernetes package manager
     "helm",
-    # Powerful, lightweight programming language
-    "lua",
-    # Convert source code to formatted text with syntax highlighting
-    "highlight",
     # Easy plain text accounting with command-line, terminal and web UIs
     "hledger",
     # Improved top (interactive process viewer)
     "htop",
-    # Cryptography and SSL/TLS Toolkit
-    "openssl@1.1",
-    # Simple zero-configuration command-line HTTP server
-    "http-server",
     # Command-line benchmarking tool
     "hyperfine",
+    # Database of common MIME types
+    "shared-mime-info",
+    # ISO/IEC 23008-12:2017 HEIF file format decoder and encoder
+    "libheif",
     # LLVM's OpenMP runtime library
     "libomp",
     # Library for reading RAW files from digital photo cameras
@@ -273,12 +221,8 @@ brews = [
     "inetutils",
     # CLI for managing resources in InfluxDB v2
     "influxdb-cli",
-    # Update of iperf: measures TCP, UDP, and SCTP bandwidth
-    "iperf3",
     # Manage your Java environment
     "jenv",
-    # JSON output from a shell
-    "jo",
     # Image manipulation library
     "jpeg",
     # Lightweight and flexible command-line JSON processor
@@ -289,10 +233,6 @@ brews = [
     "k9s",
     # Easy way to access the system keyring service from python
     "keyring",
-    # Run local Kubernetes cluster in Docker
-    "kind",
-    # Tool to move from `docker-compose` to Kubernetes
-    "kompose",
     # Kubernetes command-line interface
     "kubernetes-cli",
     # Kubernetes controller and tool for one-way encrypted Secrets
@@ -303,18 +243,22 @@ brews = [
     "lapack",
     # Command-line, double-entry accounting tool
     "ledger",
-    # Asynchronous event library
-    "libev",
+    # Postgres C API library
+    "libpq",
     # Library that provides automatic proxy configuration management
     "libproxy",
     # Apache Pulsar C++ library
     "libpulsar",
+    # Adds spatial SQL capabilities to SQLite
+    "libspatialite",
     # C websockets server library
     "libwebsockets",
     # C++ wrapper for libxml
     "libxml++",
     # Next-gen compiler infrastructure
     "llvm@17",
+    # Powerful, lightweight programming language
+    "lua",
     # Keep your Mac's application settings in sync
     "mackup",
     # Securely transfers data between computers
@@ -327,46 +271,46 @@ brews = [
     "mcfly",
     # Replacement for the old crypt package and crypt(1) command
     "mcrypt",
-    # High performance static file server
-    "miniserve",
     # Simple tool to make locally trusted development certificates
     "mkcert",
     # Remote terminal application
     "mosh",
+    # Platform built on V8 to build network applications
+    "node",
     # Neon CLI tool
     "neonctl",
     # Ambitious Vim-fork focused on extensibility and agility
     "neovim",
-    # Small build system for use with gyp or CMake
-    "ninja",
     # Port scanning utility for large networks
     "nmap",
-    # Batch rename utility
-    "nomino",
+    # Libraries for security-enabled client and server applications
+    "nss",
+    # Optimized BLAS library
+    "openblas",
     # Development kit for the Java programming language
     "openjdk@11",
+    # Cryptography and SSL/TLS Toolkit
+    "openssl@1.1",
     # 7-Zip (high compression file archiver) implementation
     "p7zip",
+    # PDF rendering library (based on the xpdf-3.0 code base)
+    "poppler",
     # Search PDFs for strings matching a regular expression
     "pdfgrep",
-    # Fast, disk space efficient package manager
-    "pnpm",
     # Python package management tool
     "poetry",
-    # Convert bitmaps to vector graphics
-    "potrace",
     # Modern replacement for ps written in Rust
     "procs",
     # Go support for Google's protocol buffers
     "protoc-gen-go",
+    # Utilities for manipulating PostScript documents
+    "psutils",
     # Python version management
     "pyenv",
     # Interpreted, interactive, object-oriented programming language
     "python@3.10",
     # Interpreted, interactive, object-oriented programming language
     "python@3.9",
-    # Cross-platform application and UI framework
-    "qt",
     # Fast, efficient and secure backup program
     "restic",
     # Search tool like grep and The Silver Searcher
@@ -381,22 +325,16 @@ brews = [
     "sd",
     # Static analysis and lint tool, for (ba)sh scripts
     "shellcheck",
-    # SMART hard drive monitoring
-    "smartmontools",
     # Editor of encrypted files
     "sops",
     # Command-line interface for https://speedtest.net bandwidth tests
     "speedtest-cli",
     # Cross-shell prompt for astronauts
     "starship",
-    # Version control system designed to be a better CVS
-    "subversion",
-    # Tool Command Language
-    "tcl-tk",
     # User interface to the TELNET protocol
     "telnet",
-    # Tool to build, change, and version infrastructure
-    "terraform",
+    # Clean C library for processing UTF-8 Unicode data
+    "utf8proc",
     # Terminal multiplexer
     "tmux",
     # Program that allows you to count code, quickly
@@ -413,8 +351,6 @@ brews = [
     "uv",
     # Vi 'workalike' with many additional features
     "vim",
-    # Tool for creating isolated virtual python environments
-    "virtualenv",
     # Your favorite rust -> wasm workflow tool!
     "wasm-pack",
     # Executes a program periodically, showing output fullscreen
@@ -444,8 +380,6 @@ brews = [
     "chiselstrike/tap/turso",
     # CodeCrafters CLI
     "codecrafters-io/tap/codecrafters",
-    # Vault
-    "hashicorp/tap/vault",
 ]
 casks = [
     # Command-line helper for the 1Password password manager
