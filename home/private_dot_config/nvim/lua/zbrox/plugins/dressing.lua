@@ -1,2 +1,4 @@
--- Improve default vim.ui elements
-return { "stevearc/dressing.nvim" }
+return {
+    "stevearc/dressing.nvim",
+    event = "VeryLazy",
+}

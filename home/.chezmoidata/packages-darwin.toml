@@ -259,6 +259,8 @@ brews = [
     "llvm@17",
     # Powerful, lightweight programming language
     "lua",
+    # Package manager for the Lua programming language
+    "luarocks",
     # Keep your Mac's application settings in sync
     "mackup",
     # Securely transfers data between computers

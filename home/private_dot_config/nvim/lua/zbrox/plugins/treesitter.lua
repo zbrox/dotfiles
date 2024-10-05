@@ -1,30 +1,61 @@
--- Syntax highlighting
 return {
-    'nvim-treesitter/nvim-treesitter',
-    build = ':TSUpdate',
+    "nvim-treesitter/nvim-treesitter",
+    event = { "BufReadPre", "BufNewFile" },
+    build = ":TSUpdate",
+    dependencies = {
+        "windwp/nvim-ts-autotag",
+    },
     config = function()
-        local configs = require("nvim-treesitter.configs")
+        -- import nvim-treesitter plugin
+        local treesitter = require("nvim-treesitter.configs")
 
-        configs.setup({
-            -- A list of parser names, or "all" (the five listed parsers should always be installed)
-            ensure_installed = { "javascript", "typescript", "rust", "lua", "vim", "vimdoc", "query", "toml", "python" },
-
-            -- Install parsers synchronously (only applied to `ensure_installed`)
-            sync_install = false,
-
-            -- Automatically install missing parsers when entering buffer
-            -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
-            auto_install = true,
-
+        -- configure treesitter
+        treesitter.setup({ -- enable syntax highlighting
             highlight = {
                 enable = true,
-
-                -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-                -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
-                -- Using this option may slow down your editor, and you may see some duplicate highlights.
-                -- Instead of true it can also be a list of languages
-                additional_vim_regex_highlighting = false,
+            },
+            -- enable indentation
+            indent = { enable = true },
+            -- enable autotagging (w/ nvim-ts-autotag plugin)
+            autotag = {
+                enable = true,
+            },
+            -- ensure these language parsers are installed
+            ensure_installed = {
+                "bash",
+                "css",
+                "dockerfile",
+                "elixir",
+                "fish",
+                "gitignore",
+                "gleam",
+                "go",
+                "graphql",
+                "html",
+                "javascript",
+                "json",
+                "lua",
+                "markdown_inline",
+                "markdown",
+                "python",
+                "rust",
+                "svelte",
+                "toml",
+                "tsx",
+                "typescript",
+                "vim",
+                "vimdoc",
+                "yaml",
+            },
+            incremental_selection = {
+                enable = true,
+                keymaps = {
+                    init_selection = "<C-space>",
+                    node_incremental = "<C-space>",
+                    scope_incremental = false,
+                    node_decremental = "<bs>",
+                },
             },
         })
-    end
+    end,
 }

@@ -1,35 +1,41 @@
--- Tree view
-return
-{
-    'kyazdani42/nvim-tree.lua',
-    dependencies = { 'nvim-tree/nvim-web-devicons' },
+return {
+    "nvim-tree/nvim-tree.lua",
+    dependencies = {
+        "nvim-tree/nvim-web-devicons", -- optional, for file icons
+    },
     config = function()
-        local function on_attach(bufnr)
-            local api = require "nvim-tree.api"
+        local nvimtree = require("nvim-tree")
 
-            local function opts(desc)
-                return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
-            end
-
-            -- default mappings
-            api.config.mappings.default_on_attach(bufnr)
-
-            -- custom mappings
-            vim.keymap.set('n', '<leader>b', '<cmd>NvimTreeToggle<CR>', { desc = "Show tree view" })
-            vim.keymap.set('n', '?', api.tree.toggle_help, opts('Help'))
-        end
-
-        require('nvim-tree').setup {
-            disable_netrw = true,
-            hijack_netrw = true,
+        -- recommended settings from plugin documentation
+        vim.g.loaded_netrw = 1
+        vim.g.loaded_netrwPlugin = 1
+        nvimtree.setup({
             view = {
-                number = true,
+                width = 30,
                 relativenumber = true,
             },
-            filters = {
-                custom = { ".git" },
+            renderer = {
+                indent_markers = {
+                    enable = true,
+                },
             },
-            on_attach = on_attach,
-        }
-    end,
+            actions = {
+                open_file = {
+                    window_picker = {
+                        enable = false,
+                    },
+                },
+            },
+            git = {
+                ignore = false,
+            },
+        })
+
+        local keymap = vim.keymap
+
+        keymap.set("n", "<leader>ee", ":NvimTreeToggle<CR>", { desc = "Toggle file explorer" })
+        keymap.set("n", "<leader>ef", ":NvimTreeFindFileToggle<CR>", { desc = "Toggle file explorer on current file" })
+        keymap.set("n", "<leader>ec", ":NvimTreeCollapse<CR>", { desc = "Collapse file explorer" })
+        keymap.set("n", "<leader>eC", ":NvimTreeRefresh<CR>", { desc = "Refresh file explorer" })
+    end
 }
