@@ -448,10 +448,10 @@ brews = [
     "hashicorp/tap/vault",
 ]
 casks = [
+    # Command-line helper for the 1Password password manager
+    "1password-cli@beta",
     # Password manager
     "1password@beta",
-    # Command-line interface for 1Password
-    "1password-cli@beta",
     # AirPods companion app
     "airbuddy",
     # GraphQL client
@@ -460,14 +460,16 @@ casks = [
     "apparency",
     # Tool to flash OS images to SD cards & USB drives
     "balenaetcher",
-    # Menu bar icon organiser
-    "bartender",
     # E-books management software
     "calibre",
     # Multi-platform client-side cloud file encryption tool
     "cryptomator",
+    # Database manager
+    "dataflare",
     # Voice and text chat software
     "discord",
+    # App to build and share containerised applications and microservices
+    "docker",
     # Calendar software
     "fantastical",
     # Collaborative team software
@@ -477,13 +479,12 @@ casks = [
     "font-anonymice-powerline",
     "font-dejavu-sans-mono-for-powerline",
     "font-droid-sans-mono-for-powerline",
-    # Free monospaced font with programming ligatures
     "font-fira-code",
     "font-fira-mono-for-powerline",
     "font-inconsolata-dz-for-powerline",
     "font-inconsolata-for-powerline",
     "font-inconsolata-g-for-powerline",
-    # Typeface made for developers
+    "font-iosevka",
     "font-jetbrains-mono",
     "font-liberation-mono-for-powerline",
     "font-menlo-for-powerline",
@@ -492,18 +493,22 @@ casks = [
     "font-noto-emoji",
     "font-noto-mono-for-powerline",
     "font-roboto-mono-for-powerline",
-    # Developer targeted fonts with a high number of glyphs
     "font-sauce-code-pro-nerd-font",
     "font-source-code-pro",
     "font-source-code-pro-for-powerline",
     "font-source-sans-pro",
     "font-source-serif-pro",
     "font-ubuntu-mono-derivative-powerline",
-    "font-iosevka",
+    # Git client for simultaneous branches on top of your existing workflow
+    "gitbutler",
     # Git interface focused on visual interaction
     "gitup",
+    # Web browser
+    "google-chrome",
     # Open-source video transcoder
     "handbrake",
+    # Menu bar manager
+    "jordanbaird-ice",
     # Spot and merge differences in text and image files or folders
     "kaleidoscope",
     # End-to-end encryption software
@@ -518,6 +523,10 @@ casks = [
     "logitech-unifying",
     # File system integration
     "macfuse",
+    # Speech recognition tool
+    "macwhisper",
+    # Tool to control external monitor brightness & volume
+    "monitorcontrol",
     # Re-mounts write-protected NTFS volumes
     "mounty",
     # Free and open-source RSS reader
@@ -558,6 +567,7 @@ casks = [
     "tableplus",
     # Tool for liberating data tables trapped inside PDF files
     "tabula",
+    # Mesh VPN based on WireGuard
     "tailscale",
     # Messaging app with a focus on speed and security
     "telegram",
@@ -567,23 +577,26 @@ casks = [
     "transmit",
     # Calling and messaging application focusing on security
     "viber",
+    # Virtualization tool
+    "virtualbuddy",
     # OpenVPN client with AppleScript support
     "viscosity",
     # Open-source code editor
     "visual-studio-code",
-    # Multimedia player
-    "vlc",
+    # Code editor
+    "visual-studio-code@insiders",
     # Desktop Backup Client for Borg
     "vorta",
+    # Rust-based terminal
     "warp",
     # GPU-accelerated cross-platform terminal emulator and multiplexer
     "wezterm",
     # Native desktop client for WhatsApp
     "whatsapp@beta",
-    # Network protocol analyzer
-    "wireshark",
-    # Allows access to WWDC livestreams, videos and sessions
-    "wwdc",
+    # REST, GraphQL and gRPC client
+    "yaak",
+    # Multiplayer code editor
+    "zed",
 ]
 
 [[packages.darwin.mas]]
