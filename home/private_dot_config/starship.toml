@@ -19,3 +19,6 @@ disabled = true
 [direnv]
 disabled = false
 style = "#CE9178"
+
+[gcloud]
+disabled = true
