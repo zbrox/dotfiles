@@ -377,6 +377,8 @@ brews = [
     "zola",
     # Shell extension to navigate your filesystem faster
     "zoxide",
+    # Pluggable terminal workspace, with terminal multiplexer as the base feature
+    "zellij",    
     # Deduplicating archiver with compression and authenticated encryption
     "borgbackup/tap/borgbackup-fuse",
     "chiselstrike/tap/turso",
