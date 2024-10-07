@@ -17,6 +17,8 @@ brews = [
     "act",
     # Simple, modern, secure file encryption
     "age",
+    # Improved shell history for zsh, bash, fish and nushell
+    "atuin",
     # General-purpose data compression with high compression ratio
     "xz",
     # Automate deployment, configuration, and upgrading
@@ -269,8 +271,6 @@ brews = [
     "make",
     # Mac App Store command-line interface
     "mas",
-    # Fly through your shell history
-    "mcfly",
     # Replacement for the old crypt package and crypt(1) command
     "mcrypt",
     # Simple tool to make locally trusted development certificates
