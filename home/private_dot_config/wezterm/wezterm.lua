@@ -1,19 +1,16 @@
-local wezterm = require "wezterm"
-local keybindings = require "keybindings"
-local utils = require "utils"
+local wezterm = require("wezterm")
 
-utils.notify_reload()
+local config = wezterm.config_builder()
 
-return {
-    font = wezterm.font "Source Code Pro for Powerline",
-    font_size = 12.0,
-    
-    hide_tab_bar_if_only_one_tab = true,
+config.font = wezterm.font("MesloLGS Nerd Font Mono")
+config.font_size = 14
 
-    -- Don't accidentally select stuff when I click on a window and accidentally move a few pixels
-    swallow_mouse_click_on_window_focus = true,
-    
-    -- Key bindings
-    leader = { key = 'b', mods = 'CTRL' },
-    keys = keybindings
-}
+-- disable tab bar
+config.enable_tab_bar = false
+
+config.window_decorations = "RESIZE"
+
+config.window_background_opacity = 0.75
+config.macos_window_background_blur = 10
+
+return config
