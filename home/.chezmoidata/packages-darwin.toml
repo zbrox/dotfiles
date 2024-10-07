@@ -427,6 +427,7 @@ casks = [
     "font-liberation-mono-for-powerline",
     "font-menlo-for-powerline",
     "font-meslo-for-powerline",
+    "font-meslo-lg-nerd-font",
     "font-monofur-for-powerline",
     "font-noto-emoji",
     "font-noto-mono-for-powerline",
