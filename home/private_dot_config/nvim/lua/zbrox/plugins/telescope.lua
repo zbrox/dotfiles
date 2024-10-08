@@ -18,7 +18,7 @@ return {
 
     -- or create your custom action
     local custom_actions = transform_mod({
-      open_trouble_qflist = function(prompt_bufnr)
+      open_trouble_qflist = function(_)
         trouble.toggle("quickfix")
       end,
     })
