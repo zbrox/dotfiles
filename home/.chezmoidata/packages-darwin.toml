@@ -487,6 +487,8 @@ casks = [
     "postico",
     # Quick Look generator for Markdown files
     "qlmarkdown",
+    # QMK Toolbox
+    "qmk-toolbox",
     # Quick Look plugin for CSV files
     "quicklook-csv",
     # Quick Look plugin for JSON files
@@ -517,6 +519,8 @@ casks = [
     "the-unarchiver",
     # File transfer application
     "transmit",
+    # Keyboard configurator
+    "via",
     # Calling and messaging application focusing on security
     "viber",
     # Virtualization tool
