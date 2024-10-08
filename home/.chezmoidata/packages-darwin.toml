@@ -11,7 +11,8 @@ taps = [
     "homebrew/cask-versions",
     "homebrew/services",
     "libsql/sqld",
-    "macos-fuse-t/homebrew-cask"
+    "macos-fuse-t/homebrew-cask",
+    "qmk/qmk"
 ]
 brews = [
     # Run your GitHub Actions locally
@@ -385,6 +386,7 @@ brews = [
     "chiselstrike/tap/turso",
     # CodeCrafters CLI
     "codecrafters-io/tap/codecrafters",
+    "qmk",
 ]
 casks = [
     # Command-line helper for the 1Password password manager
