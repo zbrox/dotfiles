@@ -521,8 +521,6 @@ casks = [
     "the-unarchiver",
     # File transfer application
     "transmit",
-    # Keyboard configurator
-    "via",
     # Calling and messaging application focusing on security
     "viber",
     # Virtualization tool
