@@ -11,6 +11,7 @@ taps = [
     "homebrew/cask-versions",
     "homebrew/services",
     "libsql/sqld",
+    "macos-fuse-t/homebrew-cask"
 ]
 brews = [
     # Run your GitHub Actions locally
@@ -462,6 +463,8 @@ casks = [
     "logitech-unifying",
     # File system integration
     "macfuse",
+    # LibFUSE implementation that doesn't use kernel extensions
+    "fuse-t",
     # Speech recognition tool
     "macwhisper",
     # Tool to control external monitor brightness & volume
