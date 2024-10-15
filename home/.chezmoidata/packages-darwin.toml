@@ -387,6 +387,8 @@ brews = [
     # CodeCrafters CLI
     "codecrafters-io/tap/codecrafters",
     "qmk",
+    # Secure runtime for JavaScript and TypeScript 
+    "deno",
 ]
 casks = [
     # Command-line helper for the 1Password password manager
