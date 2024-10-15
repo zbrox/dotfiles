@@ -409,8 +409,6 @@ casks = [
     "dataflare",
     # Voice and text chat software
     "discord",
-    # App to build and share containerised applications and microservices
-    "docker",
     # Calendar software
     "fantastical",
     # Collaborative team software
