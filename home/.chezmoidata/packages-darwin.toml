@@ -461,8 +461,6 @@ casks = [
     "livebook",
     # Software for Logitech devices
     "logitech-options",
-    # Utility for pairing devices with Unifying receivers
-    "logitech-unifying",
     # File system integration
     "macfuse",
     # LibFUSE implementation that doesn't use kernel extensions
