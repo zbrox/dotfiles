@@ -34,7 +34,10 @@ set -x HOMEBREW_AUTO_UPDATE_SECS 3600
 set -x DYLD_FALLBACK_LIBRARY_PATH /usr/local/opt/openssl/lib
 
 # load private env file
-posix-source $DOTFILES/.env_private
+if test -f $DOTFILES/.env_private
+	echo "Loading private env vars from $DOTFILES/.env_private"
+  posix-source $DOTFILES/.env_private
+end
 
 # Locales
 set -x LC_ALL en_US.UTF-8
