@@ -54,5 +54,11 @@ return {
       { desc = "Find dotfiles managed by chezmoi" }
     )
     keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Show all open buffers" })
+    keymap.set(
+      "n",
+      "<leader>gs",
+      "<cmd>Telescope lsp_document_symbols<CR>",
+      { desc = "Go to symbols list", noremap = true, silent = true }
+    )
   end,
 }
