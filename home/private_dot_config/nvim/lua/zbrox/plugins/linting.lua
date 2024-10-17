@@ -11,7 +11,6 @@ return {
       typescriptreact = { "eslint_d" },
       svelte = { "eslint_d" },
       python = { "ruff" },
-      rust = { "cargo", "clippy" },
       go = { "golangci-lint" },
       sh = { "shellcheck" },
       lua = { "luacheck" },
