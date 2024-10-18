@@ -1,0 +1,9 @@
+theme = "rose_pine"
+
+[editor]
+line-number = "relative"
+bufferline = "multiple"
+
+[editor.cursor-shape]
+insert = "bar"
+
