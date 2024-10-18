@@ -389,6 +389,8 @@ brews = [
     "qmk",
     # Secure runtime for JavaScript and TypeScript 
     "deno",
+    # Language Server Protocol for Markdown
+    "marksman",
 ]
 casks = [
     # Command-line helper for the 1Password password manager
