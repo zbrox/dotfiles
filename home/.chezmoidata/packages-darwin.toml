@@ -391,6 +391,8 @@ brews = [
     "deno",
     # Language Server Protocol for Markdown
     "marksman",
+    # Blazing fast terminal file manager written in Rust, based on async I/O
+    "yazi",
 ]
 casks = [
     # Command-line helper for the 1Password password manager
