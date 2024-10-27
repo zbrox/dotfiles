@@ -393,6 +393,8 @@ brews = [
     "marksman",
     # Blazing fast terminal file manager written in Rust, based on async I/O
     "yazi",
+    # Git-compatible distributed version control system
+    "jj",
 ]
 casks = [
     # Command-line helper for the 1Password password manager
