@@ -466,7 +466,7 @@ casks = [
     # Code notebooks for Elixir developers
     "livebook",
     # Software for Logitech devices
-    "logitech-options",
+    "logi-options+",
     # File system integration
     "macfuse",
     # LibFUSE implementation that doesn't use kernel extensions
