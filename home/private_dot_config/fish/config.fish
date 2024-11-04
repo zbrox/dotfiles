@@ -36,3 +36,6 @@ end
 
 # setup zoxide
 zoxide init fish | source
+
+# fish vi mode
+fish_vi_key_bindings
