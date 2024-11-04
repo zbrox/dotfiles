@@ -1,4 +1,6 @@
 # documentation at https://starship.rs/config
+format = """$directory$character"""
+right_format = """$all"""
 
 [character]
 success_symbol = "➜"
@@ -22,3 +24,6 @@ style = "#CE9178"
 
 [gcloud]
 disabled = true
+
+[git_branch]
+format =  '[$symbol$branch(:$remote_branch)]($style)'
