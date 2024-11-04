@@ -403,8 +403,6 @@ casks = [
     "1password@beta",
     # AirPods companion app
     "airbuddy",
-    # GraphQL client
-    "altair-graphql-client",
     # Inspect application bundles
     "apparency",
     # Tool to flash OS images to SD cards & USB drives
@@ -433,6 +431,7 @@ casks = [
     "font-inconsolata-g-for-powerline",
     "font-iosevka",
     "font-jetbrains-mono",
+    "font-jetbrains-mono-nerd-font",
     "font-liberation-mono-for-powerline",
     "font-menlo-for-powerline",
     "font-meslo-for-powerline",
