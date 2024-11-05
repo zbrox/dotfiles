@@ -20,4 +20,5 @@ bins = [
     "lemmeknow",
     "rewrk",
     "tealdeer",
+    "lazyjj",
 ]
