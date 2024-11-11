@@ -7,7 +7,11 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "features": {
+    "inline_completion_provider": "supermaven"
+  },
   "vim_mode": true,
+  "relative_line_numbers": true,
   "theme": "Rosé Pine",
   "base_keymap": "VSCode",
   "telemetry": {
@@ -22,5 +26,16 @@
         "activate_script": "fish"
       }
     }
-  }
+  },
+  "file_scan_exclusions": [
+    "**/.git",
+    "**/.jj",
+    "**/.svn",
+    "**/.hg",
+    "**/CVS",
+    "**/.DS_Store",
+    "**/Thumbs.db",
+    "**/.classpath",
+    "**/.settings"
+  ]
 }
