@@ -19,8 +19,9 @@
 [includeIf "gitdir:~/Projects/"]
     path = .gitconfig-work
 [core]
-    editor = code --wait
+    editor = nvim -w
     pager = delta --dark
+    excludesfile = ~/.gitignore_global
 [push]
     default = simple
     followTags = true
