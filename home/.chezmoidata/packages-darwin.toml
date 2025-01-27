@@ -269,8 +269,6 @@ brews = [
     "make",
     # Mac App Store command-line interface
     "mas",
-    # Replacement for the old crypt package and crypt(1) command
-    "mcrypt",
     # Simple tool to make locally trusted development certificates
     "mkcert",
     # Remote terminal application
@@ -599,10 +597,6 @@ id = 1582751983
 [[packages.darwin.mas]]
 name = "Jayson"
 id = 1468691718
-
-[[packages.darwin.mas]]
-name = "Kaleidoscope"
-id = 587512244
 
 [[packages.darwin.mas]]
 name = "Keynote"
