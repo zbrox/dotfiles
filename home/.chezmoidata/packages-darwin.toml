@@ -327,8 +327,6 @@ brews = [
     "speedtest-cli",
     # Cross-shell prompt for astronauts
     "starship",
-    # User interface to the TELNET protocol
-    "telnet",
     # Clean C library for processing UTF-8 Unicode data
     "utf8proc",
     # Terminal multiplexer
