@@ -474,8 +474,6 @@ casks = [
     "openlens",
     # Replacement for Docker Desktop
     "orbstack",
-    # HTTP client that helps testing and describing APIs
-    "paw",
     # Home media player
     "plex",
     # GUI client for PostgreSQL databases
