@@ -16,7 +16,7 @@
 [user]
 	name = Rostislav Raykov
 	email = me@zbrox.com
-[includeIf "gitdir:~/Projects/"]
+[includeIf "gitdir:~/Work/"]
     path = .gitconfig-work
 [core]
     editor = nvim -w
