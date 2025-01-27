@@ -385,6 +385,8 @@ brews = [
     "yazi",
     # Git-compatible distributed version control system
     "jj",
+    # Post-modern modal text editor
+    "helix",
 ]
 casks = [
     # Command-line helper for the 1Password password manager
