@@ -7,8 +7,6 @@ taps = [
     "hashicorp/tap",
     "hcavarsan/kftray",
     "homebrew/bundle",
-    "homebrew/cask-fonts",
-    "homebrew/cask-versions",
     "homebrew/services",
     "libsql/sqld",
     "macos-fuse-t/homebrew-cask",
@@ -105,8 +103,6 @@ brews = [
     "dive",
     # Command-line tool for DigitalOcean
     "doctl",
-    # Command-line DNS client
-    "dog",
     # More intuitive version of du in rust
     "dust",
     # Build automation tool for the container era
@@ -293,8 +289,6 @@ brews = [
     "openblas",
     # Development kit for the Java programming language
     "openjdk@11",
-    # Cryptography and SSL/TLS Toolkit
-    "openssl@1.1",
     # 7-Zip (high compression file archiver) implementation
     "p7zip",
     # PDF rendering library (based on the xpdf-3.0 code base)
@@ -443,8 +437,6 @@ casks = [
     "font-sauce-code-pro-nerd-font",
     "font-source-code-pro",
     "font-source-code-pro-for-powerline",
-    "font-source-sans-pro",
-    "font-source-serif-pro",
     "font-ubuntu-mono-derivative-powerline",
     # Git client for simultaneous branches on top of your existing workflow
     "gitbutler",
