@@ -10,7 +10,9 @@ taps = [
     "homebrew/services",
     "libsql/sqld",
     "macos-fuse-t/homebrew-cask",
-    "qmk/qmk"
+    "qmk/qmk",
+    "nikitabobko/tap",
+    "FelixKratz/formulae",
 ]
 brews = [
     # Run your GitHub Actions locally
@@ -387,6 +389,14 @@ brews = [
     "jj",
     # Post-modern modal text editor
     "helix",
+    # Drop-in replacement for Terraform. Infrastructure as Code Tool
+    "opentofu",
+    # Microsoft Azure CLI 2.0
+    "azure-cli",
+    # Custom macOS statusbar with shell plugin, interaction and graph support
+    "sketchybar",
+    # A window border system for macOS
+    "borders",
 ]
 casks = [
     # Command-line helper for the 1Password password manager
@@ -534,6 +544,8 @@ casks = [
     "yaak",
     # Multiplayer code editor
     "zed",
+    # AeroSpace is an i3-like tiling window manager for macOS
+    "AeroSpace",
 ]
 
 [[packages.darwin.mas]]
