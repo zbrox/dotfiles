@@ -35,8 +35,8 @@ set -x DYLD_FALLBACK_LIBRARY_PATH /usr/local/opt/openssl/lib
 
 # load private env file
 if test -f $DOTFILES/.env_private
-	echo "Loading private env vars from $DOTFILES/.env_private"
-  posix-source $DOTFILES/.env_private
+    echo "Loading private env vars from $DOTFILES/.env_private"
+    posix-source $DOTFILES/.env_private
 end
 
 # Locales
@@ -45,15 +45,26 @@ set -x LANG en_US.UTF-8
 set -x LANGUAGE en_US.UTF-8
 
 # Editor
-set -x EDITOR 'vim'
+set -x EDITOR vim
 
 # Homebrew OpenSSL headers fixes
 if type -q brew
-	set -x OPENSSL_INCLUDE_DIR (brew --prefix openssl)/include
-	set -x OPENSSL_LIB_DIR (brew --prefix openssl)/lib
+    set -x OPENSSL_INCLUDE_DIR (brew --prefix openssl)/include
+    set -x OPENSSL_LIB_DIR (brew --prefix openssl)/lib
 end
 
-if test (uname -p) = "arm"
-	set -x LDFLAGS -L(brew --prefix openssl)/lib
-	set -x CPPFLAGS -I(brew --prefix openssl)/include
+if test (uname -p) = arm
+    set -x LDFLAGS -L(brew --prefix openssl)/lib
+    set -x CPPFLAGS -I(brew --prefix openssl)/include
+end
+
+# 1password ssh agent
+if test -x /Applications/1Password.app/Contents/MacOS/1Password
+    if not test -d ~/.1password
+        mkdir -p ~/.1password
+    end
+    if test -f ~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
+        ln -s ~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock ~/.1password/agent.sock
+    end
+    set SSH_AUTH_SOCK ~/.1password/agent.sock
 end
