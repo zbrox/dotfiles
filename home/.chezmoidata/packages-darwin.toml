@@ -546,6 +546,8 @@ casks = [
     "zed",
     # AeroSpace is an i3-like tiling window manager for macOS
     "AeroSpace",
+    # SketchyBar default font
+    "font-hack-nerd-font",
 ]
 
 [[packages.darwin.mas]]
