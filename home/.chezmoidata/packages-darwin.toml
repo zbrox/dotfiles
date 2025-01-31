@@ -550,6 +550,8 @@ casks = [
     "font-hack-nerd-font",
     # Screen capturing tool
     "cleanshot",
+    # Keyboard customiser
+    "karabiner-elements",
 ]
 
 [[packages.darwin.mas]]
