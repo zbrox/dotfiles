@@ -226,8 +226,19 @@ shift-down = ['volume set 0', 'mode main']
 
 [[on-window-detected]]
 if.app-name-regex-substring = '^wezterm-gui$'
-run = 'move-node-to-workspace 1'
+run = 'move-node-to-workspace W'
 
 [[on-window-detected]]
 if.app-id = 'company.thebrowser.Browser'
-run = 'move-node-to-workspace 2'
+run = 'move-node-to-workspace B'
+
+[[on-window-detected]]
+if.app-id = 'company.thebrowser.Browser'
+check-further-callbacks = true
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'company.thebrowser.Browser'
+if.window-title-regex-substring = '^(?!Space)'
+check-further-callbacks = true
+run = 'layout tiling'
