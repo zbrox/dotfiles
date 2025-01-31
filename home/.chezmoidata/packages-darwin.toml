@@ -548,6 +548,8 @@ casks = [
     "AeroSpace",
     # SketchyBar default font
     "font-hack-nerd-font",
+    # Screen capturing tool
+    "cleanshot",
 ]
 
 [[packages.darwin.mas]]
