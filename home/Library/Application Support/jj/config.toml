@@ -1,3 +1,10 @@
 [user]
 name = "Rostislav Raykov"
-email = "rostislav.raykov@devies.se"
+# set email per repo
+
+[ui]
+default-command = "log"
+diff.tool = "delta"
+
+[aliases]
+credit = ["file", "annotate"]
