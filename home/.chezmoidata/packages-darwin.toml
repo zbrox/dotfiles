@@ -399,6 +399,12 @@ brews = [
     "borders",
     # Language Server for typos-cli
     "typos-lsp",
+    # Terminal slideshow tool
+    "presenterm",
+    # Versatile and fast Unicode/ASCII/ANSI graphics renderer
+    "chafa",
+    # Terminal based presentation tool
+    "slides",
     # Syntax-aware linter for prose
     "vale",
 ]
