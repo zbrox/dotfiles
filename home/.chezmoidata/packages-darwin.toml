@@ -397,6 +397,10 @@ brews = [
     "sketchybar",
     # A window border system for macOS
     "borders",
+    # Language Server for typos-cli
+    "typos-lsp",
+    # Syntax-aware linter for prose
+    "vale",
 ]
 casks = [
     # Command-line helper for the 1Password password manager
