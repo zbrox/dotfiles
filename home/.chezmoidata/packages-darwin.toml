@@ -407,6 +407,8 @@ brews = [
     "slides",
     # Syntax-aware linter for prose
     "vale",
+    # QR Code generation
+    "qrencode",
 ]
 casks = [
     # Command-line helper for the 1Password password manager
