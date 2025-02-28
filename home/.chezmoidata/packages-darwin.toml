@@ -409,6 +409,8 @@ brews = [
     "vale",
     # QR Code generation
     "qrencode",
+    # Rainbows and unicorns in your console!
+    "lolcat",
 ]
 casks = [
     # Command-line helper for the 1Password password manager
