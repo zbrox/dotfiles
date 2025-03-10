@@ -13,3 +13,5 @@ hidden = false
 [keys.normal]
 esc = ["collapse_selection", "keep_primary_selection"] # cancel selection with esc
 
+[editor.lsp]
+display-inlay-hints = true
