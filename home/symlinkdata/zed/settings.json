@@ -10,7 +10,7 @@
   "features": {
     "inline_completion_provider": "copilot"
   },
-  "vim_mode": true,
+  "vim_mode": false,
   "relative_line_numbers": true,
   "theme": "Rosé Pine",
   "base_keymap": "VSCode",
