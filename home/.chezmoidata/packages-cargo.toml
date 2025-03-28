@@ -22,4 +22,5 @@ bins = [
     "tealdeer",
     "lazyjj",
     "kanata",
+    "protols",
 ]
