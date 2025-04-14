@@ -12,7 +12,7 @@
   },
   "vim_mode": false,
   "relative_line_numbers": true,
-  "theme": "Rosé Pine",
+  "theme": "Rosé Pine Moon",
   "base_keymap": "VSCode",
   "telemetry": {
     "metrics": false
