@@ -23,8 +23,37 @@ style = "#CE9178"
 disabled = true
 
 [git_branch]
+disabled = true
 symbol = " "
 format =  '[$symbol$branch(:$remote_branch)]($style)'
+
+[custom.git_branch]
+when = true
+command = "jj root >/dev/null 2>&1 || starship module git_branch"
+description = "Only show git_branch if we're not in a jj repo"
+
+[git_status]
+disabled = true
+
+[custom.git_status]
+when = true
+command = "jj root >/dev/null 2>&1 || starship module git_status"
+description = "Only show git_status if we're not in a jj repo"
+
+[git_commit]
+disabled = true
+tag_symbol = '  '
+
+[custom.git_commit]
+when = true
+command = "jj root >/dev/null 2>&1 || starship module git_commit"
+description = "Only show git_commit if we're not in a jj repo"
+
+[custom.jj]
+command='''starship-jj --ignore-working-copy starship prompt'''
+format = "[$symbol](blue bold) $output "
+symbol = "󱗆 "
+when = "jj root --ignore-working-copy"
 
 [aws]
 symbol = "  "
@@ -61,9 +90,6 @@ symbol = " "
 
 [fossil_branch]
 symbol = " "
-
-[git_commit]
-tag_symbol = '  '
 
 [golang]
 symbol = " "

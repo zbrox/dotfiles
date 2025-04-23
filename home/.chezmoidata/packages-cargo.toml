@@ -23,4 +23,5 @@ bins = [
     "lazyjj",
     "kanata",
     "protols",
+    "starship-jj",
 ]
