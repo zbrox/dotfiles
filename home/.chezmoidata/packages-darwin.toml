@@ -410,6 +410,8 @@ brews = [
     "qrencode",
     # Rainbows and unicorns in your console!
     "lolcat",
+    # Fast, highly customisable system info script
+    "neofetch"
 ]
 casks = [
     # Command-line helper for the 1Password password manager
