@@ -3,10 +3,7 @@
 echo "Installing Xcode developer tools..."
 xcode-select --install
 
-# Tap the homebrew bundle first
-brew tap homebrew/bundle
-
-brew bundle --no-lock --file=/dev/stdin <<EOF
+brew bundle --file=/dev/stdin <<EOF
 {{ range .packages.darwin.taps -}}
 tap {{ . | quote }}
 {{ end -}}
