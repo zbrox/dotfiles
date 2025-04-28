@@ -3,4 +3,5 @@ symlinkdata/*
 {{ if ne .chezmoi.os "darwin" }}
 Library/Application Support/Code/User/settings.json
 private_dot_config/zed/settings.json
+Library/private_LaunchAgents/com.1password.SSH_AUTH_SOCK.plist
 {{ end }}
