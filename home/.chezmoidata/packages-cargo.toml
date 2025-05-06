@@ -24,4 +24,5 @@ bins = [
     "kanata",
     "protols",
     "starship-jj",
+    "cargo-px",
 ]
