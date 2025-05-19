@@ -25,4 +25,5 @@ bins = [
     "protols",
     "starship-jj",
     "cargo-px",
+    "release-plz",
 ]
