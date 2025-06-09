@@ -6,7 +6,6 @@ taps = [
     "codecrafters-io/tap",
     "hashicorp/tap",
     "hcavarsan/kftray",
-    "homebrew/services",
     "libsql/sqld",
     "macos-fuse-t/homebrew-cask",
     "qmk/qmk",
