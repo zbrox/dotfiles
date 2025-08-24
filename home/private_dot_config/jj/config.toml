@@ -8,3 +8,16 @@ diff-formatter = "delta"
 
 [aliases]
 credit = ["file", "annotate"]
+# Move closest bookmark forward to current position
+tug = ["bookmark", "move", "--from", "heads(::@- & bookmarks())", "--to", "@-"]
+
+[revset-aliases]
+# Local commits not yet pushed
+"local" = "all() ~ ancestors(remote_bookmarks())"
+
+# Find closest bookmark to a commit
+"closest_bookmark(to)" = "heads(::to & bookmarks())"
+
+# trunk() by default resolves to the latest 'main'/'master' remote bookmark. May
+# require customization for repos like nixpkgs.
+'trunk()' = 'latest((present(main) | present(master)) & remote_bookmarks())'
