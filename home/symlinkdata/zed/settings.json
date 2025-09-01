@@ -37,5 +37,10 @@
     "**/Thumbs.db",
     "**/.classpath",
     "**/.settings"
-  ]
+  ],
+  "languages": {
+    "Nix": {
+      "language_servers": ["nixd", "!nil"]
+    }
+  }
 }
