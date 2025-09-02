@@ -407,7 +407,13 @@ brews = [
     # Rainbows and unicorns in your console!
     "lolcat",
     # Modern shell for the GitHub era
-    "nushell"
+    "nushell",
+    # Diff that understands syntax
+    "difftastic",
+    # Git hook and pre-commit lint manager
+    "hk",
+    # Polyglot runtime manager (asdf rust clone)
+    "mise"
 ]
 casks = [
     # Command-line helper for the 1Password password manager
