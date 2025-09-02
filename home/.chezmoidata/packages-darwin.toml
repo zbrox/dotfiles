@@ -13,16 +13,12 @@ taps = [
     "FelixKratz/formulae",
 ]
 brews = [
-    # Run your GitHub Actions locally
-    "act",
     # Simple, modern, secure file encryption
     "age",
     # Improved shell history for zsh, bash, fish and nushell
     "atuin",
     # General-purpose data compression with high compression ratio
     "xz",
-    # Automate deployment, configuration, and upgrading
-    "ansible",
     # Checks ansible playbooks for practices and behaviour
     "ansible-lint",
     # Library for manipulating PNG images
@@ -45,8 +41,6 @@ brews = [
     "atool",
     # Tool for generating GNU Standards-compliant Makefiles
     "automake",
-    # Official Amazon AWS command-line interface
-    "awscli",
     # C library implementing the SSH2 protocol
     "libssh2",
     # Regular expressions library
@@ -101,8 +95,6 @@ brews = [
     "diskus",
     # Tool for exploring each layer in a docker image
     "dive",
-    # Command-line tool for DigitalOcean
-    "doctl",
     # More intuitive version of du in rust
     "dust",
     # Generic library support script
@@ -141,8 +133,6 @@ brews = [
     "findutils",
     # User-friendly command-line shell for UNIX-like operating systems
     "fish",
-    # Fast and simple Node.js version manager
-    "fnm",
     # Command-line fuzzy finder written in Go
     "fzf",
     # GNU compiler collection
@@ -219,24 +209,12 @@ brews = [
     "inetutils",
     # CLI for managing resources in InfluxDB v2
     "influxdb-cli",
-    # Manage your Java environment
-    "jenv",
     # Image manipulation library
     "jpeg",
     # Lightweight and flexible command-line JSON processor
     "jq",
     # Handy way to save and run project-specific commands
     "just",
-    # Kubernetes CLI To Manage Your Clusters In Style!
-    "k9s",
-    # Easy way to access the system keyring service from python
-    "keyring",
-    # Kubernetes command-line interface
-    "kubernetes-cli",
-    # Kubernetes controller and tool for one-way encrypted Secrets
-    "kubeseal",
-    # Template-free customization of Kubernetes YAML manifests
-    "kustomize",
     # Linear Algebra PACKage
     "lapack",
     # Command-line, double-entry accounting tool
@@ -273,8 +251,6 @@ brews = [
     "mosh",
     # Platform built on V8 to build network applications
     "node",
-    # Neon CLI tool
-    "neonctl",
     # Ambitious Vim-fork focused on extensibility and agility
     "neovim",
     # Port scanning utility for large networks
@@ -291,20 +267,12 @@ brews = [
     "poppler",
     # Search PDFs for strings matching a regular expression
     "pdfgrep",
-    # Python package management tool
-    "poetry",
     # Modern replacement for ps written in Rust
     "procs",
     # Go support for Google's protocol buffers
     "protoc-gen-go",
     # Utilities for manipulating PostScript documents
     "psutils",
-    # Python version management
-    "pyenv",
-    # Interpreted, interactive, object-oriented programming language
-    "python@3.10",
-    # Interpreted, interactive, object-oriented programming language
-    "python@3.9",
     # Fast, efficient and secure backup program
     "restic",
     # Search tool like grep and The Silver Searcher
@@ -327,8 +295,6 @@ brews = [
     "starship",
     # Clean C library for processing UTF-8 Unicode data
     "utf8proc",
-    # Terminal multiplexer
-    "tmux",
     # Program that allows you to count code, quickly
     "tokei",
     # CLI tool that moves files or folder to the trash
@@ -374,8 +340,6 @@ brews = [
     "chiselstrike/tap/turso",
     # CodeCrafters CLI
     "codecrafters-io/tap/codecrafters",
-    # Secure runtime for JavaScript and TypeScript
-    "deno",
     # Language Server Protocol for Markdown
     "marksman",
     # Blazing fast terminal file manager written in Rust, based on async I/O
@@ -384,8 +348,6 @@ brews = [
     "jj",
     # Post-modern modal text editor
     "helix",
-    # Drop-in replacement for Terraform. Infrastructure as Code Tool
-    "opentofu",
     # Microsoft Azure CLI 2.0
     "azure-cli",
     # Custom macOS statusbar with shell plugin, interaction and graph support
