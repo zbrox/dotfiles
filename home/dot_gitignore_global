@@ -56,3 +56,6 @@ Temporary Items
 
 # Direnv
 .envrc
+
+# Mise local
+mise.local.toml
