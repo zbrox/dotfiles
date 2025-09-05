@@ -1,0 +1,12 @@
+[settings]
+experimental = true
+idiomatic_version_file_enable_tools = ["python"]
+
+[settings.python]
+uv_venv_auto = true
+
+[settings.pipx]
+uvx = true
+
+[settings.cargo]
+binstall = true
