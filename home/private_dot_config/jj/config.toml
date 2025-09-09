@@ -1,3 +1,5 @@
+"$schema" = "https://jj-vcs.github.io/jj/latest/config-schema.json"
+
 [user]
 name = "Rostislav Raykov"
 # set email per repo
@@ -21,3 +23,6 @@ tug = ["bookmark", "move", "--from", "heads(::@- & bookmarks())", "--to", "@-"]
 # trunk() by default resolves to the latest 'main'/'master' remote bookmark. May
 # require customization for repos like nixpkgs.
 'trunk()' = 'latest((present(main) | present(master)) & remote_bookmarks())'
+
+# anything which is a work in progress according to the description
+wip = 'description(regex:"^\\[(wip|WIP|todo|TODO)\\]|(wip|WIP|todo|TODO):?")'
