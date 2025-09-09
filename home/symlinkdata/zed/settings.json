@@ -41,6 +41,9 @@
   "languages": {
     "Nix": {
       "language_servers": ["nixd", "!nil"]
+    },
+    "Python": {
+      "language_servers": ["!pyright", "ruff", "ty"]
     }
   }
 }
