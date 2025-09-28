@@ -17,116 +17,38 @@ brews = [
     "age",
     # Improved shell history for zsh, bash, fish and nushell
     "atuin",
-    # General-purpose data compression with high compression ratio
-    "xz",
-    # Checks ansible playbooks for practices and behaviour
-    "ansible-lint",
-    # Library for manipulating PNG images
-    "libpng",
-    # Image format providing lossless and lossy compression for web images
-    "webp",
-    # New file format for still image compression
-    "jpeg-xl",
-    # Collection of portable C++ source libraries
-    "boost",
-    # Standard XML representation system for technical documents
-    "docbook",
-    # Source-code syntax highlighter
-    "source-highlight",
-    # Formatter/translator for text files to numerous formats
-    "asciidoc",
-    # Text processor and publishing toolchain for AsciiDoc
-    "asciidoctor",
-    # Archival front-end
-    "atool",
     # Tool for generating GNU Standards-compliant Makefiles
     "automake",
-    # C library implementing the SSH2 protocol
-    "libssh2",
-    # Regular expressions library
-    "oniguruma",
     # Clone of cat(1) with syntax highlighting and Git integration
     "bat",
-    # Garbage collector for C and C++
-    "bdw-gc",
     # Compiler infrastructure and toolchain library for WebAssembly
     "binaryen",
-    # Parser generator
-    "bison",
     # Simple wrapper script for the Borg backup software
     "borgmatic",
     # Yet another cross-platform graphical process/system monitor
     "bottom",
-    # Glorious Glasgow Haskell Compilation System
-    "ghc",
-    # Command-line interface for Cabal and Hackage
-    "cabal-install",
-    # Software library to render fonts
-    "freetype",
-    # XML-based font configuration API for X Windows
-    "fontconfig",
-    # GNU internationalization (i18n) and localization (l10n) library
-    "gettext",
-    # Core application library for C
-    "glib",
-    # Low-level library for pixel manipulation
-    "pixman",
-    # Vector graphics library with cross-device output support
-    "cairo",
-    # Easily generate Instruments traces for your rust crate
-    "cargo-instruments",
-    # Object-file caching compiler wrapper
-    "ccache",
     # Manage your dotfiles across multiple diverse machines, securely
     "chezmoi",
     # Cross-platform make
     "cmake",
     # GNU File, Shell, and Text utilities
     "coreutils",
-    # Lightweight, framework-agnostic database migration tool
-    "dbmate",
-    # USB programmer
-    "dfu-util",
     # Display user-friendly message boxes from shell scripts
     "dialog",
     # Load/unload environment variables based on $PWD
     "direnv",
-    # Minimal, fast alternative to 'du -sh'
-    "diskus",
     # Tool for exploring each layer in a docker image
     "dive",
     # More intuitive version of du in rust
     "dust",
-    # Generic library support script
-    "libtool",
-    # Programming language for highly scalable real-time systems
-    "erlang",
     # Functional metaprogramming aware language built on Erlang VM
     "elixir",
     # Serial flasher utility for Espressif SoCs and modules based on esptool.py
     "espflash",
-    # Command-line tool to interact with exercism.io
-    "exercism",
-    # Perl lib for reading and writing EXIF metadata
-    "exiftool",
     # Modern, maintained replacement for ls
     "eza",
     # Simple, fast and user-friendly alternative to find
     "fd",
-    # Validating, recursive, caching DNS resolver
-    "unbound",
-    # GNU Transport Layer Security (TLS) Library
-    "gnutls",
-    # OpenType text shaping engine
-    "harfbuzz",
-    # Framework for layout and rendering of i18n text
-    "pango",
-    # OCR (Optical Character Recognition) engine
-    "tesseract",
-    # H.265/HEVC encoder
-    "x265",
-    # Scaling, colorspace conversion, and dithering library
-    "zimg",
     # Play, record, convert, and stream audio and video
     "ffmpeg",
     # Collection of GNU find, xargs, and locate
@@ -137,8 +59,6 @@ brews = [
     "fzf",
     # GNU compiler collection
     "gcc",
-    # Interpreter for PostScript and PDF
-    "ghostscript",
     # Distributed revision control system
     "git",
     # Syntax-highlighting pager for git and diff output
@@ -147,90 +67,28 @@ brews = [
     "git-lfs",
     # Statically typed language for the Erlang VM
     "gleam",
-    # Callback framework for C++
-    "libsigc++",
-    # C++ interface to glib
-    "glibmm",
-    # C++ interface to glib
-    "glibmm@2.66",
-    # Command-line option parsing utility
-    "gnu-getopt",
-    # GNU implementation of the famous stream editor
-    "gnu-sed",
     # GNU Pretty Good Privacy (PGP) package
     "gnupg",
     # Open source programming language to build simple/reliable/efficient software
     "go",
-    # Generate introspection data for GObject libraries
-    "gobject-introspection",
-    # Library access to GnuPG
-    "gpgme",
-    # Library for manipulating JPEG-2000 images
-    "jasper",
-    # Library to render SVG files using Cairo
-    "librsvg",
-    # Graph visualization software from AT&T and Bell Labs
-    "graphviz",
-    # Colorize logfiles and command output
-    "grc",
-    # GNU grep, egrep and fgrep
-    "grep",
     # Command-line tool for generating regular expressions
     "grex",
-    # Protocol buffers (Google's data interchange format)
-    "protobuf",
-    # Next generation open source RPC library and framework
-    "grpc",
-    # GNU Ubiquitous Intelligent Language for Extensions
-    "guile",
     # Tool for glamorous shell scripts
     "gum",
-    # Cross-platform program for developing Haskell projects
-    "haskell-stack",
-    # Kubernetes package manager
-    "helm",
     # Easy plain text accounting with command-line, terminal and web UIs
     "hledger",
     # Improved top (interactive process viewer)
     "htop",
     # Command-line benchmarking tool
     "hyperfine",
-    # Database of common MIME types
-    "shared-mime-info",
-    # ISO/IEC 23008-12:2017 HEIF file format decoder and encoder
-    "libheif",
-    # LLVM's OpenMP runtime library
-    "libomp",
-    # Library for reading RAW files from digital photo cameras
-    "libraw",
     # Tools and libraries to manipulate images in many formats
     "imagemagick",
     # GNU utilities for networking
     "inetutils",
-    # CLI for managing resources in InfluxDB v2
-    "influxdb-cli",
-    # Image manipulation library
-    "jpeg",
     # Lightweight and flexible command-line JSON processor
     "jq",
     # Handy way to save and run project-specific commands
     "just",
-    # Linear Algebra PACKage
-    "lapack",
-    # Command-line, double-entry accounting tool
-    "ledger",
-    # Postgres C API library
-    "libpq",
-    # Library that provides automatic proxy configuration management
-    "libproxy",
-    # Apache Pulsar C++ library
-    "libpulsar",
-    # Adds spatial SQL capabilities to SQLite
-    "libspatialite",
-    # C websockets server library
-    "libwebsockets",
-    # C++ wrapper for libxml
-    "libxml++",
     # Next-gen compiler infrastructure
     "llvm@17",
     # Powerful, lightweight programming language
@@ -245,56 +103,30 @@ brews = [
     "make",
     # Mac App Store command-line interface
     "mas",
-    # Simple tool to make locally trusted development certificates
-    "mkcert",
     # Remote terminal application
     "mosh",
-    # Platform built on V8 to build network applications
-    "node",
     # Ambitious Vim-fork focused on extensibility and agility
     "neovim",
     # Port scanning utility for large networks
     "nmap",
-    # Libraries for security-enabled client and server applications
-    "nss",
-    # Optimized BLAS library
-    "openblas",
-    # Development kit for the Java programming language
-    "openjdk@11",
-    # 7-Zip (high compression file archiver) implementation
-    "p7zip",
-    # PDF rendering library (based on the xpdf-3.0 code base)
-    "poppler",
     # Search PDFs for strings matching a regular expression
     "pdfgrep",
     # Modern replacement for ps written in Rust
     "procs",
-    # Go support for Google's protocol buffers
-    "protoc-gen-go",
-    # Utilities for manipulating PostScript documents
-    "psutils",
     # Fast, efficient and secure backup program
     "restic",
     # Search tool like grep and The Silver Searcher
     "ripgrep",
-    # Utility that provides fast incremental file transfer
-    "rsync",
     # Rust toolchain installer
     "rustup",
-    # Command-line tool for the Amazon S3 service
-    "s3cmd",
     # Intuitive find & replace CLI
     "sd",
     # Static analysis and lint tool, for (ba)sh scripts
     "shellcheck",
     # Editor of encrypted files
     "sops",
-    # Command-line interface for https://speedtest.net bandwidth tests
-    "speedtest-cli",
     # Cross-shell prompt for astronauts
     "starship",
-    # Clean C library for processing UTF-8 Unicode data
-    "utf8proc",
     # Program that allows you to count code, quickly
     "tokei",
     # CLI tool that moves files or folder to the trash
@@ -323,12 +155,8 @@ brews = [
     "xh",
     # CSV CLI magician written in Rust
     "xan",
-    # JavaScript package manager
-    "yarn",
     # Process YAML, JSON, XML, CSV and properties documents from the CLI
     "yq",
-    # Feature-rich command-line audio/video downloader
-    "yt-dlp",
     # Fast static site generator in a single binary with everything built-in
     "zola",
     # Shell extension to navigate your filesystem faster
@@ -352,16 +180,10 @@ brews = [
     "azure-cli",
     # Custom macOS statusbar with shell plugin, interaction and graph support
     "sketchybar",
-    # A window border system for macOS
-    "borders",
     # Language Server for typos-cli
     "typos-lsp",
     # Terminal slideshow tool
     "presenterm",
-    # Versatile and fast Unicode/ASCII/ANSI graphics renderer
-    "chafa",
-    # Terminal based presentation tool
-    "slides",
     # Syntax-aware linter for prose
     "vale",
     # QR Code generation
@@ -519,8 +341,6 @@ casks = [
     "yaak",
     # Multiplayer code editor
     "zed",
-    # AeroSpace is an i3-like tiling window manager for macOS
-    "AeroSpace",
     # SketchyBar default font
     "font-hack-nerd-font",
     # Screen capturing tool
