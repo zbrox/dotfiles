@@ -1,3 +1,5 @@
+#:schema https://starship.rs/config-schema.json
+
 # documentation at https://starship.rs/config
 format = """$directory$character"""
 right_format = """$all"""
