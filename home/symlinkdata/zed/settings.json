@@ -27,6 +27,7 @@
       }
     }
   },
+  "remove_trailing_whitespace_on_save": false,
   "file_scan_exclusions": [
     "**/.git",
     "**/.jj",
@@ -38,12 +39,19 @@
     "**/.classpath",
     "**/.settings"
   ],
+  "lsp": {
+    "ledger-language-server": {
+      "initialization_options": {
+        "formatting": false
+      }
+    }
+  },
   "languages": {
     "Nix": {
       "language_servers": ["nixd", "!nil"]
     },
     "Python": {
-      "language_servers": ["pyright", "ruff"]
+      "language_servers": ["basedpyright", "ruff"]
     }
   }
 }
