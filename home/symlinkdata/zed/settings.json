@@ -11,6 +11,7 @@
     "edit_prediction_provider": "zed"
   },
   "vim_mode": false,
+  "helix_mode": true,
   "relative_line_numbers": true,
   "theme": "Rosé Pine Dawn",
   "base_keymap": "VSCode",
