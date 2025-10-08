@@ -254,7 +254,7 @@ casks = [
     # Web browser
     "google-chrome",
     # Open-source video transcoder
-    "handbrake",
+    "handbrake-app",
     # Menu bar manager
     "jordanbaird-ice",
     # Spot and merge differences in text and image files or folders
@@ -312,7 +312,7 @@ casks = [
     # Tool for liberating data tables trapped inside PDF files
     "tabula",
     # Mesh VPN based on WireGuard
-    "tailscale",
+    "tailscale-app",
     # Messaging app with a focus on speed and security
     "telegram",
     # Unpacks archive files
