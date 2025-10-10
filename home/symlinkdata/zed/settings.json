@@ -45,6 +45,11 @@
       "initialization_options": {
         "formatting": false
       }
+    },
+    "tinymist": {
+      "settings": {
+        "exportPdf": "onSave"
+      }
     }
   },
   "languages": {
