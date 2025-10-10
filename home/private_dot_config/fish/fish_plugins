@@ -1,9 +1,5 @@
 lilyball/nix-env.fish
-laughedelic/brew-completions
 halostatue/fish-docker
 oh-my-fish/plugin-foreign-env
 oh-my-fish/plugin-bang-bang
-sijad/gitignore
 oh-my-fish/plugin-grc
-evanlucas/fish-kubectl-completions
-halostatue/fish-brew
