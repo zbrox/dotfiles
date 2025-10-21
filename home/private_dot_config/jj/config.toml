@@ -33,3 +33,9 @@ tug = ["bookmark", "move", "--from", "heads(::@- & bookmarks())", "--to", "@-"]
 
 # anything which is a work in progress according to the description
 wip = 'description(regex:"^\\[(wip|WIP|todo|TODO)\\]|(wip|WIP|todo|TODO):?")'
+
+# anything by a specific user, based on substring search of name or email
+'user(x)' = 'author(x) | committer(x)'
+
+# closest rev which is ok to be pushed (mutable, having description, not empty, not a merge)
+'closest_pushable(to)' = 'heads(::to & mutable() & ~description(exact:"") & (~empty() | merges()))'
