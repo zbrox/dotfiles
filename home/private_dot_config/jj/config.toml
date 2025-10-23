@@ -16,6 +16,12 @@ pager = "delta"
 diff-formatter = ":git"
 
 [aliases]
+d = ["diff"]
+s = ["status"]
+l = ["log", "-r", "(trunk()..@):: | (trunk()..@)-"]
+la = ["log", "-r", "..@"]
+ll = ["log", "-T", "builtin_log_detailed"]
+
 credit = ["file", "annotate"]
 
 # Bring the closest bookmark up to the closest pushable change or to the specified revision
@@ -33,6 +39,21 @@ jj git init --colocate
 # only track origin branches, not upstream or others
 jj bookmark track 'glob:*@origin'
 """]
+
+# update from remote and rebase onto the latest
+pull = ["util", "exec", "--", "bash", "-c", """
+closest="$(jj log -r 'closest_bookmark(@)' -n 1 -T 'bookmarks' --no-graph | cut -d ' ' -f 1)"
+closest="${closest%\\*}"
+jj git fetch
+jj log -n 1 -r "${closest}" 2>&1 > /dev/null && jj rebase -d "${closest}" || jj rebase -d 'trunk()'
+jj log -r 'stack()'
+"""]
+
+# Get all open stacks of work.
+open = ["log", "-r", "open()"]
+
+# Show the current stack
+stack = ["log", "-r", "stack()"]
 
 
 [revset-aliases]
