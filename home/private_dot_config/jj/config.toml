@@ -17,8 +17,23 @@ diff-formatter = ":git"
 
 [aliases]
 credit = ["file", "annotate"]
-# Move closest bookmark forward to current position
-tug = ["bookmark", "move", "--from", "heads(::@- & bookmarks())", "--to", "@-"]
+
+# Bring the closest bookmark up to the closest pushable change or to the specified revision
+tug = ["util", "exec", "--", "sh", "-c", """
+if [ "x$1" = "x" ]; then
+  jj bookmark move --from "closest_bookmark(@)" --to "closest_pushable(@)"
+else
+  jj bookmark move --to "closest_pushable(@)" "$@"
+fi
+""", ""]
+
+# colocate with git and track origin's branches
+init = ["util", "exec", "--", "bash", "-c", """
+jj git init --colocate
+# only track origin branches, not upstream or others
+jj bookmark track 'glob:*@origin'
+"""]
+
 
 [revset-aliases]
 # Local commits not yet pushed
