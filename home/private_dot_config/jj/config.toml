@@ -24,6 +24,17 @@ ll = ["log", "-T", "builtin_log_detailed"]
 
 credit = ["file", "annotate"]
 
+fetch = ["git", "fetch"]
+push = ["git", "push"]
+
+# Retrunk a series. Typically used as `jj retrunk -s ...`, and notably can be
+# used with open:
+# - jj retrunk -s 'all:roots(open())'
+retrunk = ["rebase", "-d", "trunk()"]
+
+# Retrunk the current stack of work.
+reheat = ["rebase", "-d", "trunk()", "-s", "all:roots(trunk()..stack(@))"]
+
 # Bring the closest bookmark up to the closest pushable change or to the specified revision
 tug = ["util", "exec", "--", "sh", "-c", """
 if [ "x$1" = "x" ]; then
