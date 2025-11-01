@@ -16,6 +16,8 @@ pager = "delta"
 diff-formatter = ":git"
 
 [aliases]
+b = ["fuzzy_bookmark"]
+ba = ["bookmark", "list", "-a"]
 d = ["diff"]
 s = ["status"]
 l = ["log", "-r", "(trunk()..@):: | (trunk()..@)-"]
