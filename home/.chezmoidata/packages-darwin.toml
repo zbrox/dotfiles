@@ -197,7 +197,9 @@ brews = [
     # Git hook and pre-commit lint manager
     "hk",
     # Polyglot runtime manager (asdf rust clone)
-    "mise"
+    "mise",
+    # Apjanke's fork of the classic cowsay project
+    "cowsay"
 ]
 casks = [
     # Command-line helper for the 1Password password manager
