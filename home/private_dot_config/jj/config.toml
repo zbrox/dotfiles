@@ -35,6 +35,15 @@ retrunk = ["rebase", "-d", "trunk()"]
 # Retrunk the current stack of work.
 reheat = ["rebase", "-d", "trunk()", "-s", "all:roots(trunk()..stack(@))"]
 
+# list or jump to bookmarks
+fuzzy_bookmark = ["util", "exec", "--", "sh", "-c", """
+if [ "x$1" = "x" ]; then
+  jj bookmark list
+else
+  jj bookmark list -a -T 'separate("@", name, remote) ++ "\n"' 2> /dev/null | sort | uniq | fzf -f "$1" | head -n1 | xargs jj new
+fi
+""", ""]
+
 # Bring the closest bookmark up to the closest pushable change or to the specified revision
 tug = ["util", "exec", "--", "sh", "-c", """
 if [ "x$1" = "x" ]; then
