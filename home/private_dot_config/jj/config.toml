@@ -5,7 +5,7 @@ name = "Rostislav Raykov"
 # set email per repo
 
 [ui]
-default-command = "log"
+default-command = ["log", "-T", "log_with_files"]
 
 [[--scope]]
 --when.commands = ["diff", "show"]
@@ -98,3 +98,23 @@ wip = 'description(regex:"^\\[(wip|WIP|todo|TODO)\\]|(wip|WIP|todo|TODO):?")'
 'ready()' = 'open() ~ unready()::'
 
 'recent_work' = 'ancestors(visible_heads(), 3) & mutable()'
+
+[template-aliases]
+log_with_files = '''
+if(root,
+  format_root_commit(self),
+  label(if(current_working_copy, "working_copy"),
+    concat(
+      format_short_commit_header(self) ++ "\n",
+      separate(" ",
+        if(empty, label("empty", "(empty)")),
+        if(description,
+          description.first_line(),
+          label(if(empty, "empty"), description_placeholder),
+        ),
+      ) ++ "\n",
+      if(self.contained_in("recent_work"), diff.summary()),
+    ),
+  )
+)
+'''
