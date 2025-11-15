@@ -2,14 +2,14 @@ symlinkdata/*
 
 {{ if ne .chezmoi.os "darwin" }}
 Library/
-private_dot_config/private_karabiner/
+.config/karabiner/
 {{ end }}
 
 {{ if .headless }}
-private_dot_config/zed/
-private_dot_config/wezterm/
-private_dot_config/kanata/
-private_dot_config/private_karabiner/
+.config/zed/
+.config/wezterm/
+.config/kanata/
+.config/karabiner/
 Library/
 .chezmoiscripts/run_onchange_after_configure-vscode.sh.tmpl
 {{ end }}
