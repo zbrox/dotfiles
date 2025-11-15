@@ -1,5 +1,5 @@
-{{ if eq .chezmoi.os "darwin" -}}
 #!/usr/bin/env bash
+{{ if eq .chezmoi.os "darwin" -}}
 
 # check if fish is default shell (macos specific check here)
 # if yes, exit
