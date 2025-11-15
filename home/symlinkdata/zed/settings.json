@@ -48,6 +48,7 @@
     },
     "tinymist": {
       "settings": {
+        "fontPaths": ["fonts"],
         "exportPdf": "onSave"
       }
     }
