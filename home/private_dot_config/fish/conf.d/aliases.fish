@@ -25,11 +25,16 @@ abbr -a rmtag 'git tag --delete'
 alias push 'git push'
 alias pull 'git pull'
 
-# ssh
-alias copyssh 'pbcopy < $HOME/.ssh/id_rsa.pub'
+if test (uname) = Darwin
+    # ssh
+    alias copyssh 'pbcopy < $HOME/.ssh/id_rsa.pub'
 
-# dns
-alias reloaddns 'dscacheutil -flushcache; and sudo killall -HUP mDNSResponder'
+    # dns
+    alias reloaddns 'dscacheutil -flushcache; and sudo killall -HUP mDNSResponder'
+
+    # brew
+    alias brew-update-bundle 'brew bundle dump --force --describe --global'
+end
 
 # Python
 alias pyactivate 'source bin/activate.fish'
@@ -38,9 +43,6 @@ alias pyactivate 'source bin/activate.fish'
 alias nixos-switch 'sudo nixos-rebuild switch'
 alias nixos-update 'sudo nix-channel --update'
 alias nixos-clean-all 'sudo nix-collect-garbage -d'
-
-# brew
-alias brew-update-bundle 'brew bundle dump --force --describe --global'
 
 # kubectl
 abbr -a k 'kubectl'

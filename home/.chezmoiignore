@@ -2,6 +2,13 @@ symlinkdata/*
 
 {{ if ne .chezmoi.os "darwin" }}
 Library/Application Support/Code/User/settings.json
-private_dot_config/zed/settings.json
 Library/private_LaunchAgents/com.1password.SSH_AUTH_SOCK.plist
+private_dot_config/karabiner/
+{{ end }}
+
+{{ if .headless }}
+private_dot_config/zed/
+private_dot_config/wezterm/
+Library/Application Support/Code/
+.chezmoiscripts/run_onchange_after_configure-vscode.sh.tmpl
 {{ end }}
