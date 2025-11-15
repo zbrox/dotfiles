@@ -9,7 +9,6 @@ abbr -a cd 'z'
 abbr -a l 'eza --all --long --modified --group --header --color-scale'
 
 # navigating & such
-abbr -a o 'open'
 abbr -a mkdir 'mkdir -pv' # create folders along the path always
 abbr -a search 'rg -i'
 
@@ -17,7 +16,6 @@ abbr -a search 'rg -i'
 abbr -a c 'git commit -m'
 abbr -a commit 'git commit -m'
 abbr -a master 'git checkout master'
-abbr -a g 'gitup'
 abbr -a amend 'git commit --amend --no-edit'
 abbr -a msgamend 'git commit --amend -m'
 abbr -a гит 'git' # keep forgetting to change keyboard layouts
@@ -26,6 +24,10 @@ alias push 'git push'
 alias pull 'git pull'
 
 if test (uname) = Darwin
+    # GUI apps
+    abbr -a o 'open'
+    abbr -a g 'gitup'
+
     # ssh
     alias copyssh 'pbcopy < $HOME/.ssh/id_rsa.pub'
 
