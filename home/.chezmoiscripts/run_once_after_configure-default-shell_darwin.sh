@@ -1,3 +1,4 @@
+{{ if eq .chezmoi.os "darwin" -}}
 #!/usr/bin/env bash
 
 # check if fish is default shell (macos specific check here)
@@ -23,3 +24,4 @@ fi
 
 echo "Setting Fish as the default shell for the user..."
 chsh -s "$(which fish)"
+{{ end -}}
