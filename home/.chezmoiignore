@@ -3,7 +3,6 @@ symlinkdata/*
 {{ if ne .chezmoi.os "darwin" }}
 Library/
 .config/karabiner/
-.chezmoiscripts/darwin/
 {{ end }}
 
 {{ if .headless }}
