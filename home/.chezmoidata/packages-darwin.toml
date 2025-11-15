@@ -252,7 +252,7 @@ casks = [
     # Git client for simultaneous branches on top of your existing workflow
     "gitbutler",
     # Git interface focused on visual interaction
-    "gitup",
+    "gitup-app",
     # Web browser
     "google-chrome",
     # Open-source video transcoder
