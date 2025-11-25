@@ -1,4 +1,8 @@
+[tools]
+node = "20"
+
 [settings]
+lockfile = true
 experimental = true
 idiomatic_version_file_enable_tools = ["python", "node"]
 
