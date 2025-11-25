@@ -27,9 +27,6 @@ fish_add_path $GOPATH/bin
 # Add _current_ folder's node modules
 fish_add_path ./node_modules/.bin
 
-# Use local bin folder, e.g. for virtualenv
-set -x PATH ./bin $PATH
-
 if test (uname) = Darwin
     # QT
     fish_add_path /usr/local/opt/qt/bin
