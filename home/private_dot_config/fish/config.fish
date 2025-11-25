@@ -34,6 +34,11 @@ if test -e "$HOME/.config/op/plugins.sh"
     source ~/.config/op/plugins.sh
 end
 
+# activate mise if installed
+if type mise >/dev/null 2>&1
+    mise activate fish | source
+end
+
 # setup zoxide
 zoxide init fish | source
 
