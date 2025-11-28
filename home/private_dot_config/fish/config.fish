@@ -42,5 +42,8 @@ end
 # setup zoxide
 zoxide init fish | source
 
+# setup zellij completions
+zellij setup --generate-completion fish | source
+
 # fish vi mode
 fish_vi_key_bindings
