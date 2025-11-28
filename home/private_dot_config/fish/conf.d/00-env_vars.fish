@@ -50,7 +50,7 @@ set -x LANG en_US.UTF-8
 set -x LANGUAGE en_US.UTF-8
 
 # Editor
-set -x EDITOR vim
+set -x EDITOR hx
 
 if test (uname) = Darwin
     # Homebrew OpenSSL headers fixes
