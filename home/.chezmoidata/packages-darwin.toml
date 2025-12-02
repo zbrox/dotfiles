@@ -4,12 +4,10 @@ taps = [
     "borgbackup/tap",
     "chiselstrike/tap",
     "codecrafters-io/tap",
-    "hashicorp/tap",
     "hcavarsan/kftray",
     "libsql/sqld",
     "macos-fuse-t/homebrew-cask",
     "qmk/qmk",
-    "nikitabobko/tap",
     "FelixKratz/formulae",
 ]
 brews = [
