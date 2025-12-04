@@ -18,4 +18,11 @@ end
 
 config.default_prog = { "/opt/homebrew/bin/fish", "-l", "-c", "zellij -l welcome" }
 
+config.keys = {
+	-- Disable WezTerm tab creation (zellij handles tabs)
+	{ key = "t", mods = "CMD", action = wezterm.action.DisableDefaultAssignment },
+	{ key = "t", mods = "SUPER", action = wezterm.action.DisableDefaultAssignment },
+	{ key = "t", mods = "CTRL|SHIFT", action = wezterm.action.DisableDefaultAssignment },
+}
+
 return config
