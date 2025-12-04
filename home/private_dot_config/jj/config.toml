@@ -28,7 +28,7 @@ credit = ["file", "annotate"]
 
 fetch = ["git", "fetch"]
 push = ["git", "push"]
-hooks-push = ["util", "exec", "--", "uvx", "jj-pre-push", "push"]
+hooks-push = ["util", "exec", "--", "uvx", "jj-pre-push", "--checker", "prek", "push"]
 
 # Retrunk a series. Typically used as `jj retrunk -s ...`, and notably can be
 # used with open:
