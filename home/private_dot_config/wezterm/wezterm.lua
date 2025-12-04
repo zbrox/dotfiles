@@ -16,6 +16,6 @@ if wezterm.target_triple:find("darwin") then
 	config.macos_window_background_blur = 10
 end
 
-config.default_prog = { 'zellij', '-l', 'welcome' }
+config.default_prog = { '/opt/homebrew/bin/zellij', '-l', 'welcome' }
 
 return config
