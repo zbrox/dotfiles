@@ -152,8 +152,8 @@ keybinds clear-defaults=true {
         bind "Alt Shift +" { Resize "Increase"; }
         bind "Alt Shift -" { Resize "Decrease"; }
         bind "Alt Shift =" { Resize "Increase"; }
-        bind "Alt Shift [" { PreviousSwapLayout; }
-        bind "Alt Shift ]" { NextSwapLayout; }
+        bind "Alt {" { PreviousSwapLayout; }
+        bind "Alt }" { NextSwapLayout; }
         bind "Alt Shift f" { ToggleFloatingPanes; }
         bind "Alt Shift h" { MoveFocusOrTab "left"; }
         bind "Alt Shift i" { MoveTab "left"; }
