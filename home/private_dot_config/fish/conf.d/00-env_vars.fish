@@ -63,6 +63,15 @@ if test (uname) = Darwin
         set -x LDFLAGS -L(brew --prefix openssl)/lib
         set -x CPPFLAGS -I(brew --prefix openssl)/include
     end
+
+    # PostgreSQL 15 (Homebrew keg-only)
+    if type -q brew; and test -d (brew --prefix postgresql@15 2>/dev/null)
+        set -l pg_prefix (brew --prefix postgresql@15)
+        fish_add_path $pg_prefix/bin
+        set -x LDFLAGS $LDFLAGS -L$pg_prefix/lib
+        set -x CPPFLAGS $CPPFLAGS -I$pg_prefix/include
+        set -x PKG_CONFIG_PATH $pg_prefix/lib/pkgconfig $PKG_CONFIG_PATH
+    end
 end
 
 if test (uname) = Darwin
