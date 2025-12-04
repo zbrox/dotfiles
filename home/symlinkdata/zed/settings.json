@@ -20,7 +20,7 @@
   },
   "vim_mode": false,
   "helix_mode": true,
-  "relative_line_numbers": true,
+  "relative_line_numbers": "enabled",
   "theme": "Rosé Pine Moon",
   "base_keymap": "VSCode",
   "telemetry": {
