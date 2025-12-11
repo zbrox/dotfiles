@@ -9,14 +9,30 @@
 {
   "colorize_brackets": true,
   "agent": {
+    "favorite_models": [
+      {
+        "provider": "copilot_chat",
+        "model": "claude-sonnet-4.5",
+      },
+      {
+        "provider": "copilot_chat",
+        "model": "claude-opus-4.5",
+      },
+      {
+        "provider": "copilot_chat",
+        "model": "gpt-5-codex",
+      },
+    ],
+    "default_profile": "write",
+    "always_allow_tool_actions": true,
     "default_model": {
       "provider": "copilot_chat",
-      "model": "gpt-4.1"
+      "model": "claude-sonnet-4.5",
     },
-    "model_parameters": []
+    "model_parameters": [],
   },
   "features": {
-    "edit_prediction_provider": "copilot"
+    "edit_prediction_provider": "copilot",
   },
   "vim_mode": false,
   "helix_mode": true,
@@ -24,7 +40,7 @@
   "theme": "Rosé Pine Moon",
   "base_keymap": "VSCode",
   "telemetry": {
-    "metrics": false
+    "metrics": false,
   },
   "ui_font_size": 16,
   "buffer_font_size": 16,
@@ -32,9 +48,9 @@
   "terminal": {
     "detect_venv": {
       "on": {
-        "activate_script": "fish"
-      }
-    }
+        "activate_script": "fish",
+      },
+    },
   },
   "remove_trailing_whitespace_on_save": false,
   "file_scan_exclusions": [
@@ -46,24 +62,27 @@
     "**/.DS_Store",
     "**/Thumbs.db",
     "**/.classpath",
-    "**/.settings"
+    "**/.settings",
   ],
   "lsp": {
     "ledger-language-server": {
       "initialization_options": {
-        "formatting": false
-      }
+        "formatting": false,
+      },
     },
     "tinymist": {
       "settings": {
         "fontPaths": ["fonts"],
-        "exportPdf": "onSave"
-      }
-    }
+        "exportPdf": "onSave",
+      },
+    },
   },
   "languages": {
     "Nix": {
-      "language_servers": ["nixd", "!nil"]
-    }
-  }
+      "language_servers": ["nixd", "!nil"],
+    },
+  },
+  "which_key": {
+    "enabled": true,
+  },
 }
