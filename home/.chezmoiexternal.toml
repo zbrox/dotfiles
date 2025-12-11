@@ -1,4 +1,4 @@
 [".config/zellij/plugins/harpoon.wasm"]
     type = "file"
-    url = "https://github.com/Nacho114/harpoon/releases/download/v0.1.0/harpoon.wasm"
-    checksum.sha256 = "cad9f87da31ddbaabb9b36c4d6820d33fbbad925e88f16b06bddb82bdf009602"
+    url = "https://github.com/Nacho114/harpoon/releases/download/v0.2.0/harpoon.wasm"
+    checksum.sha256 = "27acf80aebd1dfba2a7c6f87ea96f6fa4d3ebaa60430792e9b2b83e47cd91e3c"
