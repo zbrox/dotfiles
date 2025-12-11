@@ -59,3 +59,6 @@ Temporary Items
 
 # Mise local
 mise.local.toml
+
+# zed project configs
+.zed/
