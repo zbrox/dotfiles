@@ -1,7 +1,7 @@
 [".config/zellij/plugins/harpoon.wasm"]
     type = "file"
-    url = "https://github.com/Nacho114/harpoon/releases/download/v0.2.1/harpoon.wasm"
-    checksum.sha256 = "27d2aeb883feb728da36f0be07774915084b434c9ee560279ef23ac4b7ee38e8"
+    url = "https://github.com/Nacho114/harpoon/releases/download/v0.3.0/harpoon.wasm"
+    checksum.sha256 = "7f8cf57a71f1dbbbd115337a31638780d7e18e9b876def1c81c970188caa32f2"
 
 [".config/zellij/plugins/zjframes.wasm"]
     type = "file"
