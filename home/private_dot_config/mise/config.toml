@@ -1,4 +1,5 @@
 [tools]
+gradle = "8.11.1"
 node = "20"
 
 [settings]
