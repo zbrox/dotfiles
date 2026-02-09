@@ -1,0 +1,38 @@
+layout {
+    default_tab_template {
+        children
+        pane size=1 borderless=true {
+            plugin location="file:~/.config/zellij/plugins/zjstatus.wasm" {
+                format_left  "{mode}#[fg=#e0def4,bold] {session} #[fg=#e0def4]{tabs}"
+                format_right "{pipe_zjstatus_hints}{datetime}"
+                format_space "#[bg=#26233a]"
+
+                mode_locked        "#[bg=#eb6f92,fg=#26233a,bold] {name} #[bg=#26233a] "
+                mode_normal        "#[bg=#31748f,fg=#e0def4,bold] {name} #[bg=#26233a] "
+                mode_pane          "#[bg=#c4a7e7,fg=#26233a,bold] {name} #[bg=#26233a] "
+                mode_tab           "#[bg=#f6c177,fg=#26233a,bold] {name} #[bg=#26233a] "
+                mode_resize        "#[bg=#ebbcba,fg=#26233a,bold] {name} #[bg=#26233a] "
+                mode_move          "#[bg=#9ccfd8,fg=#26233a,bold] {name} #[bg=#26233a] "
+                mode_scroll        "#[bg=#c4a7e7,fg=#26233a,bold] {name} #[bg=#26233a] "
+                mode_enter_search  "#[bg=#f6c177,fg=#26233a,bold] {name} #[bg=#26233a] "
+                mode_search        "#[bg=#f6c177,fg=#26233a,bold] {name} #[bg=#26233a] "
+                mode_rename_tab    "#[bg=#f6c177,fg=#26233a,bold] {name} #[bg=#26233a] "
+                mode_rename_pane   "#[bg=#f6c177,fg=#26233a,bold] {name} #[bg=#26233a] "
+                mode_session       "#[bg=#31748f,fg=#e0def4,bold] {name} #[bg=#26233a] "
+                mode_default_to_mode "normal"
+
+                tab_normal               "#[fg=#6e6a86,bg=#26233a] {name} {fullscreen_indicator}{sync_indicator}{floating_indicator}"
+                tab_active               "#[fg=#e0def4,bg=#26233a,bold] {name} {fullscreen_indicator}{sync_indicator}{floating_indicator}"
+                tab_fullscreen_indicator "□ "
+                tab_sync_indicator       " "
+                tab_floating_indicator   "󰉈 "
+
+                pipe_zjstatus_hints_format "#[fg=#e0def4]{output} "
+
+                datetime          "#[fg=#6e6a86,bg=#26233a] {format}"
+                datetime_format   "%H:%M"
+                datetime_timezone "Europe/Stockholm"
+            }
+        }
+    }
+}
