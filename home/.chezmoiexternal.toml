@@ -2,3 +2,18 @@
     type = "file"
     url = "https://github.com/Nacho114/harpoon/releases/download/v0.2.1/harpoon.wasm"
     checksum.sha256 = "27d2aeb883feb728da36f0be07774915084b434c9ee560279ef23ac4b7ee38e8"
+
+[".config/zellij/plugins/zjframes.wasm"]
+    type = "file"
+    url = "https://github.com/dj95/zjstatus/releases/download/v0.22.0/zjframes.wasm"
+    checksum.sha256 = "960e51cc46ee33786b6af94dd43396567a17e3c1b68904ab81ac11acbf3daff0"
+    
+[".config/zellij/plugins/zjstatus.wasm"]
+    type = "file"
+    url = "https://github.com/dj95/zjstatus/releases/download/v0.22.0/zjstatus.wasm"
+    checksum.sha256 = "4de426d20b1cbf861272e927aeeb5b49d92c17f0e2bb9d173f85bf7f0154dd53"
+
+[".config/zellij/plugins/zjstatus-hints.wasm"]
+    type = "file"
+    url = "https://github.com/b0o/zjstatus-hints/releases/download/v0.1.4/zjstatus-hints.wasm"
+    checksum.sha256 = "936c55e9025c0edbd43421383efc151bdfdc78e924f966bfe9e7c682bec8719d"
