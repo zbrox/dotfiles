@@ -7,8 +7,22 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "edit_predictions": {
+    "provider": "copilot",
+  },
+  "agent_servers": {
+    "opencode": {
+      "type": "registry",
+    },
+    "github-copilot": {
+      "type": "registry",
+    },
+  },
   "colorize_brackets": true,
   "agent": {
+    "tool_permissions": {
+      "default": "allow",
+    },
     "favorite_models": [
       {
         "provider": "copilot_chat",
@@ -24,15 +38,11 @@
       },
     ],
     "default_profile": "write",
-    "always_allow_tool_actions": true,
     "default_model": {
       "provider": "copilot_chat",
       "model": "claude-sonnet-4.5",
     },
     "model_parameters": [],
-  },
-  "features": {
-    "edit_prediction_provider": "copilot",
   },
   "vim_mode": false,
   "helix_mode": true,
@@ -78,6 +88,9 @@
     },
   },
   "languages": {
+    "SQL": {
+      "show_edit_predictions": false,
+    },
     "Nix": {
       "language_servers": ["nixd", "!nil"],
     },
