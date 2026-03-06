@@ -94,6 +94,17 @@
         "exportPdf": "onSave",
       },
     },
+    "basedpyright": {
+      "settings": {
+        "basedpyright.analysis": {
+          "typeCheckingMode": "standard",
+          "diagnosticMode": "workspace",
+          "diagnosticSeverityOverrides": {
+            "reportUnannotatedClassAttribute": "none",
+          },
+        },
+      },
+    },
   },
   "languages": {
     "SQL": {
