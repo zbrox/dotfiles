@@ -1,14 +1,16 @@
 [packages.darwin]
 taps = [
     "1password/tap",
-    "borgbackup/tap",
     "chiselstrike/tap",
     "codecrafters-io/tap",
     "hcavarsan/kftray",
     "libsql/sqld",
     "macos-fuse-t/homebrew-cask",
-    "qmk/qmk",
     "FelixKratz/formulae",
+    "filosottile/musl-cross",
+    "macos-fuse-t/cask",
+    "osx-cross/arm",
+    "osx-cross/avr",
 ]
 brews = [
     # Simple, modern, secure file encryption
@@ -19,30 +21,18 @@ brews = [
     "automake",
     # Clone of cat(1) with syntax highlighting and Git integration
     "bat",
-    # Compiler infrastructure and toolchain library for WebAssembly
-    "binaryen",
-    # Simple wrapper script for the Borg backup software
-    "borgmatic",
-    # Yet another cross-platform graphical process/system monitor
-    "bottom",
     # Manage your dotfiles across multiple diverse machines, securely
     "chezmoi",
     # Cross-platform make
     "cmake",
     # GNU File, Shell, and Text utilities
     "coreutils",
-    # Display user-friendly message boxes from shell scripts
-    "dialog",
     # Load/unload environment variables based on $PWD
     "direnv",
     # Tool for exploring each layer in a docker image
     "dive",
     # More intuitive version of du in rust
     "dust",
-    # Functional metaprogramming aware language built on Erlang VM
-    "elixir",
-    # Serial flasher utility for Espressif SoCs and modules based on esptool.py
-    "espflash",
     # Modern, maintained replacement for ls
     "eza",
     # Simple, fast and user-friendly alternative to find
@@ -63,12 +53,8 @@ brews = [
     "git-delta",
     # Git extension for versioning large files
     "git-lfs",
-    # Statically typed language for the Erlang VM
-    "gleam",
     # GNU Pretty Good Privacy (PGP) package
     "gnupg",
-    # Open source programming language to build simple/reliable/efficient software
-    "go",
     # Command-line tool for generating regular expressions
     "grex",
     # Tool for glamorous shell scripts
@@ -89,10 +75,6 @@ brews = [
     "just",
     # Next-gen compiler infrastructure
     "llvm@17",
-    # Powerful, lightweight programming language
-    "lua",
-    # Package manager for the Lua programming language
-    "luarocks",
     # Keep your Mac's application settings in sync
     "mackup",
     # Securely transfers data between computers
@@ -139,30 +121,18 @@ brews = [
     "uv",
     # Vi 'workalike' with many additional features
     "vim",
-    # Your favorite rust -> wasm workflow tool!
-    "wasm-pack",
     # Executes a program periodically, showing output fullscreen
     "watch",
     # Internet file retriever
     "wget",
-    # Tools for the WireGuard secure network tunnel
-    "wireguard-tools",
-    # HTTP benchmarking tool
-    "wrk",
     # Friendly and fast tool for sending HTTP requests
     "xh",
-    # CSV CLI magician written in Rust
-    "xan",
-    # Process YAML, JSON, XML, CSV and properties documents from the CLI
-    "yq",
     # Fast static site generator in a single binary with everything built-in
     "zola",
     # Shell extension to navigate your filesystem faster
     "zoxide",
     # Pluggable terminal workspace, with terminal multiplexer as the base feature
     "zellij",
-    # Deduplicating archiver with compression and authenticated encryption
-    "borgbackup/tap/borgbackup-fuse",
     "chiselstrike/tap/turso",
     # CodeCrafters CLI
     "codecrafters-io/tap/codecrafters",
@@ -186,8 +156,6 @@ brews = [
     "vale",
     # QR Code generation
     "qrencode",
-    # Rainbows and unicorns in your console!
-    "lolcat",
     # Modern shell for the GitHub era
     "nushell",
     # Diff that understands syntax
@@ -200,6 +168,12 @@ brews = [
     "cowsay",
     # Pre-commit re-implemented in Rust
     "prek",
+    "deno",
+    "dfu-util",
+    "espflash",
+    "osx-cross/arm/arm-none-eabi-binutils",
+    "osx-cross/avr/avr-gcc@9",
+    "yq",
 ]
 casks = [
     # Command-line helper for the 1Password password manager
@@ -210,8 +184,6 @@ casks = [
     "airbuddy",
     # Inspect application bundles
     "apparency",
-    # Tool to flash OS images to SD cards & USB drives
-    "balenaetcher",
     # E-books management software
     "calibre",
     # Multi-platform client-side cloud file encryption tool
@@ -220,10 +192,6 @@ casks = [
     "dataflare",
     # Voice and text chat software
     "discord",
-    # Calendar software
-    "fantastical",
-    # Collaborative team software
-    "figma",
     # Web browser
     "firefox",
     "font-anonymice-powerline",
@@ -249,8 +217,6 @@ casks = [
     "font-source-code-pro",
     "font-source-code-pro-for-powerline",
     "font-ubuntu-mono-derivative-powerline",
-    # Git client for simultaneous branches on top of your existing workflow
-    "gitbutler",
     # Git interface focused on visual interaction
     "gitup-app",
     # Web browser
@@ -265,38 +231,22 @@ casks = [
     "keybase",
     # Music services manager
     "lastfm",
-    # Code notebooks for Elixir developers
-    "livebook",
     # Software for Logitech devices
     "logi-options+",
     # File system integration
     "macfuse",
     # LibFUSE implementation that doesn't use kernel extensions
     "fuse-t",
-    # Speech recognition tool
-    "macwhisper",
-    # Tool to control external monitor brightness & volume
-    "monitorcontrol",
     # Re-mounts write-protected NTFS volumes
     "mounty",
     # Free and open-source RSS reader
     "netnewswire",
-    # Audiobook manager for Audible users
-    "openaudible",
-    # Open source build of Lens Kubernetes IDE
-    "openlens",
     # Replacement for Docker Desktop
     "orbstack",
     # Home media player
     "plex",
     # GUI client for PostgreSQL databases
     "postico",
-    # Quick Look plugin for CSV files
-    "quicklook-csv",
-    # Quick Look plugin for JSON files
-    "quicklook-json",
-    # Archive manager for data compression and backups
-    "rar",
     # Control your tools with a few keystrokes
     "raycast",
     # Tool that provides consistent, highly configurable symbols for apps
@@ -311,8 +261,6 @@ casks = [
     "steam",
     # Native GUI tool for relational databases
     "tableplus",
-    # Tool for liberating data tables trapped inside PDF files
-    "tabula",
     # Mesh VPN based on WireGuard
     "tailscale-app",
     # Messaging app with a focus on speed and security
@@ -331,10 +279,6 @@ casks = [
     "visual-studio-code",
     # Code editor
     "visual-studio-code@insiders",
-    # Desktop Backup Client for Borg
-    "vorta",
-    # Rust-based terminal
-    "warp",
     # GPU-accelerated cross-platform terminal emulator and multiplexer
     "wezterm",
     # Native desktop client for WhatsApp
@@ -349,6 +293,18 @@ casks = [
     "cleanshot",
     # Keyboard customiser
     "karabiner-elements",
+    # Zen browser
+    "zen",
+    # OpenAI's coding agent that runs in your terminal
+    "codex",
+    "fastmail",
+    "font-source-sans-pro",
+    "font-source-serif-pro",
+    "handbrake",
+    "monitorcontrol",
+    "ollama",
+    "ollama-app",
+    "openttd",
 ]
 
 [[packages.darwin.mas]]
