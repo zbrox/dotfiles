@@ -1,15 +1,26 @@
 [packages.darwin]
 taps = [
+    # Homebrew tap: https://github.com/1password/homebrew-tap; contains 1password-cli
     "1password/tap",
+    # Homebrew tap: https://github.com/chiselstrike/homebrew-tap; contains ikuctl, turso
     "chiselstrike/tap",
+    # Homebrew tap: https://github.com/codecrafters-io/homebrew-tap; contains codecrafters
     "codecrafters-io/tap",
-    "hcavarsan/kftray",
-    "libsql/sqld",
-    "macos-fuse-t/homebrew-cask",
+    # Homebrew tap
     "FelixKratz/formulae",
+    # Homebrew tap: https://github.com/filosottile/homebrew-musl-cross; contains musl-cross
     "filosottile/musl-cross",
+    # Homebrew tap: https://github.com/hcavarsan/homebrew-kftray; contains kftray-linux, kftray-test, kftray, +2 more
+    "hcavarsan/kftray",
+    # Homebrew tap: https://github.com/libsql/homebrew-sqld; contains libsql-server, sqld-beta, sqld
+    "libsql/sqld",
+    # Homebrew tap: https://github.com/macos-fuse-t/homebrew-cask; contains fuse-t-sshfs, fuse-t
     "macos-fuse-t/cask",
+    # Homebrew tap: https://github.com/macos-fuse-t/homebrew-cask; contains fuse-t-sshfs, fuse-t
+    "macos-fuse-t/homebrew-cask",
+    # Homebrew tap: https://github.com/osx-cross/homebrew-arm; contains arm-gcc-bin@10, arm-gcc-bin@11, arm-gcc-bin@12, +7 more
     "osx-cross/arm",
+    # Homebrew tap: https://github.com/osx-cross/homebrew-avr; contains avarice, avr-binutils, avr-gcc@10, +9 more
     "osx-cross/avr",
 ]
 brews = [
@@ -19,20 +30,35 @@ brews = [
     "atuin",
     # Tool for generating GNU Standards-compliant Makefiles
     "automake",
+    # Microsoft Azure CLI 2.0
+    "azure-cli",
     # Clone of cat(1) with syntax highlighting and Git integration
     "bat",
     # Manage your dotfiles across multiple diverse machines, securely
     "chezmoi",
+    "chiselstrike/tap/turso",
     # Cross-platform make
     "cmake",
+    # CodeCrafters CLI
+    "codecrafters-io/tap/codecrafters",
     # GNU File, Shell, and Text utilities
     "coreutils",
+    # Apjanke's fork of the classic cowsay project
+    "cowsay",
+    # Secure runtime for JavaScript and TypeScript
+    "deno",
+    # USB programmer
+    "dfu-util",
+    # Diff that understands syntax
+    "difftastic",
     # Load/unload environment variables based on $PWD
     "direnv",
     # Tool for exploring each layer in a docker image
     "dive",
     # More intuitive version of du in rust
     "dust",
+    # Serial flasher utility for Espressif SoCs and modules based on esptool.py
+    "espflash",
     # Modern, maintained replacement for ls
     "eza",
     # Simple, fast and user-friendly alternative to find
@@ -59,6 +85,10 @@ brews = [
     "grex",
     # Tool for glamorous shell scripts
     "gum",
+    # Post-modern modal text editor
+    "helix",
+    # Git hook and pre-commit lint manager
+    "hk",
     # Easy plain text accounting with command-line, terminal and web UIs
     "hledger",
     # Improved top (interactive process viewer)
@@ -69,6 +99,8 @@ brews = [
     "imagemagick",
     # GNU utilities for networking
     "inetutils",
+    # Git-compatible distributed version control system
+    "jj",
     # Lightweight and flexible command-line JSON processor
     "jq",
     # Handy way to save and run project-specific commands
@@ -81,18 +113,34 @@ brews = [
     "magic-wormhole",
     # Utility for directing compilation
     "make",
+    # Language Server Protocol for Markdown
+    "marksman",
     # Mac App Store command-line interface
     "mas",
+    # Polyglot runtime manager (asdf rust clone)
+    "mise",
     # Remote terminal application
     "mosh",
     # Ambitious Vim-fork focused on extensibility and agility
     "neovim",
     # Port scanning utility for large networks
     "nmap",
+    # Modern shell for the GitHub era
+    "nushell",
+    # GNU Tools for ARM Embedded Processors - Binutils
+    "osx-cross/arm/arm-none-eabi-binutils",
+    # GNU compiler collection for AVR 8-bit and 32-bit Microcontrollers
+    "osx-cross/avr/avr-gcc@9",
     # Search PDFs for strings matching a regular expression
     "pdfgrep",
+    # Pre-commit re-implemented in Rust
+    "prek",
+    # Terminal slideshow tool
+    "presenterm",
     # Modern replacement for ps written in Rust
     "procs",
+    # QR Code generation
+    "qrencode",
     # Fast, efficient and secure backup program
     "restic",
     # Search tool like grep and The Silver Searcher
@@ -103,6 +151,8 @@ brews = [
     "sd",
     # Static analysis and lint tool, for (ba)sh scripts
     "shellcheck",
+    # Custom macOS statusbar with shell plugin, interaction and graph support
+    "sketchybar",
     # Editor of encrypted files
     "sops",
     # Cross-shell prompt for astronauts
@@ -113,12 +163,16 @@ brews = [
     "trash",
     # Build, bundle & ship your Rust WASM application to the web
     "trunk",
+    # Language Server for typos-cli
+    "typos-lsp",
     # Markup-based typesetting system
     "typst",
     # Beautiful and reliable typst code formatter
     "typstyle",
     # Extremely fast Python package installer and resolver, written in Rust
     "uv",
+    # Syntax-aware linter for prose
+    "vale",
     # Vi 'workalike' with many additional features
     "vim",
     # Executes a program periodically, showing output fullscreen
@@ -127,53 +181,16 @@ brews = [
     "wget",
     # Friendly and fast tool for sending HTTP requests
     "xh",
+    # Blazing fast terminal file manager written in Rust, based on async I/O
+    "yazi",
+    # Process YAML, JSON, XML, CSV and properties documents from the CLI
+    "yq",
+    # Pluggable terminal workspace, with terminal multiplexer as the base feature
+    "zellij",
     # Fast static site generator in a single binary with everything built-in
     "zola",
     # Shell extension to navigate your filesystem faster
     "zoxide",
-    # Pluggable terminal workspace, with terminal multiplexer as the base feature
-    "zellij",
-    "chiselstrike/tap/turso",
-    # CodeCrafters CLI
-    "codecrafters-io/tap/codecrafters",
-    # Language Server Protocol for Markdown
-    "marksman",
-    # Blazing fast terminal file manager written in Rust, based on async I/O
-    "yazi",
-    # Git-compatible distributed version control system
-    "jj",
-    # Post-modern modal text editor
-    "helix",
-    # Microsoft Azure CLI 2.0
-    "azure-cli",
-    # Custom macOS statusbar with shell plugin, interaction and graph support
-    "sketchybar",
-    # Language Server for typos-cli
-    "typos-lsp",
-    # Terminal slideshow tool
-    "presenterm",
-    # Syntax-aware linter for prose
-    "vale",
-    # QR Code generation
-    "qrencode",
-    # Modern shell for the GitHub era
-    "nushell",
-    # Diff that understands syntax
-    "difftastic",
-    # Git hook and pre-commit lint manager
-    "hk",
-    # Polyglot runtime manager (asdf rust clone)
-    "mise",
-    # Apjanke's fork of the classic cowsay project
-    "cowsay",
-    # Pre-commit re-implemented in Rust
-    "prek",
-    "deno",
-    "dfu-util",
-    "espflash",
-    "osx-cross/arm/arm-none-eabi-binutils",
-    "osx-cross/avr/avr-gcc@9",
-    "yq",
 ]
 casks = [
     # Command-line helper for the 1Password password manager
@@ -186,47 +203,88 @@ casks = [
     "apparency",
     # E-books management software
     "calibre",
+    # Screen capturing tool
+    "cleanshot",
+    # OpenAI's coding agent that runs in your terminal
+    "codex",
     # Multi-platform client-side cloud file encryption tool
     "cryptomator",
     # Database manager
     "dataflare",
     # Voice and text chat software
     "discord",
+    # Email client
+    "fastmail",
     # Web browser
     "firefox",
+    # None
     "font-anonymice-powerline",
+    # None
     "font-dejavu-sans-mono-for-powerline",
+    # None
     "font-droid-sans-mono-for-powerline",
+    # None
     "font-fira-code",
+    # None
     "font-fira-mono-for-powerline",
+    # SketchyBar default font
+    "font-hack-nerd-font",
+    # None
     "font-inconsolata-dz-for-powerline",
+    # None
     "font-inconsolata-for-powerline",
+    # None
     "font-inconsolata-g-for-powerline",
+    # None
     "font-iosevka",
+    # None
     "font-jetbrains-mono",
+    # None
     "font-jetbrains-mono-nerd-font",
+    # None
     "font-liberation-mono-for-powerline",
+    # None
     "font-menlo-for-powerline",
+    # None
     "font-meslo-for-powerline",
+    # None
     "font-meslo-lg-nerd-font",
+    # None
     "font-monofur-for-powerline",
+    # None
     "font-noto-emoji",
+    # None
     "font-noto-mono-for-powerline",
+    # None
     "font-roboto-mono-for-powerline",
+    # None
     "font-sauce-code-pro-nerd-font",
+    # None
     "font-source-code-pro",
+    # None
     "font-source-code-pro-for-powerline",
+    # None
+    "font-source-sans-pro",
+    # None
+    "font-source-serif-pro",
+    # None
     "font-ubuntu-mono-derivative-powerline",
+    # LibFUSE implementation that doesn't use kernel extensions
+    "fuse-t",
     # Git interface focused on visual interaction
     "gitup-app",
     # Web browser
     "google-chrome",
+    # Open-source video transcoder
+    "handbrake",
     # Open-source video transcoder
     "handbrake-app",
     # Menu bar manager
     "jordanbaird-ice",
     # Spot and merge differences in text and image files or folders
     "kaleidoscope",
+    # Keyboard customiser
+    "karabiner-elements",
     # End-to-end encryption software
     "keybase",
     # Music services manager
@@ -235,12 +293,18 @@ casks = [
     "logi-options+",
     # File system integration
     "macfuse",
-    # LibFUSE implementation that doesn't use kernel extensions
-    "fuse-t",
+    # Tool to control external monitor brightness & volume
+    "monitorcontrol",
     # Re-mounts write-protected NTFS volumes
     "mounty",
     # Free and open-source RSS reader
     "netnewswire",
+    # Get up and running with large language models locally
+    "ollama",
+    # Get up and running with large language models locally
+    "ollama-app",
+    # Open-source transport simulation game
+    "openttd",
     # Replacement for Docker Desktop
     "orbstack",
     # Home media player
@@ -287,24 +351,8 @@ casks = [
     "yaak",
     # Multiplayer code editor
     "zed",
-    # SketchyBar default font
-    "font-hack-nerd-font",
-    # Screen capturing tool
-    "cleanshot",
-    # Keyboard customiser
-    "karabiner-elements",
     # Zen browser
     "zen",
-    # OpenAI's coding agent that runs in your terminal
-    "codex",
-    "fastmail",
-    "font-source-sans-pro",
-    "font-source-serif-pro",
-    "handbrake",
-    "monitorcontrol",
-    "ollama",
-    "ollama-app",
-    "openttd",
 ]
 
 [[packages.darwin.mas]]
