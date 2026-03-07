@@ -1,0 +1,18 @@
+#!/usr/bin/env -S UV_CACHE_DIR=/tmp/uv-cache uv run --script
+# /// script
+# requires-python = ">=3.12"
+# dependencies = ["tomlkit>=0.13,<1; sys_platform == 'darwin'"]
+# ///
+#MISE description="Interactively reconcile local package drift (skip/add/uninstall)"
+
+from pathlib import Path
+import sys
+
+if sys.platform != "darwin":
+    print("Skipping packages:reconcile (darwin-only task).")
+    raise SystemExit(0)
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import _packages_core as core
+
+raise SystemExit(core.main("reconcile"))

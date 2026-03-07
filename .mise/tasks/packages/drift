@@ -1,0 +1,18 @@
+#!/usr/bin/env -S UV_CACHE_DIR=/tmp/uv-cache uv run --script
+# /// script
+# requires-python = ">=3.12"
+# dependencies = ["tomlkit>=0.13,<1; sys_platform == 'darwin'"]
+# ///
+#MISE description="Show installed macOS package drift vs home/.chezmoidata/packages-darwin.toml"
+
+from pathlib import Path
+import sys
+
+if sys.platform != "darwin":
+    print("Skipping packages:drift (darwin-only task).")
+    raise SystemExit(0)
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import _packages_core as core
+
+raise SystemExit(core.main("report"))
