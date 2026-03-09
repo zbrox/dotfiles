@@ -219,14 +219,29 @@ def collect_drift(show_progress: bool = False) -> list[DriftItem]:
 
     for tap in sorted(installed_taps(show_progress=show_progress) - expected_taps):
         result.append(DriftItem(kind="tap", name=tap))
-    for brew in sorted(installed_brews(show_progress=show_progress) - expected_brews):
-        result.append(DriftItem(kind="brew", name=brew))
-    for cask in sorted(installed_casks(show_progress=show_progress)):
+    preliminary_brew_drift = installed_brews(show_progress=show_progress) - expected_brews
+    if preliminary_brew_drift:
+        resolved = _resolve_current_tokens(preliminary_brew_drift, "brew")
+        for brew in sorted(preliminary_brew_drift):
+            current = resolved.get(brew, brew)
+            if current in expected_brews:
+                continue
+            result.append(DriftItem(kind="brew", name=brew))
+
+    preliminary_cask_drift: set[str] = set()
+    for cask in installed_casks(show_progress=show_progress):
         if cask in expected_casks:
             continue
         if any(eq in expected_cask_normalized for eq in _cask_equivalents(cask)):
             continue
-        result.append(DriftItem(kind="cask", name=cask))
+        preliminary_cask_drift.add(cask)
+    if preliminary_cask_drift:
+        resolved = _resolve_current_tokens(preliminary_cask_drift, "cask")
+        for cask in sorted(preliminary_cask_drift):
+            current = resolved.get(cask, cask)
+            if current in expected_casks:
+                continue
+            result.append(DriftItem(kind="cask", name=cask))
     for mas_id, name in sorted(installed_mas(show_progress=show_progress).items(), key=lambda kv: kv[1].lower()):
         if mas_id not in expected_mas:
             result.append(DriftItem(kind="mas", name=name, mas_id=mas_id, description="Mac App Store app"))
@@ -477,6 +492,45 @@ def _cask_equivalents(token: str) -> set[str]:
     else:
         eq.add(norm + "app")
     return eq
+
+
+def _resolve_current_tokens(names: set[str], kind: str) -> dict[str, str]:
+    """Batch-resolve installed names to their current canonical names via brew info.
+
+    Handles Homebrew renames where old_tokens/oldnames still appear as installed.
+    """
+    if not names or not command_exists("brew"):
+        return {}
+    cmd = ["brew", "info", "--json=v2"]
+    if kind == "cask":
+        cmd.append("--cask")
+    cmd.extend(sorted(names))
+    code, out, _ = run(cmd, timeout=15.0)
+    if code != 0 or not out.strip():
+        return {}
+    try:
+        data = json.loads(out)
+    except json.JSONDecodeError:
+        return {}
+
+    result: dict[str, str] = {}
+    if kind == "cask":
+        for entry in data.get("casks") or []:
+            current = entry.get("token", "")
+            for old in entry.get("old_tokens") or []:
+                if old in names:
+                    result[old] = current
+            if current in names:
+                result[current] = current
+    else:
+        for entry in data.get("formulae") or []:
+            current = entry.get("name", "")
+            for old in entry.get("oldnames") or []:
+                if old in names:
+                    result[old] = current
+            if current in names:
+                result[current] = current
+    return result
 
 
 def resolve_cask_alias(token: str) -> str | None:
