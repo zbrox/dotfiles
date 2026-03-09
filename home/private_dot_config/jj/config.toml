@@ -73,6 +73,9 @@ open = ["log", "-r", "open()"]
 stack = ["log", "-r", "stack()"]
 
 
+[revsets]
+bookmark-advance-to = 'closest_pushable(@)'
+
 [revset-aliases]
 # Local commits not yet pushed
 "local" = "all() ~ ancestors(remote_bookmarks())"
@@ -89,9 +92,6 @@ wip = 'description(regex:"^\\[(wip|WIP|todo|TODO)\\]|(wip|WIP|todo|TODO):?")'
 
 # anything by a specific user, based on substring search of name or email
 'user(x)' = 'author(x) | committer(x)'
-
-# when using bookmark advance without an argument, this is the default revset to advance to
-'bookmark-advance-to(x)' = 'closest_pushable(x)'
 
 # closest rev which is ok to be pushed (mutable, having description, not empty, not a merge)
 'closest_pushable(to)' = 'heads(::to & mutable() & ~description(exact:"") & (~empty() | merges()))'
