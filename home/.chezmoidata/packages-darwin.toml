@@ -2,12 +2,8 @@
 taps = [
     # Homebrew tap: https://github.com/1password/homebrew-tap; contains 1password-cli
     "1password/tap",
-    # Homebrew tap: https://github.com/chiselstrike/homebrew-tap; contains ikuctl, turso
-    "chiselstrike/tap",
     # Homebrew tap: https://github.com/codecrafters-io/homebrew-tap; contains codecrafters
     "codecrafters-io/tap",
-    # Homebrew tap
-    "FelixKratz/formulae",
     # Homebrew tap: https://github.com/filosottile/homebrew-musl-cross; contains musl-cross
     "filosottile/musl-cross",
     # Homebrew tap: https://github.com/hcavarsan/homebrew-kftray; contains kftray-linux, kftray-test, kftray, +2 more
@@ -26,25 +22,22 @@ taps = [
 brews = [
     # Simple, modern, secure file encryption
     "age",
+    # Download with resuming and segmented downloading
+    "aria2",
     # Improved shell history for zsh, bash, fish and nushell
     "atuin",
     # Tool for generating GNU Standards-compliant Makefiles
     "automake",
-    # Microsoft Azure CLI 2.0
-    "azure-cli",
     # Clone of cat(1) with syntax highlighting and Git integration
     "bat",
     # Manage your dotfiles across multiple diverse machines, securely
     "chezmoi",
-    "chiselstrike/tap/turso",
     # Cross-platform make
     "cmake",
     # CodeCrafters CLI
     "codecrafters-io/tap/codecrafters",
     # GNU File, Shell, and Text utilities
     "coreutils",
-    # Apjanke's fork of the classic cowsay project
-    "cowsay",
     # Secure runtime for JavaScript and TypeScript
     "deno",
     # USB programmer
@@ -73,6 +66,8 @@ brews = [
     "fzf",
     # GNU compiler collection
     "gcc",
+    # Interact with Google Gemini AI models from the command-line
+    "gemini-cli",
     # Distributed revision control system
     "git",
     # Syntax-highlighting pager for git and diff output
@@ -131,18 +126,12 @@ brews = [
     "osx-cross/arm/arm-none-eabi-binutils",
     # GNU compiler collection for AVR 8-bit and 32-bit Microcontrollers
     "osx-cross/avr/avr-gcc@9",
-    # Search PDFs for strings matching a regular expression
-    "pdfgrep",
     # Pre-commit re-implemented in Rust
     "prek",
     # Terminal slideshow tool
     "presenterm",
     # Modern replacement for ps written in Rust
     "procs",
-    # QR Code generation
-    "qrencode",
-    # Fast, efficient and secure backup program
-    "restic",
     # Search tool like grep and The Silver Searcher
     "ripgrep",
     # Rust toolchain installer
@@ -151,34 +140,26 @@ brews = [
     "sd",
     # Static analysis and lint tool, for (ba)sh scripts
     "shellcheck",
-    # Custom macOS statusbar with shell plugin, interaction and graph support
-    "sketchybar",
     # Editor of encrypted files
     "sops",
+    # Small command-line utility for adding spacers to command output
+    "spacer",
     # Cross-shell prompt for astronauts
     "starship",
-    # Program that allows you to count code, quickly
-    "tokei",
     # CLI tool that moves files or folder to the trash
     "trash",
-    # Build, bundle & ship your Rust WASM application to the web
-    "trunk",
     # Language Server for typos-cli
     "typos-lsp",
-    # Markup-based typesetting system
-    "typst",
-    # Beautiful and reliable typst code formatter
-    "typstyle",
     # Extremely fast Python package installer and resolver, written in Rust
     "uv",
-    # Syntax-aware linter for prose
-    "vale",
     # Vi 'workalike' with many additional features
     "vim",
     # Executes a program periodically, showing output fullscreen
     "watch",
     # Internet file retriever
     "wget",
+    # Best command-line tool to install and switch between multiple versions of Xcode
+    "xcodes",
     # Friendly and fast tool for sending HTTP requests
     "xh",
     # Blazing fast terminal file manager written in Rust, based on async I/O
@@ -199,14 +180,24 @@ casks = [
     "1password@beta",
     # AirPods companion app
     "airbuddy",
+    # Webcam & audio device software
+    "ankerwork",
     # Inspect application bundles
     "apparency",
+    # Chromium based browser
+    "arc",
     # E-books management software
     "calibre",
+    # Anthropic's official Claude AI desktop app
+    "claude",
+    # Terminal-based AI coding assistant
+    "claude-code",
     # Screen capturing tool
     "cleanshot",
     # OpenAI's coding agent that runs in your terminal
     "codex",
+    # Brings the power of Copilot coding agent directly to your terminal
+    "copilot-cli",
     # Multi-platform client-side cloud file encryption tool
     "cryptomator",
     # Database manager
@@ -227,8 +218,6 @@ casks = [
     "font-fira-code",
     # None
     "font-fira-mono-for-powerline",
-    # SketchyBar default font
-    "font-hack-nerd-font",
     # None
     "font-inconsolata-dz-for-powerline",
     # None
@@ -260,23 +249,21 @@ casks = [
     # None
     "font-sauce-code-pro-nerd-font",
     # None
+    "font-sf-pro",
+    # None
     "font-source-code-pro",
     # None
     "font-source-code-pro-for-powerline",
     # None
-    "font-source-sans-pro",
+    "font-source-sans-3",
     # None
-    "font-source-serif-pro",
+    "font-source-serif-4",
     # None
     "font-ubuntu-mono-derivative-powerline",
     # LibFUSE implementation that doesn't use kernel extensions
     "fuse-t",
-    # Git interface focused on visual interaction
-    "gitup-app",
     # Web browser
     "google-chrome",
-    # Open-source video transcoder
-    "handbrake",
     # Open-source video transcoder
     "handbrake-app",
     # Menu bar manager
@@ -293,14 +280,14 @@ casks = [
     "logi-options+",
     # File system integration
     "macfuse",
+    # Modern GUI for Redis
+    "medis",
     # Tool to control external monitor brightness & volume
     "monitorcontrol",
     # Re-mounts write-protected NTFS volumes
     "mounty",
     # Free and open-source RSS reader
     "netnewswire",
-    # Get up and running with large language models locally
-    "ollama",
     # Get up and running with large language models locally
     "ollama-app",
     # Open-source transport simulation game
@@ -351,6 +338,8 @@ casks = [
     "yaak",
     # Multiplayer code editor
     "zed",
+    # Multiplayer code editor
+    "zed@preview",
     # Zen browser
     "zen",
 ]
@@ -522,3 +511,15 @@ id = 1451685025
 [[packages.darwin.mas]]
 name = "WorldWideWeb"
 id = 1621370168
+[[packages.darwin.mas]]
+name = "ButterKit"
+id = 6751829199
+[[packages.darwin.mas]]
+name = "Home Assistant"
+id = 1099568401
+[[packages.darwin.mas]]
+name = "Prime Video"
+id = 545519333
+[[packages.darwin.mas]]
+name = "ServerCat"
+id = 1501532023
