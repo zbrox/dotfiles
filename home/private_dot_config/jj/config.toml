@@ -48,13 +48,7 @@ fi
 """, ""]
 
 # Bring the closest bookmark up to the closest pushable change or to the specified revision
-tug = ["util", "exec", "--", "sh", "-c", """
-if [ "x$1" = "x" ]; then
-  jj bookmark move --from "closest_bookmark(@)" --to "closest_pushable(@)"
-else
-  jj bookmark move --to "closest_pushable(@)" "$@"
-fi
-""", ""]
+tug = ["bookmark", "advance"]
 
 # colocate with git and track origin's branches
 init = ["util", "exec", "--", "bash", "-c", """
@@ -95,6 +89,9 @@ wip = 'description(regex:"^\\[(wip|WIP|todo|TODO)\\]|(wip|WIP|todo|TODO):?")'
 
 # anything by a specific user, based on substring search of name or email
 'user(x)' = 'author(x) | committer(x)'
+
+# when using bookmark advance without an argument, this is the default revset to advance to
+'bookmark-advance-to(x)' = 'closest_pushable(x)'
 
 # closest rev which is ok to be pushed (mutable, having description, not empty, not a merge)
 'closest_pushable(to)' = 'heads(::to & mutable() & ~description(exact:"") & (~empty() | merges()))'
