@@ -100,6 +100,8 @@ brews = [
     "jq",
     # Handy way to save and run project-specific commands
     "just",
+    # Library to render SVG files using Cairo
+    "librsvg",
     # Next-gen compiler infrastructure
     "llvm@17",
     # Keep your Mac's application settings in sync
@@ -126,6 +128,8 @@ brews = [
     "osx-cross/arm/arm-none-eabi-binutils",
     # GNU compiler collection for AVR 8-bit and 32-bit Microcontrollers
     "osx-cross/avr/avr-gcc@9",
+    # Object-relational database system
+    "postgresql@15",
     # Pre-commit re-implemented in Rust
     "prek",
     # Terminal slideshow tool
