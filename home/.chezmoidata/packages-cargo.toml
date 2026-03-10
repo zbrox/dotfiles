@@ -26,4 +26,5 @@ bins = [
     "starship-jj",
     "cargo-px",
     "release-plz",
+    "jj-vine",
 ]
