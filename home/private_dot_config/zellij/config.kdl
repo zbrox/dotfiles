@@ -252,7 +252,7 @@ plugins {
         welcome_screen true
     }
     zjstatus-hints location="file:~/.config/zellij/plugins/zjstatus-hints.wasm" {
-        hide_in_base_mode true
+        hide_in_base_mode false
         pipe_name "zjstatus_hints"
     }
 }
