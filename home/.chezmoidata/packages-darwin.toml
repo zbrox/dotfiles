@@ -76,6 +76,8 @@ brews = [
     "git-lfs",
     # GNU Pretty Good Privacy (PGP) package
     "gnupg",
+    # Colorize logfiles and command output
+    "grc",
     # Command-line tool for generating regular expressions
     "grex",
     # Tool for glamorous shell scripts
@@ -190,6 +192,8 @@ casks = [
     "apparency",
     # Chromium based browser
     "arc",
+    # App Store screenshots editor
+    "butterkit",
     # E-books management software
     "calibre",
     # Anthropic's official Claude AI desktop app
@@ -515,9 +519,6 @@ id = 1451685025
 [[packages.darwin.mas]]
 name = "WorldWideWeb"
 id = 1621370168
-[[packages.darwin.mas]]
-name = "ButterKit"
-id = 6751829199
 [[packages.darwin.mas]]
 name = "Home Assistant"
 id = 1099568401
