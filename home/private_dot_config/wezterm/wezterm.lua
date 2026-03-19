@@ -13,16 +13,14 @@ config.window_decorations = "RESIZE"
 config.window_background_opacity = 0.75
 
 if wezterm.target_triple:find("darwin") then
-	config.macos_window_background_blur = 10
+    config.macos_window_background_blur = 10
 end
 
-config.default_prog = { "/opt/homebrew/bin/fish", "-l", "-c", "zellij -l welcome" }
-
 config.keys = {
-	-- Disable WezTerm tab creation (zellij handles tabs)
-	{ key = "t", mods = "CMD", action = wezterm.action.DisableDefaultAssignment },
-	{ key = "t", mods = "SUPER", action = wezterm.action.DisableDefaultAssignment },
-	{ key = "t", mods = "CTRL|SHIFT", action = wezterm.action.DisableDefaultAssignment },
+    -- Disable WezTerm tab creation (zellij handles tabs)
+    { key = "t", mods = "CMD",        action = wezterm.action.DisableDefaultAssignment },
+    { key = "t", mods = "SUPER",      action = wezterm.action.DisableDefaultAssignment },
+    { key = "t", mods = "CTRL|SHIFT", action = wezterm.action.DisableDefaultAssignment },
 }
 
 return config
