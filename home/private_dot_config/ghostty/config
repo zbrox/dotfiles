@@ -2,7 +2,13 @@ font-family = "JetBrainsMono Nerd Font Propo"
 font-size = 14
 background-opacity = 0.75
 background-blur = 10
-macos-titlebar-style = hidden
-command = /opt/homebrew/bin/zellij -l welcome
-window-padding-balance = true
 theme = "Rose Pine Moon"
+shell-integration = fish
+
+macos-titlebar-style = transparent
+window-padding-balance = true
+window-decoration = true
+window-padding-x = 8
+window-padding-y = 8
+keybind = clear
+macos-option-as-alt = left
