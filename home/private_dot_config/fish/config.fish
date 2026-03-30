@@ -43,7 +43,9 @@ end
 zoxide init fish | source
 
 # setup zellij completions
-zellij setup --generate-completion fish | source
+if type -q zellij
+    zellij setup --generate-completion fish | source
+end
 
 # fish vi mode
 fish_vi_key_bindings
@@ -57,5 +59,34 @@ if status is-interactive
     # At this point, specify the Zellij config dir, so we can launch it manually if we want to
     export ZELLIJ_CONFIG_DIR=$HOME/.config/zellij
 
-    eval (zellij setup --generate-auto-start fish | string collect)
+    # Avoid auto-starting inside integrated terminals to keep session list clean
+    set -l in_integrated 0
+    if set -q TERM_PROGRAM
+        switch (string lower -- $TERM_PROGRAM)
+            case "vscode" "zed"
+                set in_integrated 1
+        end
+    end
+
+    if test -t 0; and not set -q ZELLIJ; and test $in_integrated -eq 0; and type -q zellij; and type -q fzf
+        set -l selection (begin
+            zellij list-sessions 2>/dev/null
+            echo "[new] create session"
+        end | fzf --ansi --prompt "Zellij> " --header "Select a session" | string collect)
+        if test -n "$selection"
+            set -l clean (string replace -ra '\x1b\\[[0-9;]*m' '' -- $selection)
+            set -l clean (string trim -- $clean)
+            if string match -q -r '^\\[new\\]' -- $clean
+                read -l -P "Create Zellij session name: " session_name
+                if test -n "$session_name"
+                    exec zellij --session $session_name
+                end
+            else
+                set -l name (string split -m1 " " -- $clean)[1]
+                if test -n "$name"
+                    exec zellij attach $name
+                end
+            end
+        end
+    end
 end
