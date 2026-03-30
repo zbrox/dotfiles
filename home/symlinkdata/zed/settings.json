@@ -12,12 +12,15 @@
       "enabled": true,
     },
   },
+  "project_panel": {
+    "diagnostic_badges": true,
+  },
   "edit_predictions": {
     "provider": "copilot",
   },
   "agent_servers": {
     "github-copilot-cli": {
-      "type": "registry"
+      "type": "registry",
     },
     "opencode": {
       "type": "registry",
