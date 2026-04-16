@@ -7,18 +7,31 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "git_panel": {
+    "dock": "left"
+  },
   "diagnostics": {
     "inline": {
       "enabled": true,
     },
   },
   "project_panel": {
+    "dock": "left",
     "diagnostic_badges": true,
   },
   "edit_predictions": {
     "provider": "copilot",
   },
   "agent_servers": {
+    "claude-acp": {
+      "type": "registry"
+    },
     "github-copilot-cli": {
       "type": "registry",
     },
@@ -31,6 +44,7 @@
   },
   "colorize_brackets": true,
   "agent": {
+    "dock": "right",
     "tool_permissions": {
       "default": "allow",
     },
