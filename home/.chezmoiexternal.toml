@@ -1,19 +1,19 @@
 [".config/zellij/plugins/harpoon.wasm"]
-    type = "file"
-    url = "https://github.com/Nacho114/harpoon/releases/download/v0.3.0/harpoon.wasm"
-    checksum.sha256 = "7f8cf57a71f1dbbbd115337a31638780d7e18e9b876def1c81c970188caa32f2"
+type = "file"
+url = "https://github.com/Nacho114/harpoon/releases/download/v0.3.0/harpoon.wasm"
+checksum.sha256 = "7f8cf57a71f1dbbbd115337a31638780d7e18e9b876def1c81c970188caa32f2"
 
 [".config/zellij/plugins/zjframes.wasm"]
-    type = "file"
-    url = "https://github.com/dj95/zjstatus/releases/download/v0.22.0/zjframes.wasm"
-    checksum.sha256 = "960e51cc46ee33786b6af94dd43396567a17e3c1b68904ab81ac11acbf3daff0"
-    
+type = "file"
+url = "https://github.com/dj95/zjstatus/releases/download/v0.23.0/zjframes.wasm"
+checksum.sha256 = "8d89e831bde195363faa5a810b04460a421006d37c9886ce9e255130fa93a085"
+
 [".config/zellij/plugins/zjstatus.wasm"]
-    type = "file"
-    url = "https://github.com/dj95/zjstatus/releases/download/v0.22.0/zjstatus.wasm"
-    checksum.sha256 = "4de426d20b1cbf861272e927aeeb5b49d92c17f0e2bb9d173f85bf7f0154dd53"
+type = "file"
+url = "https://github.com/dj95/zjstatus/releases/download/v0.23.0/zjstatus.wasm"
+checksum.sha256 = "e006901223524239db618021e4cc5d17f82dc4bfae5432895ba41f03f13861ff"
 
 [".config/zellij/plugins/zjstatus-hints.wasm"]
-    type = "file"
-    url = "https://github.com/b0o/zjstatus-hints/releases/download/v0.1.4/zjstatus-hints.wasm"
-    checksum.sha256 = "936c55e9025c0edbd43421383efc151bdfdc78e924f966bfe9e7c682bec8719d"
+type = "file"
+url = "https://github.com/b0o/zjstatus-hints/releases/download/v0.1.4/zjstatus-hints.wasm"
+checksum.sha256 = "936c55e9025c0edbd43421383efc151bdfdc78e924f966bfe9e7c682bec8719d"
