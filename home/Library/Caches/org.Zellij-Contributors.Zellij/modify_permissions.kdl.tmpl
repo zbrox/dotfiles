@@ -1,0 +1,49 @@
+#!/bin/sh
+# Ensures required zellij plugin permissions are present in permissions.kdl.
+# Existing permissions for other plugins are preserved.
+# If a managed plugin already exists but is missing permissions, they are added.
+
+set -eu
+
+EXISTING="$(cat)"
+HOME_DIR="{{ .chezmoi.homeDir }}"
+
+# Ensure a plugin has all required permissions.
+# If the plugin is missing entirely, append a full block.
+# If the plugin exists but is missing some permissions, add them to its block.
+ensure_plugin() {
+    plugin_path="$1"
+    shift
+
+    if ! printf '%s' "$EXISTING" | grep -qF "$plugin_path"; then
+        # Plugin not in file — append full block
+        if [ -n "$EXISTING" ]; then
+            EXISTING="$EXISTING
+
+"
+        fi
+        perms=""
+        for p in "$@"; do
+            perms="$perms    $p
+"
+        done
+        EXISTING="$EXISTING\"$plugin_path\" {
+$perms}"
+    else
+        # Plugin exists — check each permission
+        for p in "$@"; do
+            if ! printf '%s' "$EXISTING" | sed -n "/\"$(echo "$plugin_path" | sed 's/[/]/\\&/g')\"/,/}/p" | grep -qF "$p"; then
+                # Add missing permission before the closing brace
+                EXISTING="$(printf '%s' "$EXISTING" | sed "/\"$(echo "$plugin_path" | sed 's/[/]/\\&/g')\" {/a\\
+    $p")"
+            fi
+        done
+    fi
+}
+
+ensure_plugin "$HOME_DIR/.config/zellij/plugins/zjstatus.wasm" ReadApplicationState ChangeApplicationState RunCommands
+ensure_plugin "$HOME_DIR/.config/zellij/plugins/zjframes.wasm" ReadApplicationState ChangeApplicationState
+ensure_plugin "$HOME_DIR/.config/zellij/plugins/zjstatus-hints.wasm" ReadApplicationState MessageAndLaunchOtherPlugins
+ensure_plugin "$HOME_DIR/.config/zellij/plugins/harpoon.wasm" ReadApplicationState ChangeApplicationState RunCommands
+
+printf '%s\n' "$EXISTING"
