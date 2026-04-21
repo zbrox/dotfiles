@@ -70,7 +70,13 @@ if status is-interactive
 
     if test -t 0; and not set -q ZELLIJ; and test $in_integrated -eq 0; and type -q zellij; and type -q fzf
         set -l selection (begin
-            zellij list-sessions 2>/dev/null
+            if type -q timeout
+                timeout 2 zellij list-sessions 2>/dev/null
+            else if type -q gtimeout
+                gtimeout 2 zellij list-sessions 2>/dev/null
+            else
+                zellij list-sessions 2>/dev/null
+            end
             echo "[new] create session"
         end | fzf --ansi --prompt "Zellij> " --header "Select a session" | string collect)
         if test -n "$selection"
