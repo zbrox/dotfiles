@@ -10,10 +10,10 @@ config.enable_tab_bar = false
 
 config.window_decorations = "RESIZE"
 
-config.window_background_opacity = 0.75
+config.window_background_opacity = 1.0
 
 if wezterm.target_triple:find("darwin") then
-    config.macos_window_background_blur = 10
+    config.macos_window_background_blur = 0
 end
 
 config.keys = {
