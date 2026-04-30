@@ -1,4 +1,6 @@
 [tools]
+gh = "latest"
+glab = { version = "latest", exe = "glab" }
 gradle = "8.11.1"
 node = "20"
 
