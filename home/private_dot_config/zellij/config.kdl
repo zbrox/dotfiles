@@ -165,7 +165,7 @@ keybinds clear-defaults=true {
         bind "Alt p" { TogglePaneInGroup; }
         bind "Alt Shift p" { ToggleGroupMarking; }
         bind "Alt Shift y" {
-            LaunchOrFocusPlugin "file:~/.config/zellij/plugins/harpoon.wasm" {
+            LaunchOrFocusPlugin "harpoon" {
                 floating true
                 move_to_focused_tab true
             }
@@ -251,6 +251,9 @@ plugins {
     welcome-screen location="zellij:session-manager" {
         welcome_screen true
     }
+    harpoon location="file:~/.config/zellij/plugins/harpoon.wasm"
+    zjframes location="file:~/.config/zellij/plugins/zjframes.wasm"
+    zjstatus location="file:~/.config/zellij/plugins/zjstatus.wasm"
     zjstatus-hints location="file:~/.config/zellij/plugins/zjstatus-hints.wasm" {
         hide_in_base_mode false
         pipe_name "zjstatus_hints"
@@ -261,7 +264,7 @@ plugins {
 // eg. "file:/path/to/my-plugin.wasm"
 // eg. "https://example.com/my-plugin.wasm"
 load_plugins {
-    "file:~/.config/zellij/plugins/zjframes.wasm" {
+    zjframes {
         hide_frame_for_single_pane       "true"
         hide_frame_except_for_search     "true"
         hide_frame_except_for_scroll     "true"
