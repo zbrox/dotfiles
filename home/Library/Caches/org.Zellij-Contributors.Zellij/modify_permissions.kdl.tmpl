@@ -41,9 +41,10 @@ $perms}"
     fi
 }
 
-ensure_plugin "$HOME_DIR/.config/zellij/plugins/zjstatus.wasm" ReadApplicationState ChangeApplicationState RunCommands
-ensure_plugin "$HOME_DIR/.config/zellij/plugins/zjframes.wasm" ReadApplicationState ChangeApplicationState
-ensure_plugin "$HOME_DIR/.config/zellij/plugins/zjstatus-hints.wasm" ReadApplicationState MessageAndLaunchOtherPlugins
-ensure_plugin "$HOME_DIR/.config/zellij/plugins/harpoon.wasm" ReadApplicationState ChangeApplicationState RunCommands
+# Canonical entries (portable in dotfiles)
+ensure_plugin "file:~/.config/zellij/plugins/zjstatus.wasm" ReadApplicationState ChangeApplicationState RunCommands
+ensure_plugin "file:~/.config/zellij/plugins/zjframes.wasm" ReadApplicationState ChangeApplicationState
+ensure_plugin "file:~/.config/zellij/plugins/zjstatus-hints.wasm" ReadApplicationState MessageAndLaunchOtherPlugins
+ensure_plugin "file:~/.config/zellij/plugins/harpoon.wasm" ReadApplicationState ChangeApplicationState RunCommands
 
 printf '%s\n' "$EXISTING"
