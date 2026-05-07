@@ -32,13 +32,16 @@
     "provider": "copilot",
   },
   "agent_servers": {
+    "codex-acp": {
+      "type": "registry"
+    },
+    "pi-acp": {
+      "type": "registry"
+    },
     "claude-acp": {
       "type": "registry"
     },
     "github-copilot-cli": {
-      "type": "registry",
-    },
-    "opencode": {
       "type": "registry",
     },
     "github-copilot": {
