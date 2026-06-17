@@ -1,6 +1,7 @@
-function reloadcli --description "Reloads config.fish and conf.d files"
-    source $HOME/.config/fish/config.fish
-    for i in $HOME/.config/fish/conf.d/*.fish
-        source $i
+function reloadcli --description "Replace this shell with a fresh fish process"
+    if status is-login
+        exec fish -l
+    else
+        exec fish
     end
 end
