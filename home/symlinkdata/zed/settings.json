@@ -17,6 +17,7 @@
     "dock": "left"
   },
   "git_panel": {
+    "tree_view": true,
     "dock": "left"
   },
   "diagnostics": {
@@ -36,12 +37,16 @@
       "type": "registry"
     },
     "pi-acp": {
+      "default_model": "lmstudio/google/gemma-4-26b-a4b-qat",
       "type": "registry"
     },
     "claude-acp": {
       "type": "registry"
     },
     "github-copilot-cli": {
+      "default_config_options": {
+        "model": "auto"
+      },
       "type": "registry",
     },
     "github-copilot": {
