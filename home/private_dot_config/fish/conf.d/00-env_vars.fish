@@ -2,13 +2,15 @@
 # https://github.com/killercup/pascastle/blob/master/home/.config/fish/conf.d/env_vars.fish
 
 if test (uname) = Darwin
-    fish_add_path /opt/homebrew/bin $PATH # prefer arm64 brews
-    fish_add_path /usr/local/bin $PATH # prefer brews
+    set -gx PATH (string match -v /opt/homebrew/Library/Homebrew/shims/shared $PATH)
+    fish_add_path /opt/homebrew/bin # prefer arm64 brews
+    fish_add_path /opt/homebrew/sbin
+    fish_add_path /usr/local/bin # prefer brews
     fish_add_path /usr/local/sbin
 end
 
-fish_add_path $HOME/.bin $PATH # prefer user binaries even more
-fish_add_path $HOME/.local/bin $PATH # prefer user binaries even more
+fish_add_path $HOME/.bin # prefer user binaries even more
+fish_add_path $HOME/.local/bin # prefer user binaries even more
 
 # Dotfiles
 set -x DOTFILES $HOME/.dotfiles
