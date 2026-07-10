@@ -2,7 +2,11 @@
 # https://github.com/killercup/pascastle/blob/master/home/.config/fish/conf.d/env_vars.fish
 
 if test (uname) = Darwin
-    set -gx PATH (string match -v /opt/homebrew/Library/Homebrew/shims/shared $PATH)
+    set -l homebrew_shim_path /opt/homebrew/Library/Homebrew/shims/shared
+    if contains $homebrew_shim_path $fish_user_paths
+        set -U fish_user_paths (string match -v $homebrew_shim_path $fish_user_paths)
+    end
+    set -gx PATH (string match -v $homebrew_shim_path $PATH)
     fish_add_path /opt/homebrew/bin # prefer arm64 brews
     fish_add_path /opt/homebrew/sbin
     fish_add_path /usr/local/bin # prefer brews
