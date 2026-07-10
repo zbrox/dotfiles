@@ -11,6 +11,7 @@ end
 
 fish_add_path $HOME/.bin # prefer user binaries even more
 fish_add_path $HOME/.local/bin # prefer user binaries even more
+fish_add_path $HOME/.lmstudio/bin
 
 # Dotfiles
 set -x DOTFILES $HOME/.dotfiles
