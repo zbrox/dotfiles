@@ -1,6 +1,12 @@
 # Direnv
 eval (direnv hook fish)
 
+# Atuin
+if status is-interactive
+    atuin pty-proxy init fish | source
+    atuin init fish | source
+end
+
 # Fisher package manager
 if not functions -q fisher
     set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME ~/.config
@@ -10,9 +16,6 @@ end
 
 # Starship prompt
 starship init fish | source
-
-# Atuin
-atuin init fish | source
 
 # initialize nix
 if test -e "$HOME/.nix-profile/etc/profile.d/nix.sh"
