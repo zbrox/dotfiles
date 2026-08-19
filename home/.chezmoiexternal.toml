@@ -5,15 +5,15 @@ checksum.sha256 = "7f8cf57a71f1dbbbd115337a31638780d7e18e9b876def1c81c970188caa3
 
 [".config/zellij/plugins/zjframes.wasm"]
 type = "file"
-url = "https://github.com/dj95/zjstatus/releases/download/v0.23.0/zjframes.wasm"
-checksum.sha256 = "8d89e831bde195363faa5a810b04460a421006d37c9886ce9e255130fa93a085"
+url = "https://github.com/dj95/zjstatus/releases/download/v0.24.0/zjframes.wasm"
+checksum.sha256 = "044ed6c1784ee98c6d22ba7530644dc16c7ee2d1681c34ee603237358e123bda"
 
 [".config/zellij/plugins/zjstatus.wasm"]
 type = "file"
-url = "https://github.com/dj95/zjstatus/releases/download/v0.23.0/zjstatus.wasm"
-checksum.sha256 = "e006901223524239db618021e4cc5d17f82dc4bfae5432895ba41f03f13861ff"
+url = "https://github.com/dj95/zjstatus/releases/download/v0.24.0/zjstatus.wasm"
+checksum.sha256 = "1ccedece1ded62cf3e209be690cdd39ca6fb9e8228ed71a951f6507f9956669b"
 
 [".config/zellij/plugins/zjstatus-hints.wasm"]
 type = "file"
-url = "https://github.com/b0o/zjstatus-hints/releases/download/v0.1.4/zjstatus-hints.wasm"
-checksum.sha256 = "936c55e9025c0edbd43421383efc151bdfdc78e924f966bfe9e7c682bec8719d"
+url = "https://github.com/myah-mitchell/zjstatus-hints/releases/download/v0.3.1/zjstatus-hints.wasm"
+checksum.sha256 = "0f4294f80d18b764e9c6dca4f9bd0928381725f422bab83f5c4a4ac31f22923f"
