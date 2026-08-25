@@ -1,0 +1,11 @@
+{{/*
+Managed Zellij plugins are declared once in .chezmoidata/zellij.toml and
+expanded here into chezmoi external download targets.
+*/ -}}
+{{- range $name, $p := .zellijPlugins -}}
+[".config/zellij/plugins/{{ $p.wasm }}"]
+    type = "file"
+    url = "{{ $p.url }}"
+    checksum.sha256 = "{{ $p.checksum }}"
+
+{{ end -}}

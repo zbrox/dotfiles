@@ -62,6 +62,13 @@ if status is-interactive
     # At this point, specify the Zellij config dir, so we can launch it manually if we want to
     export ZELLIJ_CONFIG_DIR=$HOME/.config/zellij
 
+    # Repair zellij plugin permission grants before starting a session.
+    # A denial from an invisible prompt wipes the whole entry in
+    # permissions.kdl; this rebuilds it cheaply (stat + read + cmp).
+    if test -x "$HOME/.config/zellij/grant-plugin-permissions"
+        "$HOME/.config/zellij/grant-plugin-permissions" >/dev/null 2>&1
+    end
+
     # Avoid auto-starting inside integrated terminals to keep session list clean
     set -l in_integrated 0
     if set -q TERM_PROGRAM

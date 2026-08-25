@@ -1,0 +1,27 @@
+# Managed Zellij plugins — single source of truth consumed by:
+#   .chezmoiexternal.toml.tmpl                      -> download targets
+#   .chezmoitemplates/zellij-plugin-path.tmpl       -> load paths / cache keys
+#   .chezmoitemplates/zellij-plugin-permissions.tmpl-> pre-granted permissions
+#
+# Permissions granted to each plugin are the COMPLETE PermissionType enum
+# as of zellij 0.45.0 (17 variants). Extra grants are harmless and prevent
+# a plugin update from re-triggering an unacceptable prompt.
+[zellijPlugins.harpoon]
+wasm = "harpoon.wasm"
+url = "https://github.com/Nacho114/harpoon/releases/download/v0.3.0/harpoon.wasm"
+checksum = "7f8cf57a71f1dbbbd115337a31638780d7e18e9b876def1c81c970188caa32f2"
+
+[zellijPlugins.zjframes]
+wasm = "zjframes.wasm"
+url = "https://github.com/dj95/zjstatus/releases/download/v0.24.0/zjframes.wasm"
+checksum = "044ed6c1784ee98c6d22ba7530644dc16c7ee2d1681c34ee603237358e123bda"
+
+[zellijPlugins.zjstatus]
+wasm = "zjstatus.wasm"
+url = "https://github.com/dj95/zjstatus/releases/download/v0.24.0/zjstatus.wasm"
+checksum = "1ccedece1ded62cf3e209be690cdd39ca6fb9e8228ed71a951f6507f9956669b"
+
+[zellijPlugins.zjstatus-hints]
+wasm = "zjstatus-hints.wasm"
+url = "https://github.com/myah-mitchell/zjstatus-hints/releases/download/v0.3.1/zjstatus-hints.wasm"
+checksum = "0f4294f80d18b764e9c6dca4f9bd0928381725f422bab83f5c4a4ac31f22923f"

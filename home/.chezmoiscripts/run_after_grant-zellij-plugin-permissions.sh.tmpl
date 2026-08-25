@@ -1,0 +1,10 @@
+{{/*
+Apply-time twin of ~/.config/zellij/grant-plugin-permissions.
+
+Runs after every `chezmoi apply` so a fresh checkout or a changed plugin
+set repairs the permission cache immediately, even without launching an
+interactive shell afterwards. All logic lives in the rendered executable;
+this is only a thin caller, keeping one source of truth for the grant logic.
+*/ -}}
+#!/bin/sh
+exec "$HOME/.config/zellij/grant-plugin-permissions"

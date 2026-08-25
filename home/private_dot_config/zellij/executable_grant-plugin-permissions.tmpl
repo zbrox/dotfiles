@@ -1,0 +1,92 @@
+{{/*
+Pre-grant Zellij plugin permissions — self-healing, launch-time.
+
+WHY THIS EXISTS
+  Zellij has NO "trust all plugins" / "disable permission prompts" config
+  option (upstream #5027 open). Plugins loaded headless or into tiny
+  status-bar panes can never be granted interactively (#4982, #4749): the
+  approval UI is invisible/unfocusable, and a DENIAL writes an EMPTY
+  permission list over whatever was granted (wasm_bridge's read-modify-write),
+  clobbering the cache for every later session — a death spiral that leaves
+  zjstatus with a blank statusline until something repairs the file.
+  Pre-populating $ZELLIJ_CACHE/permissions.kdl suppresses prompts entirely.
+
+HOW
+  Zellij keys grants by the plugin's bare absolute path (RunPluginLocation::File's
+  Display drops any `file:` prefix; verified against v0.45.0 wasm_bridge.rs and
+  the live cache). Each managed plugin gets the FULL PermissionType set (17
+  variants in zellij 0.45.0) so future plugin updates requesting extra
+  permissions never reintroduce an un-acceptable prompt. Grants for un-managed
+  plugins are preserved verbatim; stale/partial entries for managed plugins are
+  rebuilt from this script's embedded blocks. Idempotent: cmp short-circuits an
+  unchanged cache, so the common path is stat + read + cmp.
+
+Paths are rendered at chezmoi apply time from .chezmoidata/zellij.toml via
+the shared template helpers, matching what config.kdl / layouts load.
+Called on every interactive shell launch before the session auto-start
+(config.fish) and after every `chezmoi apply` (.chezmoiscripts/run_after_*).
+*/ -}}
+#!/usr/bin/env bash
+set -uo pipefail
+
+# Zellij uses OS-specific cache dirs (the `directories` crate:
+# Library/Caches/<bundle-id> on macOS — which ignores XDG_CACHE_HOME —
+# and ~/.cache/<app> elsewhere).
+case "$(uname -s)" in
+  Darwin) cache_dir="$HOME/Library/Caches/org.Zellij-Contributors.Zellij" ;;
+  *)      cache_dir="${XDG_CACHE_HOME:-$HOME/.cache}/zellij" ;;
+esac
+perms="$cache_dir/permissions.kdl"
+mkdir -p "$cache_dir"
+work="$(mktemp -d "${TMPDIR:-/tmp}/zellij-grant.XXXXXX")"
+trap 'rm -rf "$work"' EXIT HUP INT TERM
+
+# Full grants for managed plugins (rendered at chezmoi apply time).
+cat >"$work/grants" <<'KDL'
+{{ includeTemplate "zellij-plugin-permissions.tmpl" (dict "root" $) }}
+KDL
+
+# Their cache keys (bare absolute paths), one per line.
+cat >"$work/keys" <<'KEYS'
+{{ range $name, $p := .zellijPlugins }}{{ includeTemplate "zellij-plugin-path.tmpl" (dict "root" $ "plugin" $p) | trim }}
+{{ end }}KEYS
+
+# Preserve existing grants for un-managed plugins; drop stale/partial ones
+# for managed plugins (they are re-added below with the full set).
+# Matching is by exact path AND basename, so legacy cache entries written
+# under other key formats (e.g. "file:~/..." from older zellij versions)
+# are cleaned up instead of lingering forever.
+touch "$work/current"
+[ -f "$perms" ] && cp "$perms" "$work/current"
+kept="$(awk -v kf="$work/keys" '
+    BEGIN {
+        while ((getline k < kf) > 0) {
+            if (k == "") continue
+            n = split(k, seg, "/")
+            skip[k] = 1; base[seg[n]] = 1
+        }
+    }
+    inblock {
+        if ($0 ~ /^[ \t]*\}$/) inblock = 0
+        next
+    }
+    /^[ \t]*"/ {
+        line = $0; sub(/^[ \t]*"/, "", line); key = line; sub(/".*$/, "", key)
+        n = split(key, seg, "/")
+        if ((key in skip) || (seg[n] in base)) { inblock = 1; next }
+    }
+    { print }
+' "$work/current")"
+
+# $(...) strips any accumulated trailing blank lines, keeping the merge
+# byte-stable across repeated runs.
+{
+    if [ -n "$kept" ]; then
+        printf '%s\n\n' "$kept"
+    fi
+    cat "$work/grants"
+} >"$work/merged"
+
+if ! cmp -s "$work/merged" "$perms"; then
+    mv -f "$work/merged" "$perms"
+fi

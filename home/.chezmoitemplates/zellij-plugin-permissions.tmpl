@@ -1,0 +1,33 @@
+{{/*
+Render KDL blocks granting the FULL PermissionType set (all 17 variants
+as of zellij 0.45.0) to every managed plugin.
+
+Context: (dict "root" $)
+
+Granting the complete enum means a plugin version that newly requests an
+extra permission never reintroduces the un-acceptable prompt (invisible
+for status-bar/headless plugins). Update this list if zellij adds an 18th
+variant.
+*/ -}}
+{{- $root := .root -}}
+{{- range $name, $p := $root.zellijPlugins -}}
+"{{ includeTemplate "zellij-plugin-path.tmpl" (dict "root" $root "plugin" $p) | trim }}" {
+    ReadApplicationState
+    ChangeApplicationState
+    OpenFiles
+    RunCommands
+    OpenTerminalsOrPlugins
+    WriteToStdin
+    WebAccess
+    ReadCliPipes
+    MessageAndLaunchOtherPlugins
+    Reconfigure
+    FullHdAccess
+    StartWebServer
+    InterceptInput
+    ReadPaneContents
+    RunActionsAsUser
+    WriteToClipboard
+    ReadSessionEnvironmentVariables
+}
+{{ end -}}
