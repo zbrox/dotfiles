@@ -252,7 +252,6 @@ plugins {
         welcome_screen true
     }
     harpoon location="file:~/.config/zellij/plugins/harpoon.wasm"
-    zjframes location="file:~/.config/zellij/plugins/zjframes.wasm"
     zjstatus location="file:~/.config/zellij/plugins/zjstatus.wasm"
     zjstatus-hints location="file:~/.config/zellij/plugins/zjstatus-hints.wasm" {
         hide_in_base_mode false
@@ -264,11 +263,6 @@ plugins {
 // eg. "file:/path/to/my-plugin.wasm"
 // eg. "https://example.com/my-plugin.wasm"
 load_plugins {
-    zjframes {
-        hide_frame_except_for_search     "true"
-        hide_frame_except_for_scroll     "true"
-        hide_frame_except_for_fullscreen "true"
-    }
     zjstatus-hints
 }
 web_client {
