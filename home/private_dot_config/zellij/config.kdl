@@ -90,6 +90,7 @@ keybinds clear-defaults=true {
         bind "Alt down" { MoveFocus "down"; SwitchToMode "locked"; }
         bind "Alt up" { MoveFocus "up"; SwitchToMode "locked"; }
         bind "Alt right" { MoveFocusOrTab "right"; SwitchToMode "locked"; }
+        bind "c" { CopyLastCommandOutput; }
         bind "e" { EditScrollback; SwitchToMode "locked"; }
         bind "f" { SwitchToMode "entersearch"; SearchInput 0; }
         bind "Alt h" { MoveFocusOrTab "left"; SwitchToMode "locked"; }
@@ -325,7 +326,16 @@ default_layout "custom-default"
 //   - false
 // 
 pane_frames false
- 
+
+// Explicitly select frame style for zellij >=0.45
+// none: no frame/title rows
+// titles: compact title separator rows
+// full: legacy full pane borders
+pane_frame_style "none"
+
+// Disable stacked list-style titles for stacked panes (restores legacy stacked-pane paging)
+stacked_pane_list false
+
 // When attaching to an existing session with other users,
 // should the session be mirrored (true)
 // or should each user have their own cursor (false)
