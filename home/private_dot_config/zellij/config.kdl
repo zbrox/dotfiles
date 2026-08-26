@@ -354,7 +354,7 @@ pane_frames false
 // none: no frame/title rows
 // titles: compact title separator rows
 // full: legacy full pane borders
-pane_frame_style "none"
+pane_frame_style "titles"
 
 // Disable stacked list-style titles for stacked panes (restores legacy stacked-pane paging)
 stacked_pane_list false
