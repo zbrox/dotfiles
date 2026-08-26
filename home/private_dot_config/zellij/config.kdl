@@ -348,7 +348,7 @@ default_layout "custom-default"
 //   - true (default, enabled)
 //   - false
 // 
-pane_frames false
+pane_frames true
 
 // Explicitly select frame style for zellij >=0.45
 // none: no frame/title rows
