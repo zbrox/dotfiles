@@ -255,8 +255,31 @@ plugins {
     harpoon location="file:~/.config/zellij/plugins/harpoon.wasm"
     zjstatus location="file:~/.config/zellij/plugins/zjstatus.wasm"
     zjstatus-hints location="file:~/.config/zellij/plugins/zjstatus-hints.wasm" {
-        hide_in_base_mode false
         pipe_name "zjstatus_hints"
+        hide_in_base_mode false
+
+        // Keep the custom keymap discoverable without letting hints take over
+        // the status line. Exit/unlock hints survive longest as it narrows.
+        discover_hints true
+        hide_shared_hints true
+        direction_keys "letters"
+        max_length 60
+        reserve_columns 24
+        hint_order "*, mode_locked, mode_normal"
+        drop_indicator "#[fg=#6e6a86]…"
+
+        label_mode_locked "exit"
+        label_locked_mode_normal "unlock"
+
+        // Compact aliases leave more room for useful hint labels.
+        key_alias_enter "↵"
+        key_alias_esc "⎋"
+        key_alias_tab "⇥"
+        key_alias_pageup "⇞"
+        key_alias_pagedown "⇟"
+        mod_alias_ctrl "^"
+        mod_alias_alt "⌥"
+        mod_alias_shift "⇧"
     }
 }
 

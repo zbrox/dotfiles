@@ -23,5 +23,5 @@ checksum = "1ccedece1ded62cf3e209be690cdd39ca6fb9e8228ed71a951f6507f9956669b"
 
 [zellijPlugins.zjstatus-hints]
 wasm = "zjstatus-hints.wasm"
-url = "https://github.com/myah-mitchell/zjstatus-hints/releases/download/v0.3.1/zjstatus-hints.wasm"
-checksum = "0f4294f80d18b764e9c6dca4f9bd0928381725f422bab83f5c4a4ac31f22923f"
+url = "https://github.com/myah-mitchell/zjstatus-hints/releases/download/v0.4.0/zjstatus-hints.wasm"
+checksum = "5ec850752f797e76ea38261abb269e84565a09e72c1c8710c578409df218ccc6"
