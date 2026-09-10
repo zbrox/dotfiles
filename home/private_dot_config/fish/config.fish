@@ -3,7 +3,7 @@ eval (direnv hook fish)
 
 # Atuin
 if status is-interactive
-    atuin pty-proxy init fish | source
+    source (atuin pty-proxy init fish | psub)
     atuin init fish | source
 end
 
