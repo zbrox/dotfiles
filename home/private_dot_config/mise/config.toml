@@ -2,7 +2,7 @@
 gh = "latest"
 glab = { version = "latest", exe = "glab" }
 gradle = "8.11.1"
-node = "20"
+node = "22"
 
 [settings]
 lockfile = true
