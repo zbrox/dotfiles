@@ -2,12 +2,10 @@
 taps = [
     # Homebrew tap: https://github.com/1password/homebrew-tap; contains 1password-cli
     "1password/tap",
-    # Homebrew tap: https://github.com/codecrafters-io/homebrew-tap; contains codecrafters
-    "codecrafters-io/tap",
     # Homebrew tap: https://github.com/filosottile/homebrew-musl-cross; contains musl-cross
     "filosottile/musl-cross",
-    # Homebrew tap: https://github.com/hcavarsan/homebrew-kftray; contains kftray-linux, kftray-test, kftray, +2 more
-    "hcavarsan/kftray",
+    # Homebrew tap: https://github.com/Homebrew/homebrew-core; contains a2ps, a52dec, aalib, +8595 more
+    "homebrew/core",
     # Homebrew tap: https://github.com/libsql/homebrew-sqld; contains libsql-server, sqld-beta, sqld
     "libsql/sqld",
     # Homebrew tap: https://github.com/macos-fuse-t/homebrew-cask; contains fuse-t-sshfs, fuse-t
@@ -18,24 +16,28 @@ taps = [
     "osx-cross/arm",
     # Homebrew tap: https://github.com/osx-cross/homebrew-avr; contains avarice, avr-binutils, avr-gcc@10, +9 more
     "osx-cross/avr",
+    # Homebrew tap: https://github.com/sozercan/homebrew-repo; contains a365, ayna, kaset, +2 more
+    "sozercan/repo",
 ]
 brews = [
     # Simple, modern, secure file encryption
     "age",
+    # Asciicast to GIF converter
+    "agg",
     # Download with resuming and segmented downloading
     "aria2",
+    # Record and share terminal sessions
+    "asciinema",
     # Improved shell history for zsh, bash, fish and nushell
     "atuin",
-    # Tool for generating GNU Standards-compliant Makefiles
-    "automake",
+    # Official Amazon AWS command-line interface
+    "awscli",
     # Clone of cat(1) with syntax highlighting and Git integration
     "bat",
     # Manage your dotfiles across multiple diverse machines, securely
     "chezmoi",
     # Cross-platform make
     "cmake",
-    # CodeCrafters CLI
-    "codecrafters-io/tap/codecrafters",
     # GNU File, Shell, and Text utilities
     "coreutils",
     # Secure runtime for JavaScript and TypeScript
@@ -90,8 +92,6 @@ brews = [
     "hledger",
     # Improved top (interactive process viewer)
     "htop",
-    # Command-line benchmarking tool
-    "hyperfine",
     # Tools and libraries to manipulate images in many formats
     "imagemagick",
     # GNU utilities for networking
@@ -102,34 +102,32 @@ brews = [
     "jq",
     # Handy way to save and run project-specific commands
     "just",
-    # Library to render SVG files using Cairo
-    "librsvg",
+    # Next-gen compiler infrastructure
+    "llvm",
     # Next-gen compiler infrastructure
     "llvm@17",
     # Keep your Mac's application settings in sync
     "mackup",
     # Securely transfers data between computers
     "magic-wormhole",
-    # Utility for directing compilation
-    "make",
     # Language Server Protocol for Markdown
     "marksman",
     # Mac App Store command-line interface
     "mas",
     # Polyglot runtime manager (asdf rust clone)
     "mise",
-    # Remote terminal application
-    "mosh",
+    # Deep clean and optimize your Mac
+    "mole",
     # Ambitious Vim-fork focused on extensibility and agility
     "neovim",
-    # Port scanning utility for large networks
-    "nmap",
     # Modern shell for the GitHub era
     "nushell",
     # GNU Tools for ARM Embedded Processors - Binutils
     "osx-cross/arm/arm-none-eabi-binutils",
     # GNU compiler collection for AVR 8-bit and 32-bit Microcontrollers
     "osx-cross/avr/avr-gcc@9",
+    # AI agent toolkit
+    "pi-coding-agent",
     # Object-relational database system
     "postgresql@15",
     # Pre-commit re-implemented in Rust
@@ -144,6 +142,8 @@ brews = [
     "rustup",
     # Intuitive find & replace CLI
     "sd",
+    # Database of common MIME types
+    "shared-mime-info",
     # Static analysis and lint tool, for (ba)sh scripts
     "shellcheck",
     # Editor of encrypted files
@@ -184,28 +184,20 @@ casks = [
     "1password-cli@beta",
     # Password manager
     "1password@beta",
-    # AirPods companion app
-    "airbuddy",
     # Webcam & audio device software
     "ankerwork",
+    # Terminal interface for Antigravity agents
+    "antigravity-cli",
     # Inspect application bundles
     "apparency",
-    # Chromium based browser
-    "arc",
     # App Store screenshots editor
     "butterkit",
-    # E-books management software
-    "calibre",
-    # Anthropic's official Claude AI desktop app
-    "claude",
-    # Terminal-based AI coding assistant
-    "claude-code",
+    # OpenAI's official ChatGPT desktop app
+    "chatgpt",
     # Screen capturing tool
     "cleanshot",
     # OpenAI's coding agent that runs in your terminal
     "codex",
-    # Brings the power of Copilot coding agent directly to your terminal
-    "copilot-cli",
     # Multi-platform client-side cloud file encryption tool
     "cryptomator",
     # Database manager
@@ -268,24 +260,24 @@ casks = [
     "font-source-serif-4",
     # None
     "font-ubuntu-mono-derivative-powerline",
+    # Kubernetes IDE
+    "freelens",
     # LibFUSE implementation that doesn't use kernel extensions
     "fuse-t",
     # Web browser
     "google-chrome",
+    # Native desktop AI assistant from Google
+    "google-gemini",
     # Open-source video transcoder
     "handbrake-app",
-    # Menu bar manager
-    "jordanbaird-ice",
+    # Companion app for Home Assistant home automation software
+    "home-assistant",
     # Spot and merge differences in text and image files or folders
     "kaleidoscope",
     # Keyboard customiser
     "karabiner-elements",
-    # End-to-end encryption software
-    "keybase",
-    # Music services manager
-    "lastfm",
-    # Software for Logitech devices
-    "logi-options+",
+    # Native YouTube Music client
+    "kaset",
     # File system integration
     "macfuse",
     # Modern GUI for Redis
@@ -296,8 +288,8 @@ casks = [
     "mounty",
     # Free and open-source RSS reader
     "netnewswire",
-    # Get up and running with large language models locally
-    "ollama-app",
+    # Local-first alternative to Logitech Options+ for HID++ devices
+    "openlogi",
     # Open-source transport simulation game
     "openttd",
     # Replacement for Docker Desktop
@@ -326,18 +318,12 @@ casks = [
     "telegram",
     # Unpacks archive files
     "the-unarchiver",
-    # File transfer application
-    "transmit",
     # Calling and messaging application focusing on security
     "viber",
-    # Virtualization tool
-    "virtualbuddy",
     # OpenVPN client with AppleScript support
     "viscosity",
     # Open-source code editor
     "visual-studio-code",
-    # Code editor
-    "visual-studio-code@insiders",
     # GPU-accelerated cross-platform terminal emulator and multiplexer
     "wezterm",
     # Native desktop client for WhatsApp
@@ -361,14 +347,6 @@ name = "Bakery"
 id = 1575220747
 
 [[packages.darwin.mas]]
-name = "CiderTV"
-id = 1065907486
-
-[[packages.darwin.mas]]
-name = "Convusic"
-id = 1591366129
-
-[[packages.darwin.mas]]
 name = "DaisyDisk"
 id = 411643860
 
@@ -381,36 +359,16 @@ name = "Developer"
 id = 640199958
 
 [[packages.darwin.mas]]
-name = "Dropover"
-id = 1355679052
-
-[[packages.darwin.mas]]
-name = "Exporter"
-id = 1099120373
-
-[[packages.darwin.mas]]
 name = "Fresh Cards"
 id = 1523398835
-
-[[packages.darwin.mas]]
-name = "Go Map!!"
-id = 592990211
 
 [[packages.darwin.mas]]
 name = "Hush"
 id = 1544743900
 
 [[packages.darwin.mas]]
-name = "Ice Cubes"
-id = 6444915884
-
-[[packages.darwin.mas]]
 name = "Iconic"
 id = 1582751983
-
-[[packages.darwin.mas]]
-name = "Jayson"
-id = 1468691718
 
 [[packages.darwin.mas]]
 name = "Keynote"
@@ -421,42 +379,6 @@ name = "Keys Multiplatform"
 id = 1494642810
 
 [[packages.darwin.mas]]
-name = "Kindle"
-id = 302584613
-
-[[packages.darwin.mas]]
-name = "Landmarks"
-id = 6446065798
-
-[[packages.darwin.mas]]
-name = "MakePass"
-id = 1450989464
-
-[[packages.darwin.mas]]
-name = "Messenger"
-id = 1480068668
-
-[[packages.darwin.mas]]
-name = "miele-lxiv"
-id = 988332475
-
-[[packages.darwin.mas]]
-name = "MusicHarbor"
-id = 1440405750
-
-[[packages.darwin.mas]]
-name = "MusicSmart"
-id = 1512195368
-
-[[packages.darwin.mas]]
-name = "NepTunes"
-id = 1006739057
-
-[[packages.darwin.mas]]
-name = "Notchmeister"
-id = 1599169747
-
-[[packages.darwin.mas]]
 name = "Numbers"
 id = 409203825
 
@@ -465,28 +387,8 @@ name = "Pages"
 id = 409201541
 
 [[packages.darwin.mas]]
-name = "Paprika Recipe Manager 3"
-id = 1303222628
-
-[[packages.darwin.mas]]
-name = "Pi-hole Remote"
-id = 1515445551
-
-[[packages.darwin.mas]]
 name = "Pixelmator Pro"
 id = 1289583905
-
-[[packages.darwin.mas]]
-name = "Playgrounds"
-id = 1496833156
-
-[[packages.darwin.mas]]
-name = "Shazam"
-id = 897118787
-
-[[packages.darwin.mas]]
-name = "Soor"
-id = 1439731526
 
 [[packages.darwin.mas]]
 name = "StopTheMadness"
@@ -509,22 +411,5 @@ name = "Vinegar"
 id = 1591303229
 
 [[packages.darwin.mas]]
-name = "Wayback Machine"
-id = 1472432422
-
-[[packages.darwin.mas]]
-name = "WireGuard"
-id = 1451685025
-
-[[packages.darwin.mas]]
-name = "WorldWideWeb"
-id = 1621370168
-[[packages.darwin.mas]]
-name = "Home Assistant"
-id = 1099568401
-[[packages.darwin.mas]]
 name = "Prime Video"
 id = 545519333
-[[packages.darwin.mas]]
-name = "ServerCat"
-id = 1501532023
