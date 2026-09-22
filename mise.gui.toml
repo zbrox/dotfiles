@@ -274,7 +274,6 @@ SortDirection = 0
 
 [dotfiles]
 "~/.config/ghostty/config" = { source = "src/.config/ghostty/config", mode = "copy" }
-"~/.config/kanata/default.kbd" = { source = "src/.config/kanata/default.kbd", mode = "copy" }
 "~/.config/wezterm/wezterm.lua" = { source = "src/.config/wezterm/wezterm.lua", mode = "copy" }
 "~/.config/zed/settings.json" = { source = "src/.config/zed/settings.json", mode = "copy" }
 
