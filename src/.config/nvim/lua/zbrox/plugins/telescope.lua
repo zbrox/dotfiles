@@ -38,7 +38,6 @@ return {
     })
 
     telescope.load_extension("fzf")
-    telescope.load_extension("chezmoi")
 
     local keymap = vim.keymap
 
@@ -47,12 +46,9 @@ return {
     keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", { desc = "Find string in cwd" })
     keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd" })
     keymap.set("n", "<leader>ft", "<cmd>TodoTelescope<cr>", { desc = "Find todos" })
-    keymap.set(
-      "n",
-      "<leader>fd",
-      telescope.extensions.chezmoi.find_files,
-      { desc = "Find dotfiles managed by chezmoi" }
-    )
+    keymap.set("n", "<leader>fd", function()
+      builtin.find_files({ cwd = vim.fn.expand("~/.dotfiles"), hidden = true })
+    end, { desc = "Find dotfiles" })
     keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Show all open buffers" })
     keymap.set(
       "n",
