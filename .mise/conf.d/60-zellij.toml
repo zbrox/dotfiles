@@ -1,0 +1,2 @@
+[tasks.bootstrap]
+depends = ["zellij:plugins"]
