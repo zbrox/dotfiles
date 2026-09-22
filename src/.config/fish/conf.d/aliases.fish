@@ -11,6 +11,7 @@ abbr -a l 'eza --all --long --modified --group --header --color-scale'
 # navigating & such
 abbr -a mkdir 'mkdir -pv' # create folders along the path always
 abbr -a search 'rg -i'
+alias dotfiles 'cd $DOTFILES'
 
 # git
 abbr -a c 'git commit -m'
