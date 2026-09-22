@@ -8,7 +8,7 @@ Thanks to [driesvints](https://github.com/driesvints), whose [dotfiles](https://
 
 The Base profile contains terminal and development configuration, including Fish, Git, jj, mise, Atuin, Starship, Neovim, Helix, Yazi, and Zellij.
 
-The GUI profile adds graphical application configuration for Ghostty, WezTerm, Zed, Karabiner, and QMK. Resources within either profile carry their own operating-system restrictions, so selecting GUI does not imply macOS.
+The GUI profile adds graphical application configuration for WezTerm, Zed, Karabiner, and QMK. Resources within either profile carry their own operating-system restrictions, so selecting GUI does not imply macOS.
 
 The selected profile is stored locally in `~/.miserc.toml`. Base uses:
 
