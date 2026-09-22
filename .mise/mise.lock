@@ -2,6 +2,53 @@
 
 lockfile_version = 2
 
+[[tools.cargo-dist]]
+version = "0.33.0"
+backend = "aqua:axodotdev/cargo-dist"
+specifiers = ["latest"]
+
+[tools.cargo-dist."platforms.linux-arm64"]
+checksum = "sha256:9c554ab21a58ad46eb9b6710f89633ccb26bc2577cf4b0c2d18a5b826a31913e"
+url = "https://github.com/axodotdev/cargo-dist/releases/download/v0.33.0/cargo-dist-aarch64-unknown-linux-gnu.tar.xz"
+url_api = "https://api.github.com/repos/axodotdev/cargo-dist/releases/assets/556576962"
+provenance = "github-attestations"
+
+[tools.cargo-dist."platforms.linux-arm64-musl"]
+checksum = "sha256:4761cff5fc547ad66d1449abbf321380b0e6bd8093b1fe6593852a3314fd0c19"
+url = "https://github.com/axodotdev/cargo-dist/releases/download/v0.33.0/cargo-dist-aarch64-unknown-linux-musl.tar.xz"
+url_api = "https://api.github.com/repos/axodotdev/cargo-dist/releases/assets/556576967"
+provenance = "github-attestations"
+
+[tools.cargo-dist."platforms.linux-x64"]
+checksum = "sha256:4b3f0a5f0ebbdb798f6db649d01b32ba1518376b6f7a0502b7d92b75cc2c8293"
+url = "https://github.com/axodotdev/cargo-dist/releases/download/v0.33.0/cargo-dist-x86_64-unknown-linux-gnu.tar.xz"
+url_api = "https://api.github.com/repos/axodotdev/cargo-dist/releases/assets/556576992"
+provenance = "github-attestations"
+
+[tools.cargo-dist."platforms.linux-x64-musl"]
+checksum = "sha256:b8e95bc76c63375958173ef5ae2dbd8e9211cc1ed03cdee0899702766b4c2a2e"
+url = "https://github.com/axodotdev/cargo-dist/releases/download/v0.33.0/cargo-dist-x86_64-unknown-linux-musl.tar.xz"
+url_api = "https://api.github.com/repos/axodotdev/cargo-dist/releases/assets/556576998"
+provenance = "github-attestations"
+
+[tools.cargo-dist."platforms.macos-arm64"]
+checksum = "sha256:7b3cbe25511de01d74c0f5fcb7909edabd379bea9cfa284d93af5a3cdfa3247c"
+url = "https://github.com/axodotdev/cargo-dist/releases/download/v0.33.0/cargo-dist-aarch64-apple-darwin.tar.xz"
+url_api = "https://api.github.com/repos/axodotdev/cargo-dist/releases/assets/556576963"
+provenance = "github-attestations"
+
+[tools.cargo-dist."platforms.macos-x64"]
+checksum = "sha256:6a49bfb61bd86770d79c27f3d2b40c6b2e71cde940d3d31a6ccaaffc124d7a29"
+url = "https://github.com/axodotdev/cargo-dist/releases/download/v0.33.0/cargo-dist-x86_64-apple-darwin.tar.xz"
+url_api = "https://api.github.com/repos/axodotdev/cargo-dist/releases/assets/556576979"
+provenance = "github-attestations"
+
+[tools.cargo-dist."platforms.windows-x64"]
+checksum = "sha256:9a36d70795e14326a5ec4bf17aee085df00ab85a322739291ea5d4b1b5f693cd"
+url = "https://github.com/axodotdev/cargo-dist/releases/download/v0.33.0/cargo-dist-x86_64-pc-windows-msvc.zip"
+url_api = "https://api.github.com/repos/axodotdev/cargo-dist/releases/assets/556576987"
+provenance = "github-attestations"
+
 [[tools."cargo:cargo-about"]]
 version = "0.9.2"
 backend = "cargo:cargo-about"
@@ -12,34 +59,9 @@ version = "0.22.2"
 backend = "cargo:cargo-audit"
 specifiers = ["latest"]
 
-[[tools."cargo:cargo-dist"]]
-version = "0.32.0"
-backend = "cargo:cargo-dist"
-specifiers = ["latest"]
-
-[[tools."cargo:cargo-edit"]]
-version = "0.13.13"
-backend = "cargo:cargo-edit"
-specifiers = ["latest"]
-
-[[tools."cargo:cargo-espflash"]]
-version = "4.6.0"
-backend = "cargo:cargo-espflash"
-specifiers = ["latest"]
-
 [[tools."cargo:cargo-generate"]]
 version = "0.25.0"
 backend = "cargo:cargo-generate"
-specifiers = ["latest"]
-
-[[tools."cargo:cargo-get"]]
-version = "1.4.0"
-backend = "cargo:cargo-get"
-specifiers = ["latest"]
-
-[[tools."cargo:cargo-leptos"]]
-version = "0.3.6"
-backend = "cargo:cargo-leptos"
 specifiers = ["latest"]
 
 [[tools."cargo:cargo-nextest"]]
@@ -47,24 +69,9 @@ version = "0.9.133"
 backend = "cargo:cargo-nextest"
 specifiers = ["latest"]
 
-[[tools."cargo:cargo-px"]]
-version = "0.1.20"
-backend = "cargo:cargo-px"
-specifiers = ["latest"]
-
-[[tools."cargo:cargo-run-bin"]]
-version = "1.7.5"
-backend = "cargo:cargo-run-bin"
-specifiers = ["latest"]
-
 [[tools."cargo:cargo-semver-checks"]]
 version = "0.50.0"
 backend = "cargo:cargo-semver-checks"
-specifiers = ["latest"]
-
-[[tools."cargo:cargo-shuttle"]]
-version = "0.57.3"
-backend = "cargo:cargo-shuttle"
 specifiers = ["latest"]
 
 [[tools."cargo:cargo-udeps"]]
@@ -77,11 +84,6 @@ version = "8.5.3"
 backend = "cargo:cargo-watch"
 specifiers = ["latest"]
 
-[[tools."cargo:create-tauri-app"]]
-version = "4.7.4"
-backend = "cargo:create-tauri-app"
-specifiers = ["latest"]
-
 [[tools."cargo:espup"]]
 version = "0.17.1"
 backend = "cargo:espup"
@@ -92,42 +94,87 @@ version = "0.6.14"
 backend = "cargo:flamegraph"
 specifiers = ["latest"]
 
-[[tools."cargo:jj-vine"]]
-version = "0.5.4"
-backend = "cargo:jj-vine"
-specifiers = ["latest"]
-
 [[tools."cargo:lazyjj"]]
 version = "0.5.0"
 backend = "cargo:lazyjj"
 specifiers = ["latest"]
 
-[[tools."cargo:lemmeknow"]]
-version = "0.8.0"
-backend = "cargo:lemmeknow"
-specifiers = ["latest"]
-
-[[tools."cargo:protols"]]
-version = "0.14.1"
-backend = "cargo:protols"
-specifiers = ["latest"]
-
-[[tools."cargo:release-plz"]]
+[[tools.release-plz]]
 version = "0.3.169"
-backend = "cargo:release-plz"
+backend = "aqua:release-plz/release-plz"
 specifiers = ["latest"]
 
-[[tools."cargo:rewrk"]]
-version = "0.3.2"
-backend = "cargo:rewrk"
-specifiers = ["latest"]
+[tools.release-plz."platforms.linux-arm64"]
+checksum = "sha256:6d4ce34d00342a7b10557cf03a893f8d68737063c8f49faaed26ae54daf2a4c6"
+url = "https://github.com/release-plz/release-plz/releases/download/release-plz-v0.3.169/release-plz-aarch64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/release-plz/release-plz/releases/assets/574584525"
 
-[[tools."cargo:tealdeer"]]
-version = "1.9.0"
-backend = "cargo:tealdeer"
-specifiers = ["latest"]
+[tools.release-plz."platforms.linux-arm64-musl"]
+checksum = "sha256:9fe32973a63bf1d18f02e877becf8619abc8b283f25d294f00d951e55c9946f2"
+url = "https://github.com/release-plz/release-plz/releases/download/release-plz-v0.3.169/release-plz-aarch64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/release-plz/release-plz/releases/assets/574583865"
+
+[tools.release-plz."platforms.linux-x64"]
+checksum = "sha256:1455106d3263712dd796ee04869eaee98b274e1e2e18011f67682b1f2840b64d"
+url = "https://github.com/release-plz/release-plz/releases/download/release-plz-v0.3.169/release-plz-x86_64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/release-plz/release-plz/releases/assets/574579224"
+
+[tools.release-plz."platforms.linux-x64-musl"]
+checksum = "sha256:ed709642b7f5b5fda4d47309884e65f84ca097cf9176cfd9793e8e66e28b48ad"
+url = "https://github.com/release-plz/release-plz/releases/download/release-plz-v0.3.169/release-plz-x86_64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/release-plz/release-plz/releases/assets/574583008"
+
+[tools.release-plz."platforms.macos-arm64"]
+checksum = "sha256:3bb728a921e0f9d6aca48723de2d8a49a71099ca8a113efb9350781120648a7e"
+url = "https://github.com/release-plz/release-plz/releases/download/release-plz-v0.3.169/release-plz-aarch64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/release-plz/release-plz/releases/assets/574581763"
+
+[tools.release-plz."platforms.windows-x64"]
+checksum = "sha256:3128d38feaac2a3c820a4901858a008fbb7c5ba4297d587a5222f4f35acb6456"
+url = "https://github.com/release-plz/release-plz/releases/download/release-plz-v0.3.169/release-plz-x86_64-pc-windows-msvc.tar.gz"
+url_api = "https://api.github.com/repos/release-plz/release-plz/releases/assets/574583656"
 
 [[tools.rust]]
 version = "stable"
 backend = "core:rust"
 specifiers = ["stable"]
+
+[[tools.tealdeer]]
+version = "1.9.0"
+backend = "aqua:tealdeer-rs/tealdeer"
+specifiers = ["latest"]
+
+[tools.tealdeer."platforms.linux-arm64"]
+checksum = "sha256:a748f181c00933980cb850f4a24199c45900fc523787f6c524232a6bfc66b895"
+url = "https://github.com/tealdeer-rs/tealdeer/releases/download/v1.9.0/tealdeer-linux-aarch64-musl"
+url_api = "https://api.github.com/repos/tealdeer-rs/tealdeer/releases/assets/527792762"
+
+[tools.tealdeer."platforms.linux-arm64-musl"]
+checksum = "sha256:a748f181c00933980cb850f4a24199c45900fc523787f6c524232a6bfc66b895"
+url = "https://github.com/tealdeer-rs/tealdeer/releases/download/v1.9.0/tealdeer-linux-aarch64-musl"
+url_api = "https://api.github.com/repos/tealdeer-rs/tealdeer/releases/assets/527792762"
+
+[tools.tealdeer."platforms.linux-x64"]
+checksum = "sha256:dc7263b550e90c0689ea2cb434e3144469805d5dddecbb1f7fc534e1185b7408"
+url = "https://github.com/tealdeer-rs/tealdeer/releases/download/v1.9.0/tealdeer-linux-x86_64-musl"
+url_api = "https://api.github.com/repos/tealdeer-rs/tealdeer/releases/assets/527792725"
+
+[tools.tealdeer."platforms.linux-x64-musl"]
+checksum = "sha256:dc7263b550e90c0689ea2cb434e3144469805d5dddecbb1f7fc534e1185b7408"
+url = "https://github.com/tealdeer-rs/tealdeer/releases/download/v1.9.0/tealdeer-linux-x86_64-musl"
+url_api = "https://api.github.com/repos/tealdeer-rs/tealdeer/releases/assets/527792725"
+
+[tools.tealdeer."platforms.macos-arm64"]
+checksum = "sha256:e6c6d9bf6d0267a38d5709c2b8334467fedd456927429ab426ff823201c13a40"
+url = "https://github.com/tealdeer-rs/tealdeer/releases/download/v1.9.0/tealdeer-macos-aarch64"
+url_api = "https://api.github.com/repos/tealdeer-rs/tealdeer/releases/assets/527792693"
+
+[tools.tealdeer."platforms.macos-x64"]
+checksum = "sha256:58337de7ad3446235f1493e02456002a9aa4e915cf70347d12334aa5fe08bfe5"
+url = "https://github.com/tealdeer-rs/tealdeer/releases/download/v1.9.0/tealdeer-macos-x86_64"
+url_api = "https://api.github.com/repos/tealdeer-rs/tealdeer/releases/assets/527792716"
+
+[tools.tealdeer."platforms.windows-x64"]
+checksum = "sha256:23fb76fb683d76dd413cb470b1a3c32157e585edec7d740e73da1aa9c6406dfe"
+url = "https://github.com/tealdeer-rs/tealdeer/releases/download/v1.9.0/tealdeer-windows-x86_64-msvc.exe"
+url_api = "https://api.github.com/repos/tealdeer-rs/tealdeer/releases/assets/527792764"

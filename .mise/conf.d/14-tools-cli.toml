@@ -1,0 +1,4 @@
+[tools]
+cargo-dist = "latest"
+release-plz = "latest"
+tealdeer = "latest"
