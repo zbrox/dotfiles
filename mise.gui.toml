@@ -1,4 +1,202 @@
+[bootstrap.brew.taps]
+"1password/tap" = "https://github.com/1password/homebrew-tap.git"
+"macos-fuse-t/cask" = "https://github.com/macos-fuse-t/homebrew-cask.git"
+"sozercan/repo" = "https://github.com/sozercan/homebrew-repo.git"
+
 [bootstrap.packages]
+# Command-line helper for the 1Password password manager
+"brew-cask:1password-cli@beta" = { os = "macos" }
+# Password manager
+"brew-cask:1password@beta" = { os = "macos" }
+# Webcam & audio device software
+"brew-cask:ankerwork" = { os = "macos" }
+# Terminal interface for Antigravity agents
+"brew-cask:antigravity-cli" = { os = "macos" }
+# Inspect application bundles
+"brew-cask:apparency" = { os = "macos" }
+# App Store screenshots editor
+"brew-cask:butterkit" = { os = "macos" }
+# OpenAI's official ChatGPT desktop app
+"brew-cask:chatgpt" = { os = "macos" }
+# Screen capturing tool
+"brew-cask:cleanshot" = { os = "macos" }
+# OpenAI's coding agent that runs in your terminal
+"brew-cask:codex" = { os = "macos" }
+# Multi-platform client-side cloud file encryption tool
+"brew-cask:cryptomator" = { os = "macos" }
+# Database manager
+"brew-cask:dataflare" = { os = "macos" }
+# Voice and text chat software
+"brew-cask:discord" = { os = "macos" }
+# Email client
+"brew-cask:fastmail" = { os = "macos" }
+# Web browser
+"brew-cask:firefox" = { os = "macos" }
+# None
+"brew-cask:font-anonymice-powerline" = { os = "macos" }
+# None
+"brew-cask:font-dejavu-sans-mono-for-powerline" = { os = "macos" }
+# None
+"brew-cask:font-droid-sans-mono-for-powerline" = { os = "macos" }
+# None
+"brew-cask:font-fira-code" = { os = "macos" }
+# None
+"brew-cask:font-fira-mono-for-powerline" = { os = "macos" }
+# None
+"brew-cask:font-inconsolata-dz-for-powerline" = { os = "macos" }
+# None
+"brew-cask:font-inconsolata-for-powerline" = { os = "macos" }
+# None
+"brew-cask:font-inconsolata-g-for-powerline" = { os = "macos" }
+# None
+"brew-cask:font-iosevka" = { os = "macos" }
+# None
+"brew-cask:font-jetbrains-mono" = { os = "macos" }
+# None
+"brew-cask:font-jetbrains-mono-nerd-font" = { os = "macos" }
+# None
+"brew-cask:font-liberation-mono-for-powerline" = { os = "macos" }
+# None
+"brew-cask:font-menlo-for-powerline" = { os = "macos" }
+# None
+"brew-cask:font-meslo-for-powerline" = { os = "macos" }
+# None
+"brew-cask:font-meslo-lg-nerd-font" = { os = "macos" }
+# None
+"brew-cask:font-monofur-for-powerline" = { os = "macos" }
+# None
+"brew-cask:font-noto-emoji" = { os = "macos" }
+# None
+"brew-cask:font-noto-mono-for-powerline" = { os = "macos" }
+# None
+"brew-cask:font-roboto-mono-for-powerline" = { os = "macos" }
+# None
+"brew-cask:font-sauce-code-pro-nerd-font" = { os = "macos" }
+# None
+"brew-cask:font-sf-pro" = { os = "macos" }
+# None
+"brew-cask:font-source-code-pro" = { os = "macos" }
+# None
+"brew-cask:font-source-code-pro-for-powerline" = { os = "macos" }
+# None
+"brew-cask:font-source-sans-3" = { os = "macos" }
+# None
+"brew-cask:font-source-serif-4" = { os = "macos" }
+# None
+"brew-cask:font-ubuntu-mono-derivative-powerline" = { os = "macos" }
+# Kubernetes IDE
+"brew-cask:freelens" = { os = "macos" }
+# LibFUSE implementation that doesn't use kernel extensions
+"brew-cask:fuse-t" = { os = "macos" }
+# Web browser
+"brew-cask:google-chrome" = { os = "macos" }
+# Native desktop AI assistant from Google
+"brew-cask:google-gemini" = { os = "macos" }
+# Open-source video transcoder
+"brew-cask:handbrake-app" = { os = "macos" }
+# Companion app for Home Assistant home automation software
+"brew-cask:home-assistant" = { os = "macos" }
+# Spot and merge differences in text and image files or folders
+"brew-cask:kaleidoscope" = { os = "macos" }
+# Keyboard customiser
+"brew-cask:karabiner-elements" = { os = "macos" }
+# Native YouTube Music client
+"brew-cask:kaset" = { os = "macos" }
+# File system integration
+"brew-cask:macfuse" = { os = "macos" }
+# Modern GUI for Redis
+"brew-cask:medis" = { os = "macos" }
+# Tool to control external monitor brightness & volume
+"brew-cask:monitorcontrol" = { os = "macos" }
+# Re-mounts write-protected NTFS volumes
+"brew-cask:mounty" = { os = "macos" }
+# Free and open-source RSS reader
+"brew-cask:netnewswire" = { os = "macos" }
+# Local-first alternative to Logitech Options+ for HID++ devices
+"brew-cask:openlogi" = { os = "macos" }
+# Open-source transport simulation game
+"brew-cask:openttd" = { os = "macos" }
+# Replacement for Docker Desktop
+"brew-cask:orbstack" = { os = "macos" }
+# Home media player
+"brew-cask:plex" = { os = "macos" }
+# GUI client for PostgreSQL databases
+"brew-cask:postico" = { os = "macos" }
+# Control your tools with a few keystrokes
+"brew-cask:raycast" = { os = "macos" }
+# Tool that provides consistent, highly configurable symbols for apps
+"brew-cask:sf-symbols" = { os = "macos" }
+# Instant messaging application focusing on security
+"brew-cask:signal" = { os = "macos" }
+# Team communication and collaboration software
+"brew-cask:slack" = { os = "macos" }
+# System monitor for the menu bar
+"brew-cask:stats" = { os = "macos" }
+# Video game digital distribution service
+"brew-cask:steam" = { os = "macos" }
+# Native GUI tool for relational databases
+"brew-cask:tableplus" = { os = "macos" }
+# Mesh VPN based on WireGuard
+"brew-cask:tailscale-app" = { os = "macos" }
+# Messaging app with a focus on speed and security
+"brew-cask:telegram" = { os = "macos" }
+# Unpacks archive files
+"brew-cask:the-unarchiver" = { os = "macos" }
+# Calling and messaging application focusing on security
+"brew-cask:viber" = { os = "macos" }
+# OpenVPN client with AppleScript support
+"brew-cask:viscosity" = { os = "macos" }
+# GPU-accelerated cross-platform terminal emulator and multiplexer
+"brew-cask:wezterm" = { os = "macos" }
+# Native desktop client for WhatsApp
+"brew-cask:whatsapp@beta" = { os = "macos" }
+# REST, GraphQL and gRPC client
+"brew-cask:yaak" = { os = "macos" }
+# Multiplayer code editor
+"brew-cask:zed" = { os = "macos" }
+# Multiplayer code editor
+"brew-cask:zed@preview" = { os = "macos" }
+# Zen browser
+"brew-cask:zen" = { os = "macos" }
+
+# 1Password for Safari
+"mas:1569813296" = { os = "macos" }
+# Bakery
+"mas:1575220747" = { os = "macos" }
+# DaisyDisk
+"mas:411643860" = { os = "macos" }
+# Day One
+"mas:1055511498" = { os = "macos" }
+# Developer
+"mas:640199958" = { os = "macos" }
+# Fresh Cards
+"mas:1523398835" = { os = "macos" }
+# Hush
+"mas:1544743900" = { os = "macos" }
+# Iconic
+"mas:1582751983" = { os = "macos" }
+# Keynote
+"mas:409183694" = { os = "macos" }
+# Keys Multiplatform
+"mas:1494642810" = { os = "macos" }
+# Numbers
+"mas:409203825" = { os = "macos" }
+# Pages
+"mas:409201541" = { os = "macos" }
+# Pixelmator Pro
+"mas:1289583905" = { os = "macos" }
+# StopTheMadness
+"mas:1376402589" = { os = "macos" }
+# TestFlight
+"mas:899247664" = { os = "macos" }
+# Things
+"mas:904280696" = { os = "macos" }
+# Vidimote
+"mas:1585702412" = { os = "macos" }
+# Vinegar
+"mas:1591303229" = { os = "macos" }
+# Prime Video
+"mas:545519333" = { os = "macos" }
 
 [dotfiles]
 "~/.config/ghostty/config" = { source = "src/.config/ghostty/config", mode = "copy" }
