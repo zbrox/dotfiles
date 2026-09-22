@@ -1,7 +1,5 @@
-# Managed Zellij plugins — single source of truth consumed by:
-#   .chezmoiexternal.toml.tmpl                      -> download targets
-#   .chezmoitemplates/zellij-plugin-path.tmpl       -> load paths / cache keys
-#   .chezmoitemplates/zellij-plugin-permissions.tmpl-> pre-granted permissions
+# Managed Zellij plugins — single source of truth for provisioning and
+# pre-granted permission cache entries.
 #
 # Permissions granted to each plugin are the COMPLETE PermissionType enum
 # as of zellij 0.45.0 (17 variants). Extra grants are harmless and prevent

@@ -1,0 +1,107 @@
+#!/usr/bin/env python3
+#MISE description="Provision checksummed Zellij plugins and permission grants"
+
+from __future__ import annotations
+
+import hashlib
+import os
+from pathlib import Path
+import shutil
+import subprocess
+import tempfile
+import tomllib
+import urllib.request
+
+
+REPOSITORY_ROOT = Path(__file__).resolve().parents[3]
+MANIFEST = REPOSITORY_ROOT / "src/.config/zellij/plugins.toml"
+
+
+def sha256(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as file:
+        for chunk in iter(lambda: file.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def validated_plugins() -> list[tuple[str, str, str, str]]:
+    with MANIFEST.open("rb") as file:
+        manifest = tomllib.load(file)
+
+    plugins = manifest.get("zellijPlugins")
+    if not isinstance(plugins, dict) or not plugins:
+        raise RuntimeError(f"No plugins found in {MANIFEST}")
+
+    validated = []
+    for name, plugin in sorted(plugins.items()):
+        if not isinstance(plugin, dict):
+            raise RuntimeError(f"Invalid plugin entry: {name}")
+
+        wasm = plugin.get("wasm")
+        url = plugin.get("url")
+        checksum = plugin.get("checksum")
+        if not all(isinstance(value, str) and value for value in (wasm, url, checksum)):
+            raise RuntimeError(f"Incomplete plugin entry: {name}")
+        if Path(wasm).name != wasm:
+            raise RuntimeError(f"Plugin filename must not contain a path: {wasm}")
+        if not url.startswith("https://"):
+            raise RuntimeError(f"Plugin URL must use HTTPS: {url}")
+        if len(checksum) != 64 or any(character not in "0123456789abcdef" for character in checksum):
+            raise RuntimeError(f"Invalid SHA-256 checksum for {name}: {checksum}")
+
+        validated.append((name, wasm, url, checksum))
+
+    return validated
+
+
+def download(url: str, destination: Path, checksum: str) -> None:
+    descriptor, temporary_name = tempfile.mkstemp(prefix=f".{destination.name}.", dir=destination.parent)
+    os.close(descriptor)
+    temporary = Path(temporary_name)
+
+    try:
+        request = urllib.request.Request(url, headers={"User-Agent": "mise-zellij-bootstrap"})
+        with urllib.request.urlopen(request, timeout=120) as response, temporary.open("wb") as file:
+            shutil.copyfileobj(response, file)
+
+        actual = sha256(temporary)
+        if actual != checksum:
+            raise RuntimeError(
+                f"Checksum mismatch for {destination.name}: expected {checksum}, got {actual}"
+            )
+
+        temporary.chmod(0o644)
+        os.replace(temporary, destination)
+    finally:
+        temporary.unlink(missing_ok=True)
+
+
+def main() -> None:
+    plugin_directory = Path(
+        os.environ.get("ZELLIJ_PLUGIN_DIR", "~/.config/zellij/plugins")
+    ).expanduser()
+    permission_helper = Path(
+        os.environ.get(
+            "ZELLIJ_PERMISSION_HELPER",
+            "~/.config/zellij/grant-plugin-permissions",
+        )
+    ).expanduser()
+    plugin_directory.mkdir(parents=True, exist_ok=True)
+
+    for name, wasm, url, checksum in validated_plugins():
+        destination = plugin_directory / wasm
+        if destination.is_file() and sha256(destination) == checksum:
+            print(f"current: {name}")
+            continue
+
+        download(url, destination, checksum)
+        print(f"installed: {name}")
+
+    if not permission_helper.is_file() or not os.access(permission_helper, os.X_OK):
+        raise RuntimeError(f"Permission helper is not executable: {permission_helper}")
+    subprocess.run([str(permission_helper)], check=True)
+
+
+if __name__ == "__main__":
+    main()
