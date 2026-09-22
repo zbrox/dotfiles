@@ -1,0 +1,3 @@
+[dotfiles]
+"~/.config/helix" = { source = "../../src/.config/helix", mode = "copy" }
+"~/.config/nvim" = { source = "../../src/.config/nvim", mode = "copy" }
