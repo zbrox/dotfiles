@@ -137,6 +137,8 @@ if [[ "$operating_system" == "Darwin" ]]; then
     fi
 
     eval "$("$brew_path" shellenv)"
+    # mise evaluates third-party cask definitions before packages are installed.
+    export PATH="$HOMEBREW_REPOSITORY/Library/Homebrew/vendor/portable-ruby/current/bin:$PATH"
 
     if ! command -v mise >/dev/null 2>&1; then
         "$brew_path" install mise
