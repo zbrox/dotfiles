@@ -1,0 +1,37 @@
+[dotfiles]
+"~/.config/fish/completions/orbctl.fish" = { source = "../../src/.config/fish/completions/orbctl.fish", mode = "copy" }
+"~/.config/fish/completions/uv.fish" = { source = "../../src/.config/fish/completions/uv.fish", mode = "copy" }
+"~/.config/fish/conf.d/00-env_vars.fish" = { source = "../../src/.config/fish/conf.d/00-env_vars.fish", mode = "copy" }
+"~/.config/fish/conf.d/aliases.fish" = { source = "../../src/.config/fish/conf.d/aliases.fish", mode = "copy" }
+"~/.config/fish/config.fish" = { source = "../../src/.config/fish/config.fish", mode = "copy" }
+"~/.config/fish/fish_plugins" = { source = "../../src/.config/fish/fish_plugins", mode = "copy" }
+"~/.config/fish/functions/clean-unzip.fish" = { source = "../../src/.config/fish/functions/clean-unzip.fish", mode = "copy" }
+"~/.config/fish/functions/dorelease.fish" = { source = "../../src/.config/fish/functions/dorelease.fish", mode = "copy" }
+"~/.config/fish/functions/fish_greeting.fish" = { source = "../../src/.config/fish/functions/fish_greeting.fish", mode = "copy" }
+"~/.config/fish/functions/fisher.fish" = { source = "../../src/.config/fish/functions/fisher.fish", mode = "copy" }
+"~/.config/fish/functions/ip-addr.fish" = { source = "../../src/.config/fish/functions/ip-addr.fish", mode = "copy" }
+"~/.config/fish/functions/is-clean-zip.fish" = { source = "../../src/.config/fish/functions/is-clean-zip.fish", mode = "copy" }
+"~/.config/fish/functions/isodate.fish" = { source = "../../src/.config/fish/functions/isodate.fish", mode = "copy" }
+"~/.config/fish/functions/isodatetime.fish" = { source = "../../src/.config/fish/functions/isodatetime.fish", mode = "copy" }
+"~/.config/fish/functions/key_bindings.fish" = { source = "../../src/.config/fish/functions/key_bindings.fish", mode = "copy" }
+"~/.config/fish/functions/lan-ip.fish" = { source = "../../src/.config/fish/functions/lan-ip.fish", mode = "copy" }
+"~/.config/fish/functions/new_post.fish" = { source = "../../src/.config/fish/functions/new_post.fish", mode = "copy" }
+"~/.config/fish/functions/posix-source.fish" = { source = "../../src/.config/fish/functions/posix-source.fish", mode = "copy" }
+"~/.config/fish/functions/reloadcli.fish" = { source = "../../src/.config/fish/functions/reloadcli.fish", mode = "copy" }
+"~/.config/fish/functions/sync-fork.fish" = { source = "../../src/.config/fish/functions/sync-fork.fish", mode = "copy" }
+"~/.config/fish/functions/tag.fish" = { source = "../../src/.config/fish/functions/tag.fish", mode = "copy" }
+"~/.config/fish/functions/tar-cd.fish" = { source = "../../src/.config/fish/functions/tar-cd.fish", mode = "copy" }
+"~/.config/fish/functions/versionbump.fish" = { source = "../../src/.config/fish/functions/versionbump.fish", mode = "copy" }
+"~/.config/fish/functions/whose-port.fish" = { source = "../../src/.config/fish/functions/whose-port.fish", mode = "copy" }
+"~/.config/fish/functions/zellij-logs-path.fish" = { source = "../../src/.config/fish/functions/zellij-logs-path.fish", mode = "copy" }
+"~/.config/fish/functions/zeropad.fish" = { source = "../../src/.config/fish/functions/zeropad.fish", mode = "copy" }
+
+[dotfiles."fish-wifi-network-name"]
+source = "../../src/.config/fish/functions/wifi-network-name.fish"
+mode = "copy"
+variants = [{ os = "macos", target = "~/.config/fish/functions/wifi-network-name.fish" }]
+
+[dotfiles."fish-xcodeclean"]
+source = "../../src/.config/fish/functions/xcodeclean.fish"
+mode = "copy"
+variants = [{ os = "macos", target = "~/.config/fish/functions/xcodeclean.fish" }]
