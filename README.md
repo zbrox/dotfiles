@@ -1,52 +1,91 @@
-# My dotfiles
+# Dotfiles
 
-Thanks to [driesvints](https://github.com/driesvints) whose [dotfiles](https://github.com/driesvints/dotfiles) these were originally based on. That's what got me started! So after some heavy evolution over the years, this is what it is now.
+Personal configuration managed by [mise](https://mise.jdx.dev/) and versioned with [Jujutsu](https://jj-vcs.github.io/jj/).
 
-Current iteration uses [chezmoi](https://www.chezmoi.io/) to manage everything.
+Thanks to [driesvints](https://github.com/driesvints), whose [dotfiles](https://github.com/driesvints/dotfiles) originally provided the starting point for this repository.
 
-## What's in the box
+## Profiles
 
-- Setting up platform-specific configurations (macOS, Linux including NixOS)
-- Installing software using Homebrew bundle on macOS or through the Mac App Store
-- Install rustup (except on NixOS)
-- Install cargo binaries (except on NixOS)
-- Configurations
-  - [Fish](http://fishshell.com) as the default shell, with some handy functions, autocompletions, plugins, and [Fisher](https://github.com/jorgebucaran/fisher) for a plugin manager
-  - [Starship](https://starship.rs) for a prompt
-  - [Neovim](https://neovim.io/) settings and plugins
-  - [Helix](https://helix-editor.com/) configuration
-  - [Wezterm](https://wezfurlong.org/wezterm/index.html) very basic settings of the cross platform terminal emulator (GUI only)
-  - [Git](https://git-scm.com) Duh! Setting up a global gitignore, commit message template, some aliases, and some configurations options I'm used to
-  - [jj (Jujutsu)](https://github.com/martinvonz/jj) configuration for this version control system
-  - [VSCode](https://code.visualstudio.com) settings and extensions (GUI only)
-  - [zed](https://zed.dev) settings only (GUI only)
-  - [Zellij](https://zellij.dev) basic settings for this amazing terminal multiplexer
-  - [Atuin](https://atuin.sh) almost the default settings for atuin, a better history for your shell
-  - [Yazi](https://yazi-rs.github.io/) terminal file manager configuration
-  - [mise](https://mise.jdx.dev/) configuration for this dev tools version manager
-  - [Karabiner](https://karabiner-elements.pqrs.org/) keyboard remapping (macOS only)
-  - [Kanata](https://github.com/jtroo/kanata) keyboard remapping configuration (GUI only)
-  - [QMK](https://qmk.fm/) basic user settings to set the default keyboard and layout which I have made for myself (macOS only)
+The Base profile contains terminal and development configuration, including Fish, Git, jj, mise, Atuin, Starship, Neovim, Helix, Yazi, and Zellij.
+
+The GUI profile adds graphical application configuration for Ghostty, WezTerm, Zed, Kanata, Karabiner, and QMK. Resources within either profile carry their own operating-system restrictions, so selecting GUI does not imply macOS.
+
+The selected profile is stored locally in `~/.miserc.toml`. Base uses:
+
+```toml
+env = []
+```
+
+Base with GUI uses:
+
+```toml
+env = ["gui"]
+```
 
 ## Setup
 
+The installer clones the repository to `~/.dotfiles`, applies the selected configuration, and initializes the checkout as a collocated jj repository.
+
 ### macOS
 
-Requirements: [homebrew](https://brew.sh/) and [chezmoi](https://www.chezmoi.io/)
+Run either profile directly:
 
-Steps:
+```sh
+curl -fsSL https://raw.githubusercontent.com/zbrox/dotfiles/master/install.sh | bash -s -- --base
+curl -fsSL https://raw.githubusercontent.com/zbrox/dotfiles/master/install.sh | bash -s -- --gui
+```
 
-1. Install homebrew - `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
-2. Install chezmoi - `brew install chezmoi`
-3. Init dotfiles - `chezmoi init --apply zbrox`
+Running without a profile prompts for one:
 
-### Linux (including NixOS)
+```sh
+curl -fsSL https://raw.githubusercontent.com/zbrox/dotfiles/master/install.sh | bash
+```
 
-Requirements: [chezmoi](https://www.chezmoi.io/)
+The installer bootstraps the selected profile and prints any remaining manual steps when it finishes.
 
-Steps:
+### Linux
 
-1. Install chezmoi - Follow [installation instructions](https://www.chezmoi.io/install/) for your distro
-2. Init dotfiles - `chezmoi init --apply zbrox`
+Git, Fish, jj, and curl must be supplied by the system configuration. The installer reuses mise when available or installs its portable binary under `~/.local/bin`.
 
-On first run, you'll be prompted whether this is a GUI or headless system to configure appropriate tools.
+```sh
+curl -fsSL https://raw.githubusercontent.com/zbrox/dotfiles/master/install.sh | bash -s -- --base
+curl -fsSL https://raw.githubusercontent.com/zbrox/dotfiles/master/install.sh | bash -s -- --gui
+```
+
+With no profile argument, Linux selects Base. Linux setup applies the selected dotfiles and configures the Fish login shell; system packages and development tools remain owned by the distribution or Nix configuration.
+
+## Repository layout
+
+- `mise.toml` contains shared settings and tools.
+- `mise.gui.toml` contains the additive GUI profile.
+- `.mise/conf.d/` contains Base packages, tools, dotfile declarations, and bootstrap tasks.
+- `src/` mirrors the destination paths for copy-mode dotfiles.
+- `mise.local.toml` is ignored and stores the machine-specific absolute Fish path used for login-shell setup.
+
+## Updating dotfiles
+
+Edit managed files in the home directory, then inspect and capture those changes:
+
+```sh
+jj -R ~/.dotfiles new -m "wip: update dotfiles"
+mise -C ~/.dotfiles dot diff
+mise -C ~/.dotfiles dot add --changed --no-apply
+jj -R ~/.dotfiles diff
+jj -R ~/.dotfiles desc -m "chore: update dotfiles"
+```
+
+Advance and push the intended bookmark after reviewing the revision:
+
+```sh
+jj -R ~/.dotfiles bookmark set master -r @
+jj -R ~/.dotfiles git push -b master
+```
+
+Before applying repository changes, inspect differences against the live files:
+
+```sh
+mise -C ~/.dotfiles dot diff
+mise -C ~/.dotfiles dot apply
+```
+
+Run `mise -C ~/.dotfiles bootstrap` when a revision also changes packages, tools, plugins, or machine settings.
