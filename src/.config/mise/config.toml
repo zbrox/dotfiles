@@ -17,3 +17,4 @@ uvx = true
 
 [settings.cargo]
 binstall = true
+binstall_native = true
