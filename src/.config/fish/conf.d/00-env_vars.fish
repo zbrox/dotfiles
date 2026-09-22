@@ -84,12 +84,6 @@ end
 if test (uname) = Darwin
     # 1password ssh agent
     if test -x /Applications/1Password.app/Contents/MacOS/1Password
-        if not test -d ~/.1password
-            mkdir -p ~/.1password
-        end
-        if test -f ~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
-            ln -s ~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock ~/.1password/agent.sock
-        end
-        set SSH_AUTH_SOCK ~/.1password/agent.sock
+        set -gx SSH_AUTH_SOCK "$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
     end
 end

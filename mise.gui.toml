@@ -198,6 +198,14 @@
 # Prime Video
 "mas:545519333" = { os = "macos" }
 
+[bootstrap.macos.launchd.agents.1password-ssh-auth-sock]
+program = "/bin/sh"
+args = [
+    "-c",
+    '/bin/mkdir -p "{{ env.HOME }}/.1password" && /bin/ln -sfn "{{ env.HOME }}/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock" "{{ env.HOME }}/.1password/agent.sock"',
+]
+run_at_load = true
+
 [dotfiles]
 "~/.config/ghostty/config" = { source = "src/.config/ghostty/config", mode = "copy" }
 "~/.config/kanata/default.kbd" = { source = "src/.config/kanata/default.kbd", mode = "copy" }
