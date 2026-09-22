@@ -200,6 +200,15 @@ fish_path="$(command -v fish || true)"
 
 local_config_content="$(printf '[bootstrap.user]\nlogin_shell = \"%s\"\n' "$fish_path")"$'\n'
 write_managed_file "$LOCAL_CONFIG" "$local_config_content" "local bootstrap configuration"
+"$mise_path" trust "$LOCAL_CONFIG"
+
+global_config="$HOME/.config/mise/config.toml"
+if [[ -f "$global_config" ]]; then
+    "$mise_path" trust "$global_config"
+    if [[ "$operating_system" == "Darwin" ]]; then
+        "$mise_path" -C "$HOME" --yes install
+    fi
+fi
 
 run_mise -C "$DOTFILES_DIR" bootstrap user apply --yes
 
