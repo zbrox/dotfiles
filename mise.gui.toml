@@ -1,1 +1,17 @@
 [bootstrap.packages]
+
+[dotfiles]
+"~/.config/ghostty/config" = { source = "src/.config/ghostty/config", mode = "copy" }
+"~/.config/kanata/default.kbd" = { source = "src/.config/kanata/default.kbd", mode = "copy" }
+"~/.config/wezterm/wezterm.lua" = { source = "src/.config/wezterm/wezterm.lua", mode = "copy" }
+"~/.config/zed/settings.json" = { source = "src/.config/zed/settings.json", mode = "copy" }
+
+[dotfiles.karabiner]
+source = "src/.config/karabiner/karabiner.json"
+mode = "copy"
+variants = [{ os = "macos", target = "~/.config/karabiner/karabiner.json" }]
+
+[dotfiles.qmk]
+source = "src/Library/Application Support/qmk/qmk.ini"
+mode = "copy"
+variants = [{ os = "macos", target = "~/Library/Application Support/qmk/qmk.ini" }]
