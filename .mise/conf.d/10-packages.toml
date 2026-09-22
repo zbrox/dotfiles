@@ -1,1 +1,155 @@
+[bootstrap.brew.taps]
+"osx-cross/arm" = "https://github.com/osx-cross/homebrew-arm.git"
+"osx-cross/avr" = "https://github.com/osx-cross/homebrew-avr.git"
+
 [bootstrap.packages]
+# Simple, modern, secure file encryption
+"brew:age" = { os = "macos" }
+# Asciicast to GIF converter
+"brew:agg" = { os = "macos" }
+# Download with resuming and segmented downloading
+"brew:aria2" = { os = "macos" }
+# Record and share terminal sessions
+"brew:asciinema" = { os = "macos" }
+# Improved shell history for zsh, bash, fish and nushell
+"brew:atuin" = { os = "macos" }
+# Official Amazon AWS command-line interface
+"brew:awscli" = { os = "macos" }
+# Clone of cat(1) with syntax highlighting and Git integration
+"brew:bat" = { os = "macos" }
+# Cross-platform make
+"brew:cmake" = { os = "macos" }
+# GNU File, Shell, and Text utilities
+"brew:coreutils" = { os = "macos" }
+# Secure runtime for JavaScript and TypeScript
+"brew:deno" = { os = "macos" }
+# USB programmer
+"brew:dfu-util" = { os = "macos" }
+# Diff that understands syntax
+"brew:difftastic" = { os = "macos" }
+# Load/unload environment variables based on $PWD
+"brew:direnv" = { os = "macos" }
+# Tool for exploring each layer in a docker image
+"brew:dive" = { os = "macos" }
+# More intuitive version of du in rust
+"brew:dust" = { os = "macos" }
+# Serial flasher utility for Espressif SoCs and modules based on esptool.py
+"brew:espflash" = { os = "macos" }
+# Modern, maintained replacement for ls
+"brew:eza" = { os = "macos" }
+# Simple, fast and user-friendly alternative to find
+"brew:fd" = { os = "macos" }
+# Play, record, convert, and stream audio and video
+"brew:ffmpeg" = { os = "macos" }
+# Collection of GNU find, xargs, and locate
+"brew:findutils" = { os = "macos" }
+# User-friendly command-line shell for UNIX-like operating systems
+"brew:fish" = { os = "macos" }
+# Command-line fuzzy finder written in Go
+"brew:fzf" = { os = "macos" }
+# GNU compiler collection
+"brew:gcc" = { os = "macos" }
+# Distributed revision control system
+"brew:git" = { os = "macos" }
+# Syntax-highlighting pager for git and diff output
+"brew:git-delta" = { os = "macos" }
+# Git extension for versioning large files
+"brew:git-lfs" = { os = "macos" }
+# GNU Pretty Good Privacy (PGP) package
+"brew:gnupg" = { os = "macos" }
+# Colorize logfiles and command output
+"brew:grc" = { os = "macos" }
+# Command-line tool for generating regular expressions
+"brew:grex" = { os = "macos" }
+# Tool for glamorous shell scripts
+"brew:gum" = { os = "macos" }
+# Post-modern modal text editor
+"brew:helix" = { os = "macos" }
+# Git hook and pre-commit lint manager
+"brew:hk" = { os = "macos" }
+# Easy plain text accounting with command-line, terminal and web UIs
+"brew:hledger" = { os = "macos" }
+# Improved top (interactive process viewer)
+"brew:htop" = { os = "macos" }
+# Tools and libraries to manipulate images in many formats
+"brew:imagemagick" = { os = "macos" }
+# GNU utilities for networking
+"brew:inetutils" = { os = "macos" }
+# Git-compatible distributed version control system
+"brew:jj" = { os = "macos" }
+# Lightweight and flexible command-line JSON processor
+"brew:jq" = { os = "macos" }
+# Handy way to save and run project-specific commands
+"brew:just" = { os = "macos" }
+# Next-gen compiler infrastructure
+"brew:llvm" = { os = "macos" }
+# Next-gen compiler infrastructure
+"brew:llvm@17" = { os = "macos" }
+# Keep your Mac's application settings in sync
+"brew:mackup" = { os = "macos" }
+# Securely transfers data between computers
+"brew:magic-wormhole" = { os = "macos" }
+# Language Server Protocol for Markdown
+"brew:marksman" = { os = "macos" }
+# Mac App Store command-line interface
+"brew:mas" = { os = "macos" }
+# Deep clean and optimize your Mac
+"brew:mole" = { os = "macos" }
+# Ambitious Vim-fork focused on extensibility and agility
+"brew:neovim" = { os = "macos" }
+# Modern shell for the GitHub era
+"brew:nushell" = { os = "macos" }
+# GNU Tools for ARM Embedded Processors - Binutils
+"brew:osx-cross/arm/arm-none-eabi-binutils" = { os = "macos" }
+# GNU compiler collection for AVR 8-bit and 32-bit Microcontrollers
+"brew:osx-cross/avr/avr-gcc@9" = { os = "macos" }
+# AI agent toolkit
+"brew:pi-coding-agent" = { os = "macos" }
+# Object-relational database system
+"brew:postgresql@15" = { os = "macos" }
+# Pre-commit re-implemented in Rust
+"brew:prek" = { os = "macos" }
+# Terminal slideshow tool
+"brew:presenterm" = { os = "macos" }
+# Modern replacement for ps written in Rust
+"brew:procs" = { os = "macos" }
+# Search tool like grep and The Silver Searcher
+"brew:ripgrep" = { os = "macos" }
+# Intuitive find & replace CLI
+"brew:sd" = { os = "macos" }
+# Database of common MIME types
+"brew:shared-mime-info" = { os = "macos" }
+# Static analysis and lint tool for (ba)sh scripts
+"brew:shellcheck" = { os = "macos" }
+# Editor of encrypted files
+"brew:sops" = { os = "macos" }
+# Small command-line utility for adding spacers to command output
+"brew:spacer" = { os = "macos" }
+# Cross-shell prompt for astronauts
+"brew:starship" = { os = "macos" }
+# CLI tool that moves files or folder to the trash
+"brew:trash" = { os = "macos" }
+# Language Server for typos-cli
+"brew:typos-lsp" = { os = "macos" }
+# Extremely fast Python package installer and resolver, written in Rust
+"brew:uv" = { os = "macos" }
+# Vi 'workalike' with many additional features
+"brew:vim" = { os = "macos" }
+# Executes a program periodically, showing output fullscreen
+"brew:watch" = { os = "macos" }
+# Internet file retriever
+"brew:wget" = { os = "macos" }
+# Best command-line tool to install and switch between multiple versions of Xcode
+"brew:xcodes" = { os = "macos" }
+# Friendly and fast tool for sending HTTP requests
+"brew:xh" = { os = "macos" }
+# Blazing fast terminal file manager written in Rust, based on async I/O
+"brew:yazi" = { os = "macos" }
+# Process YAML, JSON, XML, CSV and properties documents from the CLI
+"brew:yq" = { os = "macos" }
+# Pluggable terminal workspace, with terminal multiplexer as the base feature
+"brew:zellij" = { os = "macos" }
+# Fast static site generator in a single binary with everything built-in
+"brew:zola" = { os = "macos" }
+# Shell extension to navigate your filesystem faster
+"brew:zoxide" = { os = "macos" }
