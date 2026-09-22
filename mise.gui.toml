@@ -273,7 +273,6 @@ SortDirection = 0
 "first minute of work hours" = "540"
 
 [dotfiles]
-"~/.config/ghostty/config" = { source = "src/.config/ghostty/config", mode = "copy" }
 "~/.config/wezterm/wezterm.lua" = { source = "src/.config/wezterm/wezterm.lua", mode = "copy" }
 "~/.config/zed/settings.json" = { source = "src/.config/zed/settings.json", mode = "copy" }
 
