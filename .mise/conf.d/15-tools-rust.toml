@@ -1,0 +1,32 @@
+[settings.cargo]
+binstall = true
+binstall_native = true
+
+[tools]
+rust = "stable"
+"cargo:cargo-about" = "latest"
+"cargo:cargo-audit" = "latest"
+"cargo:cargo-dist" = "latest"
+"cargo:cargo-edit" = "latest"
+"cargo:cargo-espflash" = "latest"
+"cargo:cargo-generate" = "latest"
+"cargo:cargo-get" = "latest"
+"cargo:cargo-leptos" = "latest"
+"cargo:cargo-nextest" = "latest"
+"cargo:cargo-run-bin" = "latest"
+"cargo:cargo-semver-checks" = "latest"
+"cargo:cargo-shuttle" = "latest"
+"cargo:cargo-udeps" = "latest"
+"cargo:cargo-watch" = "latest"
+"cargo:create-tauri-app" = "latest"
+"cargo:espup" = "latest"
+"cargo:flamegraph" = "latest"
+"cargo:lemmeknow" = "latest"
+"cargo:rewrk" = "latest"
+"cargo:tealdeer" = "latest"
+"cargo:lazyjj" = "latest"
+"cargo:kanata" = "latest"
+"cargo:protols" = "latest"
+"cargo:cargo-px" = "latest"
+"cargo:release-plz" = "latest"
+"cargo:jj-vine" = "latest"
