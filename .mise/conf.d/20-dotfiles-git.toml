@@ -1,0 +1,5 @@
+[dotfiles]
+"~/.gitconfig" = { source = "../../src/.gitconfig", mode = "copy" }
+"~/.gitconfig-work" = { source = "../../src/.gitconfig-work", mode = "copy" }
+"~/.gitignore_global" = { source = "../../src/.gitignore_global", mode = "copy" }
+"~/.config/mise/config.toml" = { source = "../../src/.config/mise/config.toml", mode = "copy" }
