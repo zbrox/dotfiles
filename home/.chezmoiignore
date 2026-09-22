@@ -11,5 +11,4 @@ Library/
 .config/kanata/
 .config/karabiner/
 Library/
-.chezmoiscripts/run_onchange_after_configure-vscode.sh.tmpl
 {{ end }}
