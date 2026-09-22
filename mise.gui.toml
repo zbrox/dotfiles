@@ -101,7 +101,7 @@
 # Keyboard customiser
 "brew-cask:karabiner-elements" = { os = "macos" }
 # Native YouTube Music client
-"brew-cask:kaset" = { os = "macos" }
+"brew-cask:sozercan/repo/kaset" = { os = "macos" }
 # File system integration
 "brew-cask:macfuse" = { os = "macos" }
 # Modern GUI for Redis
