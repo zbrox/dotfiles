@@ -206,6 +206,72 @@ args = [
 ]
 run_at_load = true
 
+[bootstrap.macos.dock]
+autohide_delay = 0.0
+autohide_time_modifier = 0.0
+autohide = true
+
+[bootstrap.macos.finder]
+show_pathbar = true
+show_extensions_warning = false
+preferred_view_style = "list"
+
+[bootstrap.macos.keyboard]
+automatic_spelling_correction = false
+
+[bootstrap.macos.defaults.NSGlobalDomain]
+# Set sidebar icon size to medium
+NSTableViewDefaultSizeMode = 2
+# Use dark appearance
+AppleInterfaceStyle = "Dark"
+
+[bootstrap.macos.defaults."com.apple.print.PrintingPrefs"]
+# Automatically quit Print Center after jobs complete
+"Quit When Finished" = true
+
+[bootstrap.macos.defaults."com.apple.screensaver"]
+# Require a password immediately after sleep or the screen saver begins
+askForPassword = 1
+askForPasswordDelay = 0
+
+[bootstrap.macos.defaults."com.apple.finder"]
+# Disable Finder window and Get Info animations
+DisableAllAnimations = true
+# Search the current folder by default
+FXDefaultSearchScope = "SCcf"
+
+[bootstrap.macos.defaults."com.apple.dock"]
+# Highlight items under the pointer in Dock stack grids
+"mouse-over-hilite-stack" = true
+mineffect = "scale"
+"minimize-to-application" = true
+# Show only running applications
+"static-only" = true
+"expose-group-by-app" = true
+"wvous-tl-corner" = 0
+"wvous-tl-modifier" = 0
+"wvous-tr-corner" = 0
+"wvous-tr-modifier" = 0
+"wvous-bl-corner" = 0
+"wvous-bl-modifier" = 0
+# Show the desktop from the bottom-right hot corner
+"wvous-br-corner" = 4
+"wvous-br-modifier" = 0
+
+[bootstrap.macos.defaults."com.apple.ActivityMonitor"]
+OpenMainWindow = true
+IconType = 5
+# Show all processes
+ShowCategory = 100
+SortColumn = "CPUUsage"
+SortDirection = 0
+
+[bootstrap.macos.defaults."com.apple.ical"]
+# Show a full day starting at 9 AM, with Monday as the first day of the week
+"number of hours displayed" = "24"
+"first day of the week" = "1"
+"first minute of work hours" = "540"
+
 [dotfiles]
 "~/.config/ghostty/config" = { source = "src/.config/ghostty/config", mode = "copy" }
 "~/.config/kanata/default.kbd" = { source = "src/.config/kanata/default.kbd", mode = "copy" }
