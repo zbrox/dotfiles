@@ -178,3 +178,89 @@ url_api = "https://api.github.com/repos/tealdeer-rs/tealdeer/releases/assets/527
 checksum = "sha256:23fb76fb683d76dd413cb470b1a3c32157e585edec7d740e73da1aa9c6406dfe"
 url = "https://github.com/tealdeer-rs/tealdeer/releases/download/v1.9.0/tealdeer-windows-x86_64-msvc.exe"
 url_api = "https://api.github.com/repos/tealdeer-rs/tealdeer/releases/assets/527792764"
+
+[[tools.weave]]
+version = "0.5.4"
+backend = "github:Ataraxy-Labs/weave"
+specifiers = ["latest"]
+
+[tools.weave.options]
+matching_regex = "^weave-cli-"
+
+[tools.weave."platforms.linux-arm64"]
+checksum = "sha256:e8cc21ade01c8f9b665b3c7f34467866be72320cbc54a72166557ee502440e71"
+url = "https://github.com/Ataraxy-Labs/weave/releases/download/v0.5.4/weave-cli-aarch64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/Ataraxy-Labs/weave/releases/assets/539480848"
+
+[tools.weave."platforms.linux-arm64-musl"]
+checksum = "sha256:e8cc21ade01c8f9b665b3c7f34467866be72320cbc54a72166557ee502440e71"
+url = "https://github.com/Ataraxy-Labs/weave/releases/download/v0.5.4/weave-cli-aarch64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/Ataraxy-Labs/weave/releases/assets/539480848"
+
+[tools.weave."platforms.linux-x64"]
+checksum = "sha256:93b9fa03e714af8091f4c28a86c7ba80d9803d5a07d196c4601960ad51426dfc"
+url = "https://github.com/Ataraxy-Labs/weave/releases/download/v0.5.4/weave-cli-x86_64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/Ataraxy-Labs/weave/releases/assets/539480850"
+
+[tools.weave."platforms.linux-x64-musl"]
+checksum = "sha256:93b9fa03e714af8091f4c28a86c7ba80d9803d5a07d196c4601960ad51426dfc"
+url = "https://github.com/Ataraxy-Labs/weave/releases/download/v0.5.4/weave-cli-x86_64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/Ataraxy-Labs/weave/releases/assets/539480850"
+
+[tools.weave."platforms.macos-arm64"]
+checksum = "sha256:6e880eb7a038fbd23c2e8df7bd4ded17ee9c04fbf1edfc8b6d03364479b09d87"
+url = "https://github.com/Ataraxy-Labs/weave/releases/download/v0.5.4/weave-cli-aarch64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/Ataraxy-Labs/weave/releases/assets/539480863"
+
+[tools.weave."platforms.macos-x64"]
+checksum = "sha256:6025ea8e19b0d2575837e1eef2eb242a86425f4414c81a6596f947ec46c8d080"
+url = "https://github.com/Ataraxy-Labs/weave/releases/download/v0.5.4/weave-cli-x86_64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/Ataraxy-Labs/weave/releases/assets/539480859"
+
+[tools.weave."platforms.windows-x64"]
+checksum = "sha256:1ebb852e6fc04e21539bb52701e774b86ac21584503f68f55aff27e8448019a7"
+url = "https://github.com/Ataraxy-Labs/weave/releases/download/v0.5.4/weave-cli-x86_64-pc-windows-msvc.zip"
+url_api = "https://api.github.com/repos/Ataraxy-Labs/weave/releases/assets/539480862"
+
+[[tools.weave-driver]]
+version = "0.5.4"
+backend = "github:Ataraxy-Labs/weave"
+specifiers = ["latest"]
+
+[tools.weave-driver.options]
+matching_regex = "^weave-driver-"
+
+[tools.weave-driver."platforms.linux-arm64"]
+checksum = "sha256:b2320ee2230fa30c88fe1a3fa4fa447e99e8d7ca6385f2abe391edbe3e3197be"
+url = "https://github.com/Ataraxy-Labs/weave/releases/download/v0.5.4/weave-driver-aarch64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/Ataraxy-Labs/weave/releases/assets/539480854"
+
+[tools.weave-driver."platforms.linux-arm64-musl"]
+checksum = "sha256:b2320ee2230fa30c88fe1a3fa4fa447e99e8d7ca6385f2abe391edbe3e3197be"
+url = "https://github.com/Ataraxy-Labs/weave/releases/download/v0.5.4/weave-driver-aarch64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/Ataraxy-Labs/weave/releases/assets/539480854"
+
+[tools.weave-driver."platforms.linux-x64"]
+checksum = "sha256:823693ec833bdfe1d99512ed37ff58047c16aa817416c6450e239fcddebd0503"
+url = "https://github.com/Ataraxy-Labs/weave/releases/download/v0.5.4/weave-driver-x86_64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/Ataraxy-Labs/weave/releases/assets/539480861"
+
+[tools.weave-driver."platforms.linux-x64-musl"]
+checksum = "sha256:823693ec833bdfe1d99512ed37ff58047c16aa817416c6450e239fcddebd0503"
+url = "https://github.com/Ataraxy-Labs/weave/releases/download/v0.5.4/weave-driver-x86_64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/Ataraxy-Labs/weave/releases/assets/539480861"
+
+[tools.weave-driver."platforms.macos-arm64"]
+checksum = "sha256:e24497ca8e7ade1287d1986d49ae44a12898d31ec6a3e6bf3698e594629d13c2"
+url = "https://github.com/Ataraxy-Labs/weave/releases/download/v0.5.4/weave-driver-aarch64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/Ataraxy-Labs/weave/releases/assets/539480856"
+
+[tools.weave-driver."platforms.macos-x64"]
+checksum = "sha256:1a3c2ef15d48dcc4722a1c276ef953211c2f8c5e7bdced90ac729e056445cbdb"
+url = "https://github.com/Ataraxy-Labs/weave/releases/download/v0.5.4/weave-driver-x86_64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/Ataraxy-Labs/weave/releases/assets/539480846"
+
+[tools.weave-driver."platforms.windows-x64"]
+checksum = "sha256:05742154a2cb82969d2b2b0cae1105ad8946796af964cd4e35cbd092e39df044"
+url = "https://github.com/Ataraxy-Labs/weave/releases/download/v0.5.4/weave-driver-x86_64-pc-windows-msvc.zip"
+url_api = "https://api.github.com/repos/Ataraxy-Labs/weave/releases/assets/539480858"

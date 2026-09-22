@@ -2,3 +2,17 @@
 cargo-dist = "latest"
 release-plz = "latest"
 tealdeer = "latest"
+
+[tool_alias]
+weave = "github:Ataraxy-Labs/weave"
+weave-driver = "github:Ataraxy-Labs/weave"
+
+[tools.weave]
+version = "latest"
+matching_regex = "^weave-cli-"
+rename_exe = "weave"
+
+[tools.weave-driver]
+version = "latest"
+matching_regex = "^weave-driver-"
+rename_exe = "weave-driver"
