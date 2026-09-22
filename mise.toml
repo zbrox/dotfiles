@@ -1,3 +1,7 @@
 [tools]
 gum = "latest"
 python = "3.14"
+
+[settings]
+dotfiles.root = "~/.dotfiles/src"
+dotfiles.default_mode = "copy"
