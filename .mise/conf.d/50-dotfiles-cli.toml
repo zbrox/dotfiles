@@ -1,0 +1,6 @@
+[dotfiles]
+"~/.config/atuin/config.toml" = { source = "../../src/.config/atuin/config.toml", mode = "copy" }
+"~/.config/jj" = { source = "../../src/.config/jj", mode = "copy" }
+"~/.config/yazi" = { source = "../../src/.config/yazi", mode = "copy" }
+"~/.config/zellij" = { source = "../../src/.config/zellij", mode = "copy" }
+"~/.config/starship.toml" = { source = "../../src/.config/starship.toml", mode = "copy" }
