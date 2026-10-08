@@ -122,6 +122,15 @@ esac
 
 select_profile "$@"
 
+nixos=false
+if [[ "$operating_system" == "Linux" && -r /etc/os-release ]] && (
+    # shellcheck source=/dev/null
+    source /etc/os-release
+    [[ "${ID:-}" == "nixos" ]]
+); then
+    nixos=true
+fi
+
 if [[ "$operating_system" == "Darwin" ]]; then
     if ! xcode-select -p >/dev/null 2>&1; then
         xcode-select --install
@@ -149,6 +158,10 @@ else
     require_command git
     require_command fish
     require_command jj
+
+    if [[ "$nixos" == "true" ]]; then
+        require_command mise
+    fi
 
     if command -v mise >/dev/null 2>&1; then
         mise_path="$(command -v mise)"
@@ -196,13 +209,15 @@ fi
 if [[ "$operating_system" == "Darwin" ]]; then
     eval "$("$brew_path" shellenv)"
 fi
-fish_path="$(command -v fish || true)"
-[[ -n "$fish_path" && "$fish_path" == /* && -x "$fish_path" ]] || \
-    die "Fish was not installed at an executable absolute path"
+if [[ "$nixos" != "true" ]]; then
+    fish_path="$(command -v fish || true)"
+    [[ -n "$fish_path" && "$fish_path" == /* && -x "$fish_path" ]] || \
+        die "Fish was not installed at an executable absolute path"
 
-local_config_content="$(printf '[bootstrap.user]\nlogin_shell = \"%s\"\n' "$fish_path")"$'\n'
-write_managed_file "$LOCAL_CONFIG" "$local_config_content" "local bootstrap configuration"
-"$mise_path" trust "$LOCAL_CONFIG"
+    local_config_content="$(printf '[bootstrap.user]\nlogin_shell = \"%s\"\n' "$fish_path")"$'\n'
+    write_managed_file "$LOCAL_CONFIG" "$local_config_content" "local bootstrap configuration"
+    "$mise_path" trust "$LOCAL_CONFIG"
+fi
 
 global_config="$HOME/.config/mise/config.toml"
 if [[ -f "$global_config" ]]; then
@@ -212,7 +227,9 @@ if [[ -f "$global_config" ]]; then
     fi
 fi
 
-run_mise -C "$DOTFILES_DIR" bootstrap user apply --yes
+if [[ "$nixos" != "true" ]]; then
+    run_mise -C "$DOTFILES_DIR" bootstrap user apply --yes
+fi
 
 jj_path="$(command -v jj || true)"
 [[ -n "$jj_path" ]] || die "Jujutsu was not installed"
@@ -239,5 +256,10 @@ cat <<EOF
 To switch this checkout to SSH after authentication is available:
   jj -R "$DOTFILES_DIR" git remote set-url origin git@github.com:zbrox/dotfiles.git
 
-Start a new login session to use Fish as your login shell.
 EOF
+
+if [[ "$nixos" == "true" ]]; then
+    printf 'The login shell is managed by your NixOS configuration.\n'
+else
+    printf 'Start a new login session to use Fish as your login shell.\n'
+fi
