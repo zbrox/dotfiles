@@ -159,6 +159,8 @@ else
     require_command fish
     require_command jj
     require_command python3
+    python3 -c 'import tomllib' >/dev/null 2>&1 || \
+        die "Python 3.11 or newer must be supplied by the Linux system configuration"
 
     if [[ "$nixos" == "true" ]]; then
         require_command mise

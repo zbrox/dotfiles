@@ -3,6 +3,13 @@
 
 from __future__ import annotations
 
+import sys
+
+if sys.version_info < (3, 11):
+    raise SystemExit(
+        f"Python 3.11 or newer is required; found {sys.version.split()[0]} at {sys.executable}"
+    )
+
 import hashlib
 import os
 from pathlib import Path

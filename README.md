@@ -60,6 +60,14 @@ To provision missing Zellij plugins without running system setup:
 mise -C ~/.dotfiles run --skip-tools zellij:plugins
 ```
 
+On NixOS, include `python3` in `environment.systemPackages`. An older Python under `~/.nix-profile/bin` can take precedence; remove or update that user-profile package to select the system Python.
+
+To provision plugins with Python from a temporary Nix environment:
+
+```sh
+nix shell nixpkgs#python3 --command env MISE_DISABLE_TOOLS=python mise -C ~/.dotfiles run --skip-tools zellij:plugins
+```
+
 ## Repository layout
 
 - `mise.toml` contains shared settings and tools.
