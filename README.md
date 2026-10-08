@@ -45,14 +45,20 @@ The installer bootstraps the selected profile and prints any remaining manual st
 
 ### Linux
 
-Git, Fish, jj, and curl must be supplied by the system configuration. The installer reuses mise when available or installs its portable binary under `~/.local/bin`.
+Git, Fish, jj, curl, and Python 3.11 or newer must be supplied by the system configuration. The installer reuses mise when available or installs its portable binary under `~/.local/bin`.
 
 ```sh
 curl -fsSL https://raw.githubusercontent.com/zbrox/dotfiles/master/install.sh | bash -s -- --base
 curl -fsSL https://raw.githubusercontent.com/zbrox/dotfiles/master/install.sh | bash -s -- --gui
 ```
 
-With no profile argument, Linux selects Base. Linux setup applies the selected dotfiles and configures the Fish login shell; system packages and development tools remain owned by the distribution or Nix configuration.
+With no profile argument, Linux selects Base. Linux setup applies the selected dotfiles and provisions Zellij plugins without installing mise-managed tools. It configures the Fish login shell except on NixOS; system packages and development tools remain owned by the distribution or Nix configuration.
+
+To provision missing Zellij plugins without running system setup:
+
+```sh
+mise -C ~/.dotfiles run --skip-tools zellij:plugins
+```
 
 ## Repository layout
 

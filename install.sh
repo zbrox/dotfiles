@@ -158,6 +158,7 @@ else
     require_command git
     require_command fish
     require_command jj
+    require_command python3
 
     if [[ "$nixos" == "true" ]]; then
         require_command mise
@@ -182,7 +183,7 @@ run_mise() {
 
 run_bootstrap() {
     if [[ "$operating_system" == "Linux" ]]; then
-        run_mise "$@" --only dotfiles --yes
+        MISE_TASK_RUN_AUTO_INSTALL=false run_mise "$@" --only dotfiles,task --yes
     else
         run_mise "$@" --skip user --yes
     fi
