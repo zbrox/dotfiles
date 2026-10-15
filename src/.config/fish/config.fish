@@ -1,5 +1,5 @@
 # Direnv
-eval (direnv hook fish)
+direnv hook fish | source
 
 # Atuin
 if status is-interactive
